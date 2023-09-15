@@ -1,0 +1,9 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--color-neutral-white);
+  overflow-y: scroll;
+  height: 100vh;
+}
