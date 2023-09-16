@@ -1,3 +1,6 @@
+import Button from "../../components/common/Button";
+import Input from "../../components/common/Input";
+
 export const CTA = () => {
     return (
         <div className="ctaContainer">
@@ -11,10 +14,11 @@ export const CTA = () => {
 
                 <div className="ctaFooterFlex">
                     <div className="ctaInput">
-                        <input type="text" className="form-control" placeholder="Enter your email"/>
+                        <Input type="text" className="form-control" placeholder="Enter your email" />
+                        {/* <input type="text" className="form-control" placeholder="Enter your email"/> */}
                     </div>
                     <div className="ctaButton">
-                        <button className="btn ctaButton">Sign Up</button>
+                        <Button label={"Reveal coupon"} classes={"ctaButton"} variant={"secondary"} />
                     </div>
                 </div>
             </div>
