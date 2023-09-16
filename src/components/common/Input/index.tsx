@@ -32,7 +32,7 @@ const Input = ({
       <div className="text-wrapper">
         <label>{title}</label>
         <input
-          className={`text-input text-input-${variant} input-${size}`}
+          className={`form-control text-input ${variant ? `input-${variant}` : ''} ${size ? `input-${size}` : ''}`}
           type={type ? type : INPUT_TYPE.TEXT}
           name={name ? name : ''}
           value={value ? value : ''}
@@ -42,7 +42,7 @@ const Input = ({
       </div>
     ) : (
       <input
-        className={`text-input text-input-${variant} input-${size}`}
+        className={`form-control text-input ${variant ? `input-${variant}` : ''} ${size ? `input-${size}` : ''}`}
         type={type ? type : INPUT_TYPE.TEXT}
         name={name ? name : ''}
         value={value ? value : ''}
