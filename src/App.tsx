@@ -1,9 +1,12 @@
-import Header from 'layouts/header';
+import { Navbar } from 'layouts/header/navbar';
+import RouterViews from './router';
 
 const App: React.FC = () => {
   return (
     <div className="App">
-      <Header />
+      <RouterViews>
+        <Navbar />
+      </RouterViews>
     </div>
   );
 };

@@ -35,7 +35,8 @@ const Toast: React.FC<Props> = ({ status, message, onClose }) => {
           onClick={handleButtonCloseClick}
           type="button"
           className="btn-close"
-          aria-label="Close">
+          aria-label="Close"
+        >
           X
         </button>
       </div>

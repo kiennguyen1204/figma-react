@@ -1,0 +1,14 @@
+.navbarCustom {
+  display: block;
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+}
+.navbarCustom .flexContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+}

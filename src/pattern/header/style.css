@@ -1,0 +1,604 @@
+
+/** limitToobarContainer */
+.limitToolbarContainer {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 8px 0;
+    background-color: var(--color-secondary-dark);
+}
+.limitToolbarContainer .limitToolbarBox {
+    display: block;
+    position: relative;
+    width: 100%;
+}
+.limitToolbarContainer .limitToolbarBox .limitToolbarInfo {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 0.75rem;
+    color: #fff;
+}
+.limitToolbarContainer .limitToolbarBox .limitToolbarInfo .limitToolbarText {
+    display: inline-block;
+    position: relative;
+    font-size: 14px;
+    font-weight: 400;
+    font-family: var(--font-family-regular);
+    line-height: 21px;
+
+    width: auto;
+    white-space: nowrap;
+
+    color: var(--color-neutral-white);
+    opacity: 0.7;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.limitToolbarContainer .limitToolbarBox .limitToolbarInfo .limitToolbarTime {
+    font-size: 14px;
+    font-weight: 400;
+    font-family: var(--font-family-regular);
+    color: var(--color-neutral-white);
+}
+@media screen and (max-width: 575.98px) {
+    .limitToolbarContainer .limitToolbarBox .limitToolbarInfo .limitToolbarText,
+    .limitToolbarContainer .limitToolbarBox .limitToolbarInfo .limitToolbarTime {
+        font-size: 12px;
+        line-height: 18px;
+    }
+
+    .limitToolbarContainer {
+        padding: 8px 24px;
+    }
+}
+/** limitToobarContainer */
+
+
+
+
+
+
+/** middleToolbarContainer */
+.navbarContainer {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: auto;
+    background: #fff;
+}
+.navbarContainer .navbarBox {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: auto;
+    padding: 14px 56px;
+    border-bottom: 1px solid var(--bs-gray-500);
+}
+
+.navbarContainer .navbarBox .navbarBrand,
+.navbarContainer .navbarBox .navbarSearchBox,
+.navbarContainer .navbarBox .navbarBoxEnd {
+    width: calc(100% / 3);
+}
+
+.navbarContainer .navbarBox .navbarBrand {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    order: 0;
+
+    gap: 1rem;
+}
+.navbarContainer .navbarBox .navbarBrand .menuButtonHamburger {
+    display: none;
+    position: relative;
+    top: 0;
+
+    width: 30px;
+    height: 30px;
+
+    padding: 0;
+    cursor: pointer;
+
+    overflow: hidden;
+
+    transition: top 0.5s ease;
+}
+.navbarContainer .navbarBox .navbarBrand .menuButtonHamburger:is(:active, :focus) svg path {
+    stroke: var(--color-secondary-base);
+}
+
+.navbarContainer .navbarBox .navbarBrand .navbarLogo {
+    display: block;
+    max-width: 270px;
+    width: 100%;
+    height: 40px;
+}
+.navbarContainer .navbarBox .navbarSearchBox {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    width: 55%;
+    height: auto;
+
+    order: 1;
+}
+.navbarContainer .navbarBox .navbarSearchBox .form-group {
+    display: flex;
+    width: 100%;
+    height: auto;
+    padding: 4px 4px 4px 24px;
+    align-items: center;
+    gap: 8px;
+}
+.navbarContainer .navbarBox .navbarSearchBox .form-group .floatingForm {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    height: 48px;
+    gap: 8px;
+}
+.navbarContainer .navbarBox .navbarSearchBox .form-group .floatingForm .floatingCustomControl {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 100px;
+    border-color: var(--bs-gray-500);
+    padding: .375rem .75rem .375rem 1.75rem;
+}
+.navbarContainer .navbarBox .navbarSearchBox .form-group .floatingForm .searchButton {
+    display: grid;
+    place-items: center;
+    position: relative;
+    width: 52px;
+    height: 48px;
+    padding: 8px;
+    border-radius: 50%;
+    background-color: var(--color-primary-base);
+}
+.navbarContainer .navbarBox .navbarSearchBox .form-group .floatingForm .searchButton svg path {
+    stroke: #fff;
+}
+.navbarContainer .navbarBox .navbarBoxEnd {
+    display: block;
+    position: relative;
+    height: auto;
+
+    order: 2;
+}
+.navbarContainer .navbarBox .navbarBoxEnd .navbarGroupInfo {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    column-gap: 15%;
+}
+
+.navbarContainer .navbarBox .navbarBoxEnd .navbarGroupInfo .navbarItem {
+    display: block;
+    position: relative;
+}
+.navbarContainer .navbarBox .navbarBoxEnd .navbarGroupInfo .navbarItem:not(:last-child)::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: -30%;
+    transform: translate(-50%, -50%);
+    width: 1px;
+    height: 15px;
+    background: var(--bs-gray-500);
+}
+.navbarContainer .navbarBox .navbarBoxEnd .navbarGroupInfo .navbarItem:not(:last-child) .itemLink .icon {
+    display: none;
+}
+
+.navbarContainer .navbarBox .navbarBoxEnd .navbarGroupInfo .navbarItem .itemLink {
+    font-size: 16px;
+    font-weight: 400;
+    font-family: var(--font-family-regular);
+    line-height: 1.5;
+    
+    color: var(--color-neutral-mid);
+    text-decoration: none;
+    white-space: nowrap;
+}
+.navbarContainer .navbarBox .navbarBoxEnd .navbarGroupInfo .navbarItem .productQuality {
+    display: grid;
+    place-items: center;
+    position: absolute;
+    bottom: 0;
+    right: 3px;
+    width: 20px;
+    height: 20px;
+    font-size: 12px;
+    border-radius: 12px;
+    color: #fff;
+    background-color: red;
+    user-select: none;
+    pointer-events: none;
+}
+@media screen and (max-width: 1099.98px) {
+    .navbarContainer .navbarBox {
+        padding: 14px 24px;
+    }
+}
+@media screen and (max-width: 991.98px) {
+
+    .navbarContainer .navbarBox {
+        flex-flow: row wrap;
+        padding: 0;
+        border-bottom: none;
+    }
+    .navbarContainer .navbarBox .navbarBrand {
+        width: calc(100% / 2);
+        order: 0;
+
+        padding-block: 14px;
+        padding-left: 42px;
+    }
+    
+    .navbarContainer .navbarBox .navbarBoxEnd {
+        width: calc(100% / 2);
+        order: 1;
+
+        padding-block: 14px;
+        padding-right: 42px;
+    }
+    .navbarContainer .navbarBox .navbarSearchBox {
+        width: 100%;
+        order: 2;
+
+        border-top: 1px solid var(--bs-gray-500);
+        padding: 12px 24px;
+    }
+
+    .navbarContainer .navbarBox .navbarSearchBox .form-group {
+        padding: 0;
+    }
+
+    .navbarContainer .navbarBox .navbarBrand .menuButtonHamburger {
+        display: block;
+    }
+
+}
+@media screen and (max-width: 575.98px) {
+    .navbarContainer .navbarBox .navbarBrand {
+        padding-left: 24px;
+    }
+    .navbarContainer .navbarBox .navbarBrand .navbarLogo {
+        max-width: 120px;
+    }
+    .navbarContainer .navbarBox .navbarBoxEnd {
+        padding-right: 24px;
+    }
+
+    .navbarContainer .navbarBox .navbarBoxEnd {
+        font-size: 14px;
+        color: var(--color-neutral-mid);
+    }
+
+    .navbarContainer .navbarBox .navbarSearchBox {
+        padding: 12px 12px;
+    }
+    .navbarContainer .navbarBox .navbarBoxEnd .navbarGroupInfo {
+        column-gap: 5%;
+    }
+
+    .navbarContainer .navbarBox .navbarBoxEnd .navbarGroupInfo .navbarItem:not(:last-child)::after {
+        right: -13%;
+    }
+}
+
+@media screen and (max-width: 399.98px) {
+    .navbarContainer .navbarBox .navbarBoxEnd .navbarGroupInfo .navbarItem:not(:last-child) .itemLink .text {
+        display: none;
+    }
+    .navbarContainer .navbarBox .navbarBoxEnd .navbarGroupInfo .navbarItem:not(:last-child) .itemLink .icon {
+        display: block;
+    }
+    .navbarContainer .navbarBox .navbarBoxEnd .navbarGroupInfo {
+        column-gap: 10%;
+    }
+
+    .navbarContainer .navbarBox .navbarBoxEnd .navbarGroupInfo .navbarItem:not(:last-child)::after {
+        right: -1rem;
+    }
+}
+/** middleToolbarContainer */
+
+
+
+
+
+/** endToobarContainer */
+.navbarBoxEndContainer {
+    display: block;
+    position: relative;
+}
+
+.navbarBoxEndContainer .closeDrawer {
+    display: none;
+}
+
+.navbarBoxEndContainer .navbarBox {
+    display: block;
+    position: relative;
+    padding: 16px 64px;
+}
+
+.navbarBoxEndContainer .navbarBox .navGroup {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    column-gap: 40px;
+}
+.navbarBoxEndContainer .navbarBox .navGroup .navItem {
+    display: block;
+    position: relative;
+    padding-bottom: 1rem;
+}
+.navbarBoxEndContainer .navbarBox .navGroup .navItem .dropdownMenuBox {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 6px;
+    border: none;
+    background-color: transparent;
+}
+.navbarBoxEndContainer .navbarBox .navGroup .navItem .dropdownMenuBox:active,
+.navbarBoxEndContainer .navbarBox .navGroup .navItem .dropdownMenuBox:focus {
+    border: none;
+    outline: none;
+    border-color: unset;
+}
+.navbarBoxEndContainer .navbarBox .navGroup .navItem .navLink {
+    font-size: 16px;
+    font-weight: 400;
+    font-family: var(--font-family-regular);
+    line-height: 1.5;
+    color: var(--color-neutral-mid);
+    text-decoration: none;
+    transition: all 0.3s;
+}
+.navbarBoxEndContainer .navbarBox .navGroup .navItem .navLink:hover {
+    color: var(--color-primary-base);
+}
+
+@media screen and (max-width: 1319.98px) {
+    .navbarBoxEndContainer .navbarBox .navGroup {
+        column-gap: calc(40px / 1.65);
+    }
+}
+@media screen and (max-width: 1199.98px) {
+    .navbarBoxEndContainer .navbarBox .navGroup {
+        column-gap: calc(40px / 2.5);
+    }
+    .navbarBoxEndContainer .navbarBox {
+        padding: 16px 24px;
+    }
+}
+@media screen and (max-width: 991.98px) {
+    .navbarBoxEndContainer {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: -1000px;
+
+        width: 100%;
+        height: 100%;
+
+        background-color: var(--color-neutral-white);
+        box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+        transition: left 0.5s ease;
+        z-index: 998;
+    }
+    .navbarBoxEndContainer.showDrawer {
+        left: 0px;
+    }
+
+    .navbarBoxEndContainer .closeDrawer {
+        display: inline-block;
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+
+        z-index: 10;
+    }
+
+    .navbarBoxEndContainer .closeDrawer i {
+        font-size: 32px;
+    }
+
+    .navbarBoxEndContainer .navbarBox {
+        display: block;
+        position: relative;
+
+        padding: 6rem 24px 1rem 24px;
+    }
+
+    .navbarBoxEndContainer .navbarBox .navGroup {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: flex-start;
+        justify-content: flex-start;
+        position: relative;
+        height: calc(100svh - 10rem);
+        padding: 1rem;
+        overflow-y: auto;
+        border-radius: 8px;
+    }
+
+    .navbarBoxEndContainer .navbarBox .navGroup::-webkit-scrollbar {
+        width: 4px;
+        background-color: #F5F5F5;
+    }
+
+    .navbarBoxEndContainer .navbarBox .navGroup::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+        border-radius: 10px;
+        background-color: #F5F5F5;
+    }
+    .navbarBoxEndContainer .navbarBox .navGroup::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+        background-color: var(--color-secondary-base);
+    }
+    .navbarBoxEndContainer .navbarBox .navGroup .navItem {
+        display: block;
+        position: relative;
+        width: 100%;
+    }
+
+    .navbarBoxEndContainer .navbarBox .navGroup .navItem .navLink {
+        font-size: 16px;
+    }
+    .navbarBoxEndContainer .navbarBox .navGroup .navItem > .navLink {
+        display: block;
+        position: relative;
+        width: 100%;
+    }
+
+    .navbarBoxEndContainer .navbarBox .navGroup .navItem .dropdownMenuBox {
+        width: 100%;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        padding-inline: 0;
+    }
+    .navbarBoxEndContainer .navbarBox .navGroup .navItem .dropdownMenuBox .navLink {
+        order: 0;
+        width: calc(90% - 6px);
+        text-align: left;
+
+        pointer-events: none;
+    }
+    .navbarBoxEndContainer .navbarBox .navGroup .navItem .dropdownMenuBox > svg {
+        order: 1;
+        width: calc(10% - 6px);
+    }
+    
+}
+/** endToobarContainer */
+
+
+
+
+
+
+
+/** DropdownMenuBox */
+@media screen and (min-width: 992px) {
+    .navbarBoxEndContainer .navbarBox .navGroup .navItem:is(:hover, :focus) .dropdownBoxContainer {
+        user-select: all;
+        pointer-events: auto;
+        opacity: 1;
+
+        top: 35px;
+        visibility: visible;
+    }
+}
+.dropdownBoxContainer {
+    display: block;
+    position: absolute;
+    top: 70px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: 200px;
+    transition: all 0.3s;
+}
+@media screen and (min-width: 992px) {
+    .dropdownBoxContainer {
+        user-select: none;
+        pointer-events: none;
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+.dropdownBoxContainer .dropdownBox {
+    display: block;
+    position: relative;
+    width: 100%;
+
+    background: #fff;
+    border: 1px solid var(--bs-gray-500);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+.dropdownBoxContainer .dropdownBox .dropdownBoxContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+.dropdownBoxContainer .dropdownBox .dropdownBoxContent .dropdownBoxContentItem {
+    display: block;
+    position: relative;
+
+    width: 100%;
+    padding: 16px 24px;
+
+    background: var(--color-neutral-white);
+    transform: translateY(0);
+
+    overflow: hidden;
+    transition: all 0.3s;
+}
+.dropdownBoxContainer .dropdownBox .dropdownBoxContent .dropdownBoxContentItem .dropdownBoxContentItemLink {
+    font-size: 16px;
+    font-weight: 400;
+    font-family: var(--font-family-regular);
+    line-height: 1.5;
+    color: var(--color-neutral-mid);
+    text-align: center;
+
+    text-decoration: none;
+    text-shadow: none;
+
+    transition: all 0.3s;
+}
+.dropdownBoxContainer .dropdownBox .dropdownBoxContent .dropdownBoxContentItem:hover {
+    background: var(--color-secondary-dark);
+}
+.dropdownBoxContainer .dropdownBox .dropdownBoxContent .dropdownBoxContentItem:hover .dropdownBoxContentItemLink {
+    color: var(--color-neutral-white);
+    text-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+@media screen and (max-width: 991.98px) {
+    .dropdownBoxContainer {
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 100%;
+
+        transform: translateX(0);
+        transition: all 0.3s;
+
+        order: 2;
+    }
+
+    .dropdownBoxContainer .dropdownBox .dropdownBoxContent .dropdownBoxContentItem {
+        text-align: left;
+        padding: 16px 24px 16px 18px;
+    }
+}
+/** DropdownMenuBox */
+

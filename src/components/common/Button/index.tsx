@@ -46,7 +46,8 @@ const Button = ({
       type={type}
       className={`${classes} ${colorTextClass}`}
       onClick={onClick}
-      disabled={isDisabled || isLoading}>
+      disabled={isDisabled || isLoading}
+    >
       {isLoading && <span className="loader"></span>}
       <span>{label}</span>
     </button>

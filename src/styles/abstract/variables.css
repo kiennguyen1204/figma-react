@@ -66,6 +66,7 @@
   --line-height-70: 70.4px;
 
   /* Fonts family */
-  --font-family-primary: 'Lexend-Regular';
-  --font-family-secondary: 'Lexend-Medium';
+  --font-family-all: 'Lexend', sans-serif;
+  --font-family-regular: 'Lexend-Regular';
+  --font-family-medium: 'Lexend-Medium';
 }
