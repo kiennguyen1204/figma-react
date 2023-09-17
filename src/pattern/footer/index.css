@@ -1,0 +1,201 @@
+.footerContainer {
+  display: block;
+  position: relative;
+  color: var(--color-neutral-white);
+  overflow: hidden;
+  z-index: 0;
+}
+.footerContainer::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 14rem;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, var(--color-neutral-base), var(--color-secondary-ultra-dark));
+  z-index: -1;
+}
+.footerContainer .footerInsiderContainer {
+  display: block;
+  position: relative;
+  width: 100%;
+  padding: 120px 120px 64px 120px;
+}
+@media screen and (max-width: 767.98px) {
+  .footerContainer .footerInsiderContainer {
+    padding: 64px 24px;
+  }
+}
+.footerContainer .footerInsiderContainer .footerInsiderBox {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 32px;
+  margin-bottom: 64px;
+}
+.footerContainer .footerInsiderContainer .footerInsiderBox .footerTop {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  row-gap: 24px;
+  position: relative;
+  width: calc(30% - 32px);
+}
+@media screen and (max-width: 1199.98px) {
+  .footerContainer .footerInsiderContainer .footerInsiderBox .footerTop {
+    width: calc(50% - 32px);
+  }
+}
+@media screen and (max-width: 991.98px) {
+  .footerContainer .footerInsiderContainer .footerInsiderBox .footerTop {
+    width: 100%;
+  }
+}
+.footerContainer .footerInsiderContainer .footerInsiderBox .footerTop .footerLogo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 24px;
+  color: var(--color-neutral-white);
+}
+.footerContainer .footerInsiderContainer .footerInsiderBox .footerTop .footerLogo .footerTitle {
+  display: block;
+  position: relative;
+  max-width: 173px;
+  width: 100%;
+  height: auto;
+}
+.footerContainer .footerInsiderContainer .footerInsiderBox .footerTop .footerLogo .footerDescription {
+  display: block;
+  position: relative;
+  max-width: 276px;
+  width: 100%;
+  font-size: var(--font-size-normal);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-medium);
+  color: var(--color-neutral-lighter);
+}
+@media screen and (max-width: 991.98px) {
+  .footerContainer .footerInsiderContainer .footerInsiderBox .footerTop .footerLogo .footerDescription {
+    max-width: 100%;
+  }
+}
+.footerContainer .footerInsiderContainer .footerInsiderBox .footerContent {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  row-gap: 40px;
+  width: calc(70% - 32px);
+}
+@media screen and (max-width: 1199.98px) {
+  .footerContainer .footerInsiderContainer .footerInsiderBox .footerContent {
+    width: calc(50% - 32px);
+  }
+}
+@media screen and (max-width: 991.98px) {
+  .footerContainer .footerInsiderContainer .footerInsiderBox .footerContent {
+    width: 100%;
+  }
+}
+.footerContainer .footerInsiderContainer .footerInsiderBox .footerContent .footerContentItem {
+  display: block;
+  position: relative;
+  width: 100%;
+  color: var(--color-neutral-white);
+}
+.footerContainer .footerInsiderContainer .footerInsiderBox .footerContent .footerContentItem .footerTitle {
+  display: block;
+  position: relative;
+  color: var(--color-neutral-white);
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-large);
+  margin-bottom: 24px;
+}
+.footerContainer .footerInsiderContainer .footerInsiderBox .footerContent .footerContentItem .listGroup {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(50px, 1fr));
+  width: 100%;
+  row-gap: 16px;
+}
+.footerContainer .footerInsiderContainer .footerInsiderBox .footerContent .footerContentItem .listGroup .listGroupItem .footerLink {
+  display: block;
+  position: relative;
+  color: var(--color-neutral-lighter);
+  font-size: var(--font-size-medium);
+  font-weight: var(--font-weight-normal);
+  line-height: var(--line-height-small);
+  text-decoration: none;
+  transition: all 0.3s;
+}
+.footerContainer .footerInsiderContainer .footerInsiderBox .footerContent .footerContentItem .listGroup .listGroupItem:hover .footerLink {
+  color: var(--color-neutral-white);
+}
+.footerContainer .footerInsiderContainer .footerInsiderBox .footerContent .footerContentItem.paymentMethod .listGroup {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+  column-gap: 16px;
+}
+.footerContainer .footerInsiderContainer .spacingLine {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 1px;
+  background: var(--color-neutral-lighter);
+  margin-bottom: 40px;
+}
+.footerContainer .footerInsiderContainer .copyright {
+  display: block;
+  position: relative;
+}
+.footerContainer .footerInsiderContainer .copyright .listGroupCopyright {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+.footerContainer .footerInsiderContainer .copyright .listGroupCopyright .groupItem {
+  display: block;
+  position: relative;
+}
+.footerContainer .footerInsiderContainer .copyright .listGroupCopyright .groupItem .copyrightText {
+  display: block;
+  position: relative;
+  color: var(--color-neutral-lighter);
+  font-size: var(--font-size-normal);
+  font-weight: var(--font-weight-normal);
+  font-family: var(--font-family-regular);
+  line-height: var(--line-height-medium);
+}
+.footerContainer .footerInsiderContainer .copyright .listGroupCopyright .groupItem .groupItemInner {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: flex-start;
+  column-gap: 32px;
+}
+.footerContainer .footerInsiderContainer .copyright .listGroupCopyright .groupItem .groupItemInner .InnerItem {
+  display: block;
+  position: relative;
+}
+.footerContainer .footerInsiderContainer .copyright .listGroupCopyright .groupItem .groupItemInner .InnerItem .innerItemLink {
+  display: block;
+  position: relative;
+  color: var(--color-neutral-lighter);
+  font-size: var(--font-size-medium);
+  font-weight: var(--font-weight-normal);
+  font-family: var(--font-family-regular);
+  line-height: var(--line-height-small);
+  text-decoration: none;
+  transition: all 0.3s;
+}
+.footerContainer .footerInsiderContainer .copyright .listGroupCopyright .groupItem .groupItemInner .InnerItem:hover .innerItemLink {
+  color: var(--color-neutral-white);
+}

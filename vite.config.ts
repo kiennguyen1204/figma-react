@@ -1,5 +1,4 @@
 import { defineConfig, loadEnv } from 'vite';
-import million from 'million/compiler';
 import viteCompression from 'vite-plugin-compression';
 import viteImagemin from 'vite-plugin-imagemin';
 import react from "@vitejs/plugin-react";
@@ -9,7 +8,6 @@ import tsconfigPaths from 'vite-tsconfig-paths';
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
-    million.vite({ auto: true }),
     react(),
     tsconfigPaths(),
     EnvironmentPlugin('all'),

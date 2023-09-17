@@ -10,9 +10,9 @@ export const MiddleNavbar = ({ onClick }: { onClick: () => void }) => {
                 <div className="navbarBrand">
                     <button className="btn menuButtonHamburger" onClick={onClick}>
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M3 7H21" stroke="#062A09" stroke-width="1.5" strokeLinecap="round"/>
-                            <path d="M3 12H21" stroke="#062A09" stroke-width="1.5" strokeLinecap="round"/>
-                            <path d="M3 17H21" stroke="#062A09" stroke-width="1.5" strokeLinecap="round"/>
+                            <path d="M3 7H21" stroke="#062A09" strokeWidth="1.5" strokeLinecap="round"/>
+                            <path d="M3 12H21" stroke="#062A09" strokeWidth="1.5" strokeLinecap="round"/>
+                            <path d="M3 17H21" stroke="#062A09" strokeWidth="1.5" strokeLinecap="round"/>
                         </svg>
                     </button>
 

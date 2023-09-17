@@ -1,13 +1,14 @@
 import RouterViews from './router';
 import { Navbar } from 'layouts/header/navbar';
-import { Footer } from './pattern/footer';
+import { Footer } from './layouts/footer';
 
 const App: React.FC = () => {
   return (
     <div className="App">
-      <RouterViews>
-        <Navbar />
-        <Footer />
+      <RouterViews
+        header={<Navbar />}
+        footer={<Footer />}
+      >
       </RouterViews>
     </div>
   );

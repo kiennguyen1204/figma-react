@@ -35,12 +35,7 @@ const Button = ({
   isLoading,
   onClick
 }: Props | any): ReactElement => {
-  const classes = `btn ${variant 
-      ? `btn-${variant}` 
-      : ''
-    } ${color ? `btn-${color}` : ''} ${size ? 'btn-${size}' : ''}' ${
-    isDisabled ? 'btn-disabled' : ''
-  } ${isLoading ? 'btn-loading' : ''}`;
+  const classes = `btn ${variant && `btn-${variant}-base`} ${color && `btn-${color}-base`} ${size && `btn-${size}`} ${isDisabled ? 'btn-disabled' : ''} ${isLoading ? 'btn-loading' : ''}`;
 
   const colorTextClass = `btn-color-text-${colorText}`;
 

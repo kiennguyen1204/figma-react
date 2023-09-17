@@ -7,18 +7,20 @@ import { INPUT_SIZE, INPUT_TYPE, INPUT_VARIANT } from 'constants/enums';
 import './index.css';
 
 export interface InputProps {
-  name: string | undefined;
-  value: string | undefined;
-  placeholder?: string | undefined;
-  title?: string | undefined;
+  name?: string;
+  inputClass?: string;
+  value?: string;
+  placeholder?: string;
+  title?: string;
   variant?: INPUT_VARIANT;
-  type?: INPUT_TYPE | undefined;
-  size?: INPUT_SIZE | undefined;
+  type?: INPUT_TYPE;
+  size?: INPUT_SIZE;
   onChange?: (e: ChangeEvent<HTMLInputElement>) => void;
 }
 
 const Input = ({
   name,
+  inputClass,
   value,
   placeholder,
   title,
@@ -26,29 +28,38 @@ const Input = ({
   type = INPUT_TYPE.TEXT,
   size = INPUT_SIZE.MEDIUM,
   onChange
-}: InputProps | any): ReactElement => (
+}: InputProps | any): ReactElement | any => (
   <>
     {title ? (
       <div className="text-wrapper">
         <label>{title}</label>
         <input
-          className={`form-control text-input ${variant ? `input-${variant}` : ''} ${size ? `input-${size}` : ''}`}
+          className={`form-control text-input-default ${inputClass ? inputClass : ''} ${variant ? `text-input input-${variant}` : ''} ${size ? `input-${size}` : ''}`}
           type={type ? type : INPUT_TYPE.TEXT}
-          name={name ? name : ''}
-          value={value ? value : ''}
-          placeholder={placeholder ? placeholder : ''}
+          name={name && name}
+          value={value && value}
+          placeholder={placeholder && placeholder}
           onChange={onChange ?? undefined}
         />
       </div>
     ) : (
-      <input
-        className={`form-control text-input ${variant ? `input-${variant}` : ''} ${size ? `input-${size}` : ''}`}
-        type={type ? type : INPUT_TYPE.TEXT}
-        name={name ? name : ''}
-        value={value ? value : ''}
-        placeholder={placeholder ? placeholder : ''}
-        onChange={onChange ?? undefined}
-      />
+      value ? (
+        <input
+          className={`form-control text-input-default ${inputClass && inputClass} ${variant && `text-input input-${variant}`} ${size && `input-${size}`}`}
+          type={type ? type : INPUT_TYPE.TEXT}
+          name={name && name}
+          value={value && value}
+          onChange={onChange ?? undefined}
+        />
+        ) : (
+          <input
+            className={`form-control text-input-default ${inputClass && inputClass} ${variant && `text-input input-${variant}`} ${size && `input-${size}`}`}
+            type={type ? type : INPUT_TYPE.TEXT}
+            name={name && name}
+            placeholder={placeholder && placeholder}
+            onChange={onChange ?? undefined}
+          />
+      )
     )}
   </>
 );

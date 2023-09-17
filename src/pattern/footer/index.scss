@@ -1,0 +1,255 @@
+$backgroundGradient: linear-gradient(180deg, var(--color-neutral-base), var(--color-secondary-ultra-dark));
+
+.footerContainer {
+    display: block;
+    position: relative;
+
+    color: var(--color-neutral-white);
+    overflow: hidden;
+    z-index: 0;
+
+    &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 14rem;
+
+        width: 100%;
+        height: 100%;
+        background: $backgroundGradient;
+        z-index: -1;
+    }
+
+    .footerInsiderContainer {
+        display: block;
+        position: relative;
+        width: 100%;
+        padding: 120px 120px 64px 120px;
+
+        @media screen and (max-width: 767.98px) {
+            padding: 64px 24px;
+        }
+
+        .footerInsiderBox {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-between;
+            align-items: flex-start;
+
+            $footerGap: 32px;
+            gap: 32px;
+            margin-bottom: 64px;
+
+            $footerStart: 30%;
+            $footerEnd: 70%;
+
+            .footerTop {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: flex-start;
+                row-gap: 24px;
+
+                position: relative;
+                width: calc($footerStart - $footerGap);
+                
+                @media screen and (max-width: 1199.98px) {
+                    $footerStart: 50%;
+                    width: calc($footerStart - $footerGap);
+                }
+
+                @media screen and (max-width: 991.98px) {
+                    width: 100%;
+                }
+
+                .footerLogo {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    justify-content: flex-start;
+                    gap: 24px;
+
+                    color: var(--color-neutral-white);
+                
+                    .footerTitle {
+                        display: block;
+                        position: relative;
+                        max-width: 173px;
+                        width: 100%;
+                        height: auto;
+                    }
+
+                    .footerDescription {
+                        display: block;
+                        position: relative;
+                        max-width: 276px;
+                        width: 100%;
+
+                        font-size: var(--font-size-normal);
+                        font-weight: var(--font-weight-regular);
+                        
+                        line-height: var(--line-height-medium);
+                        color: var(--color-neutral-lighter);
+                    
+                        @media screen and (max-width: 991.98px) {
+                            max-width: 100%;
+                        }
+                    }
+                }
+            }
+
+            .footerContent {
+                display: flex;
+                flex-flow: column wrap;
+                justify-content: flex-start;
+                align-items: flex-start;
+                row-gap: 40px;
+
+                width: calc($footerEnd - $footerGap);
+
+                @media screen and (max-width: 1199.98px) {
+                    $footerEnd: 50%;
+                    width: calc($footerEnd - $footerGap);
+                }
+
+                @media screen and (max-width: 991.98px) {
+                    width: 100%;
+                }
+            
+                .footerContentItem {
+                    display: block;
+                    position: relative;
+                    width: 100%;
+
+                    color: var(--color-neutral-white);
+                
+                    .footerTitle {
+                        display: block;
+                        position: relative;
+
+                        color: var(--color-neutral-white);
+                        font-size: var(--font-size-xl);
+                        font-weight: var(--font-weight-medium);
+                        
+                        line-height: var(--line-height-large);
+                        margin-bottom: 24px;    
+                    }
+
+                    .listGroup {
+                        display: grid;
+                        grid-template-columns: repeat(2, minmax(50px, 1fr));
+                        width: 100%;
+
+                        row-gap: 16px;
+
+                        .listGroupItem {
+                            .footerLink {
+                                display: block;
+                                position: relative;
+
+                                color: var(--color-neutral-lighter);
+                                font-size: var(--font-size-medium);
+                                font-weight: var(--font-weight-normal);
+                                
+                                line-height: var(--line-height-small);
+
+                                text-decoration: none;
+                                transition: all 0.3s;
+                            }
+                        
+                            &:hover {
+                                .footerLink {
+                                    color: var(--color-neutral-white);
+                                }
+                            }
+                        }
+                    }
+
+                    &.paymentMethod {
+
+                        .listGroup {
+                            display: flex;
+                            flex-flow: row wrap;
+                            align-items: flex-start;
+                            justify-content: flex-start;
+
+                            column-gap: 16px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .spacingLine {
+            display: block;
+            position: relative;
+            width: 100%;
+            height: 1px;
+            background: var(--color-neutral-lighter);
+            margin-bottom: 40px;
+        }
+
+        .copyright {
+            display: block;
+            position: relative;
+
+            .listGroupCopyright {
+                display: flex;
+                flex-flow: row wrap;
+                align-items: center;
+                justify-content: space-between;
+
+                gap: 40px;
+            
+                .groupItem {
+                    display: block;
+                    position: relative;
+
+                    .copyrightText {
+                        display: block;
+                        position: relative;
+
+                        color: var(--color-neutral-lighter);
+                        font-size: var(--font-size-normal);
+                        font-weight: var(--font-weight-normal);
+                        font-family: var(--font-family-regular);
+                        line-height: var(--line-height-medium);
+                    }
+
+                    .groupItemInner {
+                        display: flex;
+                        flex-flow: row wrap;
+                        align-items: center;
+                        justify-content: flex-start;
+                        column-gap: 32px;
+
+                        .InnerItem {
+                            display: block;
+                            position: relative;
+                        
+                            .innerItemLink {
+                                display: block;
+                                position: relative;
+
+                                color: var(--color-neutral-lighter);
+                                font-size: var(--font-size-medium);
+                                font-weight: var(--font-weight-normal);
+                                font-family: var(--font-family-regular);
+                                line-height: var(--line-height-small);
+
+                                text-decoration: none;
+                                transition: all 0.3s;
+                            }
+
+                            &:hover {
+                                .innerItemLink {
+                                    color: var(--color-neutral-white);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
