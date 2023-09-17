@@ -43,7 +43,7 @@
     display: block;
     position: relative;
     font-size: var(--font-size-xl);
-    font-weight: var(--font-weight-normal);
+    font-weight: var(--font-weight-regular);
     font-family: var(--font-family-regular);
 
     line-height: var(--line-height-large);

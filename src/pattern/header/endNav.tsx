@@ -1,12 +1,12 @@
-import {useEffect, useRef, useState} from "react";
+import {useEffect, useState} from "react";
 import {Link} from "react-router-dom";
 import "./style.css";
 import { DropdownBox } from "./dropdown";
 
 export const EndNavbar = ({ isDrawerOpen, isOpenDrawer }: { isDrawerOpen: boolean, isOpenDrawer: () => void }) => {
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-    const listItem = useRef([
-        { name: "Shop All", to: "" },
+    const listItem = [
+        { name: "Shop All", to: "/about" },
         { name: "Flower", to: "", dropdown: [
             { name: "Strains", to: "", },
             { name: "Edibles", to: "", },
@@ -35,7 +35,7 @@ export const EndNavbar = ({ isDrawerOpen, isOpenDrawer }: { isDrawerOpen: boolea
         ] },
         { name: "Rewards", to: "" },
         { name: "Blog", to: "" },
-    ]);
+    ];
     
     
     useEffect(() => { setIsDropdownOpen(isDropdownOpen) }, [isDropdownOpen]);
@@ -86,7 +86,7 @@ export const EndNavbar = ({ isDrawerOpen, isOpenDrawer }: { isDrawerOpen: boolea
             <div className="navbarBox">
                 <ul className="navGroup list-unstyled">
                     {
-                        listItem.current.map((el, index : number) => (
+                        listItem.map((el, index : number) => (
                             <li className="navItem" key={index}>
                                 {
                                     !el.hasOwnProperty("dropdown") ? (

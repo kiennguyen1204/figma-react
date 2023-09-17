@@ -1,5 +1,7 @@
 import { BrowserRouter as RouterView, Routes, Route } from "react-router-dom"
 import { Homepage } from "pages/Homepage"
+import { About } from "pages/About";
+
 import { PageNotFound } from "pages/PageNotFound"
 
 interface RouterProps {
@@ -7,6 +9,7 @@ interface RouterProps {
     header?: React.ReactNode;
     footer?: React.ReactNode;
 }
+
 
 const Router = (props: RouterProps) => {
     const { children, header, footer } = props;
@@ -20,6 +23,7 @@ const Router = (props: RouterProps) => {
             <Routes>
                 <Route path="/" element={<Homepage />} />
                 <Route path="/home" element={<Homepage />} />
+                <Route path="/about" element={<About />} />
                 <Route path="*" element={<PageNotFound />} />
             </Routes>
 

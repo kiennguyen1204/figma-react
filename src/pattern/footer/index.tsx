@@ -101,7 +101,7 @@ export const FooterPattern = () => {
                         <ul className="listGroup list-unstyled">
                             {paymentMethod.map((el: { image: string, name: string }, index: number) => (
                                 <li className="listGroupItem" key={index}>
-                                    <img src={el.image} alt={el.name} />
+                                    <img decoding='async' loading='lazy' src={el.image} alt={el.name} />
                                 </li>
                             ))}
                         </ul>
