@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import "./style.css";
-import Logo from 'assets/images/logo.svg';
+import Logo from '..//..//assets/images/Logo.png';
 
 
 export const MiddleNavbar = ({ onClick }: { onClick: () => void }) => {

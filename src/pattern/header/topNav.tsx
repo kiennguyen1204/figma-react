@@ -1,6 +1,7 @@
+import { ReactElement } from "react";
 import "./style.css";
 
-export const TopNavbar = () => {
+export  const TopNavbar = ():ReactElement => {
     return (
         <section className="limitToolbarContainer">
             <div className="limitToolbarBox">

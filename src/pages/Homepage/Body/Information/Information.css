@@ -1,0 +1,32 @@
+.wrapper {
+width: var(--default-width);
+margin: 0 auto;
+}
+.heading h1{
+    display: flex;
+    align-items: center;
+    margin: 0;
+
+}
+.heading .heading-text {
+    display: flex;
+    align-items: center;
+    font-family: Lexend;
+font-size: 64px;
+font-weight: 600;
+line-height: 70px;
+letter-spacing: -4px;
+text-align: left;
+
+
+
+}
+.heading h1:first-child {
+    margin-right: 1.5rem;
+}
+.heading h1 p{
+    color: var(--color-other-orange);
+    margin: 0;
+    padding: 0;
+    color: var(--color-other-orange);
+}

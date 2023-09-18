@@ -1,5 +1,5 @@
 import { BrowserRouter as RouterView, Routes, Route } from "react-router-dom"
-import { Homepage } from "pages/Homepage"
+import  Homepage  from "./pages/Homepage/Homepage"
 import { PageNotFound } from "pages/PageNotFound"
 
 const Router = (props: any) => {
@@ -8,7 +8,6 @@ const Router = (props: any) => {
             {props.children}
             <Routes>
                 <Route path="/" element={<Homepage />} />
-                <Route path="/home" element={<Homepage />} />
                 <Route path="*" element={<PageNotFound />} />
             </Routes>
         </RouterView>
