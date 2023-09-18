@@ -1,4 +1,5 @@
-.btn-primary {
+.btn-primary-base,
+.btn.btn-primary-base {
   display: inline-flex;
   height: var(--height-56);
   justify-content: center;
@@ -6,10 +7,11 @@
   gap: 8px;
   flex-shrink: 0;
   border-radius: 100px;
-  background: var(--color-primary-base);
+  background-color: var(--color-primary-base);
 }
 
-.btn-secondary {
+.btn-secondary-base,
+.btn.btn-secondary-base {
   display: flex;
   height: var(--height-large);
   padding: 0px 20px;
@@ -21,12 +23,14 @@
   background: var(--color-secondary-ultra-light);
 }
 
-.btn-color-text-primary {
+.btn-color-text-primary,
+.btn.btn-color-text-primary {
   color: var(--color-neutral-white);
   font: normal var(--font-weight-regular) var(--font-size-normal) / var(--line-height-medium);
 }
 
-.btn-color-text-secondary {
+.btn-color-text-secondary,
+.btn.btn-color-text-secondary {
   color: var(--color-neutral-mid);
   font: normal var(--font-weight-regular) var(--font-size-medium) / var(--line-height-medium);
 }

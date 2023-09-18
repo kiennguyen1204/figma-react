@@ -1,12 +1,15 @@
 import Button from "../../components/common/Button";
 import Input from "../../components/common/Input";
 
+import "./index.css";
+import Card from '../../components/common/Card/index';
+
 export const CTA = () => {
     return (
-        <div className="ctaContainer">
-            <div className="ctaBox">
+        <Card classes={"ctaContainer"}>
+            <div className="cardWrapper">
                 <div className="ctaText">
-                    <h3 className="ctaTitle">Join our community</h3>
+                    <h3 className="ctaTitle">UNLOCK 20% OFF YOUR FIRST ORDER</h3>
                     <p className="ctaDescription">Get 20% off your first purchase when you sign up for our newsletter.</p>
                 </div>
 
@@ -14,14 +17,13 @@ export const CTA = () => {
 
                 <div className="ctaFooterFlex">
                     <div className="ctaInput">
-                        <Input type="text" className="form-control" placeholder="Enter your email" />
-                        {/* <input type="text" className="form-control" placeholder="Enter your email"/> */}
+                        <Input type="text" size={"md"} value={""} inputClass="w-100" placeholder="Email Address" />
                     </div>
                     <div className="ctaButton">
-                        <Button label={"Reveal coupon"} classes={"ctaButton"} variant={"secondary"} />
+                        <Button label={"Reveal coupon"} classes={"ctaButton"} variant={"primary"} size={"big"} />
                     </div>
                 </div>
             </div>
-        </div>
+        </Card>
     );
 }

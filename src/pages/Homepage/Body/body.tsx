@@ -7,9 +7,9 @@ import arrowright from'..//..//..//assets/images/arrow-right.png'
 import { ReactElement } from "react";
 import Center from './center/center'
 function Body():ReactElement {
-    return ( <div className='wrapper'>
+    return ( <div className='wrapper-body'>
         <div className="review-product">
-            <h1 className='flex'>BEST DISPENSARY TO BUY <br />
+            <h1 className='flex heading'>BEST DISPENSARY TO BUY <br />
              WEED ONLINE IN CANADA</h1>
              <div className="review-products_select flex">
                 <button className='review-products_select__items'>Best Sellers</button>
@@ -29,9 +29,10 @@ function Body():ReactElement {
                     </div>
                 <div/>
                 
-            </div>
-                             {/* sản phẩm bán đầu trang */}
-             <div className="review-products_items mr-30">
+                </div>
+              <div className="review-lists flex">
+                               {/* sản phẩm bán đầu trang */}
+                               <div className="review-products_items mr-30">
                 <div className="review-products_items__imgs flex">
                 <img src={stone2} alt="" />
                 </div>
@@ -59,7 +60,7 @@ function Body():ReactElement {
                 <button className='btn flex'>Add to Cart</button>
                 </div>
                                         {/* item 2 */}
-            <div className="review-products_items mr-30">
+                <div className="review-products_items mr-30">
                 <div className="review-products_items__imgs flex">
                 <img src={stone1} alt="" />
                 </div>
@@ -113,14 +114,17 @@ function Body():ReactElement {
                 <button className='btn flex'>Add to Cart</button>
                 </div>
             {/* view */}
-            <div className="view flex">Out Of Stack</div>
+                <div className="view flex">Out Of Stack</div>
             {/* button */}
-            <img src={arrowleft} className="review-products_btn--left"></img>
-            <img src={arrowright} className="review-products_btn--right"></img>
+                <img src={arrowleft} className="review-products_btn--left"></img>
+                <img src={arrowright} className="review-products_btn--right"></img>
+              </div>
             </div>
         </div>
         {/* customer */}
+        <div className="center">
         <Center/>
+        </div>
     </div> );
 }
 

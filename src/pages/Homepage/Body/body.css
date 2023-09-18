@@ -1,6 +1,7 @@
-.wrapper {
+.wrapper-body {
     width: 100%;
     background-repeat: no-repeat;
+    margin-bottom: -15rem;
 }
 /* header */
 
@@ -48,7 +49,7 @@ color: var(--color-secondary-dark);
 /* reviw product */
 
 .review-products-list {
-    width: var(--default-width);
+    width: 100%;
     margin: 0 auto;
    position: relative;
 }
@@ -67,7 +68,7 @@ gap: 12px;
 }
 .review-products-list .review-products_btn--left {
     position: absolute;
-    left: 22.5%;
+    left: 29.5%;
     top: 30%;
     width: 36px;
     height: 36px;
@@ -297,7 +298,85 @@ border-top-left-radius: 6px;
 border-bottom-right-radius: 6px;
 
 }
+.center {
+    width: 100%;
+}
 
+/* media */
+
+@media only screen and (max-width: 740px) { 
+    .wrapper-body .review-product h1 {
+font-family: Lexend;
+font-size: 32px;
+font-weight: 600;
+line-height: 38px;
+letter-spacing: -1.5px;
+text-align: center;
+
+    }
+    .review-product .review-products_select {
+        width: 434px;
+        height: 40px;
+        top: 1708px;
+        left: 24px;
+        border: 0px, 0px, 1px, 0px;
+        gap: 16px;
+        
+    }
+    .review-product .review-products_select .review-products_select__items {
+        width: 120px;
+height: 40px;
+padding: 0px, 20px, 0px, 20px;
+border-radius: 100px;
+gap: 12px;
+font-size: 14px;
+    }
+    .review-product .review-products_select .review-products_select__items:first-child {
+        border: 1px solid var(--color-secondary-dark);
+    }
+
+    /* review product */
+    .review-products-list {
+        flex-direction: column;
+    }
+    .review-product .review-product_main {
+        margin: 0 auto;
+        width: 342px;
+        height: 395px;
+        top: 1788px;
+        left: 24px;
+        border-radius: 16px;
+        border: 0px, 0px, 0px, 1px;
+        gap: 24px;
+        
+    }
+    .review-product .review-product_main img{
+        width: 151px;
+        height: 151px;
+        margin: 1.5rem auto;
+    }
+    .review-product .review-lists {
+        width: 921px;
+height: 568px;
+top: 2215px;
+left: -265px;
+gap: 24px;
+margin-top: 5rem;
+    }
+    .review-product .review-lists .review-products_btn--left {
+        top: 60%;
+        left: 10%;
+    }
+    .review-product .review-lists .review-products_btn--right {
+        top: 60%;
+        right: 10%;
+
+    }
+    .review-product .review-lists .review-products_items {
+        margin: 0;
+    }
+
+}
 /* common */
 .flex {
     display: flex;

@@ -1,16 +1,14 @@
 import { ReactElement } from "react";
 import './Homepage.css'
-import Snack1 from '..//..//assets/images/homepage/image 11_prev_ui 1.png'
-import Snack2 from '..//..//assets/images/homepage/image 9_prev_ui 1.png'
-import Snack3 from '..//..//assets/images/homepage/image 8_prev_ui 1.png'
 import box1 from '..//..//assets/images/truck-fast.png'
 import box2 from '..//..//assets/images/safe-home.png'
 import box3 from '..//..//assets/images/coin.png'
 import Body from "./Body/body";
+import 'bootstrap/dist/css/bootstrap.css';
 function HomePage():ReactElement {
     return ( <div className="wrapper">
         {/*head  */}
-        <div className="head">
+        <div className="head ">
             <div className="head-info">
                 <div className="dispensary">
                     <p>BEST SELLER</p>
@@ -28,13 +26,9 @@ function HomePage():ReactElement {
                     Shop All
                 </button>
             </div>
-            {/* snack */}
-            <img className="snack-1" src={Snack1}></img>
-            <img className="snack-2" src={Snack2}></img>
-            <img className="snack-3" src={Snack3}></img>
         </div>
         {/* contact */}
-        <div className="wrapp-contact">
+        <div className="wrapp-contact xl">
             <div className="contact flex">
                 {/* car */}
             <div className="contact-items flex">

@@ -1,0 +1,86 @@
+.InfoProduct {
+    width: var(--default-width);
+    margin: 0 auto;
+    margin-bottom: 10rem;
+    display: flex;
+}
+.InfoProduct .InfoProduct-items {
+    width: 379px;
+height:656px;
+padding: 32px;
+border-radius: 12px;
+border: 1px solid var(--color-secondary-ultra-light);
+gap: 32px;
+margin-right: 2rem;
+}
+.InfoProduct .InfoProduct-items:last-child {
+height: 740px;
+}
+.InfoProduct .InfoProduct-items img {
+    width:315px;
+height: 240px;
+border-radius: 8px;
+gap: 8px;
+
+}
+.InfoProduct .InfoProduct-items h2 {
+    font-family: Lexend;
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 38px;
+    letter-spacing: -1.5px;
+    text-align: left;
+    padding:1.5rem 0 ;
+}
+.InfoProduct .InfoProduct-items p {
+    font-family: Lexend;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+    letter-spacing: 0px;
+    text-align: left;
+    margin-bottom: 2rem;    
+    
+}
+.InfoProduct .InfoProduct-items a {
+    font-family: Lexend;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0px;
+    text-align: left;
+    color: var(--color-primary-base);
+}
+/* media @media only screen and (max-width: 740px) { */
+    @media only screen and (max-width: 740px) { 
+        .InfoProduct {
+            flex-direction: column;
+            margin: 0 auto;
+            width: 360px;
+        }
+        .InfoProduct .InfoProduct-items {
+            margin-bottom: 2rem;
+            width: 360px;
+            height: 543px;
+        }
+        .InfoProduct .InfoProduct-items img {
+            width: 294px;
+            height: 1,825px;
+        }
+        .InfoProduct .InfoProduct-items h2 {
+            line-height: 2rem;
+            font-size: 24px;
+            padding: 0.5rem 0;
+        }
+        .InfoProduct .InfoProduct-items p {
+           
+            font-family: Lexend;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 15px;
+            letter-spacing: 0px;
+            text-align: left;
+            margin-bottom: 10px;
+        }
+        
+    }

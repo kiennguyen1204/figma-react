@@ -1,5 +1,5 @@
 .wrapper{
-   
+    width: 100%;
 }
 /* head */
 .head {
@@ -9,6 +9,7 @@
     height: 720px;
     background-image: url('..//..//assets/images/homepage/Mask group.png');
     color: #fff;
+    background-size:cover;
     background-repeat: no-repeat;
 }
 .head-info {
@@ -66,7 +67,6 @@ font-size: 26px;
     height: 64px;
     top: 707px;
     left: 64px;
-    padding: 8px, 56px, 8px, 56px;
     border-radius: 100px;
     gap: 8px;
     background-color: var( --color-primary-base);
@@ -101,7 +101,6 @@ left: 963px;
 
 /* contact */
 .wrapp-contact {
-    width: 1,440px;
     height: 356px;
     top: 889px;
     padding: 80px, 64px, 80px, 64px;
@@ -110,7 +109,6 @@ left: 963px;
 
 }
 .contact {
-    width: var(--default-width);
     margin: 0 auto;
     height: 100%;
 }
@@ -153,7 +151,92 @@ text-align: left;
 color: var(--color-neutral-light);
 }
 
+/* mobile <   740px */
+@media only screen and (max-width: 740px) {
+    /* head */
+    .head {
+    background-image: url('..//..//assets/images/banner/sm_bg.jpg');
+    background-repeat: no-repeat;
+    height: 690px;
+    }
+    .head-info {
+        top: 5%;
+    }
+    .head-info .dispensary p {
+font-size: 14px;
+font-weight: 400;
+line-height: 21px;
+letter-spacing: 4px;
+text-align: left;
+
+    }
+    .head-info .dispensary h1 {
+font-size: 32px;
+font-weight: 600;
+line-height: 38px;
+letter-spacing: -1.5px;
+color: #fff;
+margin: 1rem 0;
+    }
+    .head-sell {
+        top: 30%;
+
+    }
+    .head-sell button {
+        width: 145px;
+        height: 56px;
+    }
+    /* contact */
+    .wrapp-contact {
+        background-color: var(--color-secondary-ultra-light);
+        width: 390px;
+        top: 844px;
+        height: 654px;
+        padding: 64px, 24px, 64px, 24px;
+        display: flex;
+    }
+    .contact {
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+        margin-left: 1rem;
+    }
+    .contact-items {
+        width: 342px;
+        height: 147px;
+        margin-top: 2.5rem;
+
+    }
+    .contact-box {
+        width: 64px;
+        height: 64px;
+    } 
+    .contact-box img {
+        align-items: center;
+        border: none;
+        
+        height: 40px;
+        width: 40px;
+    }
+    .contact-texts {
+        height: 147px;
+    }
+    .contact-texts p {
+        font-size: 20px;
+    }
+    .contact-box span {
+        font-size: 14px;
+        line-height: 15px;
+    }
+
+}
+/* tablet >= 740px and < 1024px */
+@media only screen and (min-width: 740px) and (max-width: 1024px){
+    
+}
 /* common */
+
 .flex {
     display: flex;
     align-items: center;

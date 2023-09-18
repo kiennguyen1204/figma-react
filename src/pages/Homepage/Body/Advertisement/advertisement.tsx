@@ -4,7 +4,7 @@ import img2 from '..//..//..//..//assets/images/homepage/fluent_wallet-credit-ca
 import img3 from '..//..//..//..//assets/images/homepage/healthicons_health-worker-form-outline.png';
 import img4 from '..//..//..//..//assets/images/homepage/ph_circle-wavy-check-light.png'
 function Advertisement() {
-    return ( <div className="wrapper">
+    return ( <div className="wrapper-Advertisement">
         <div className="coins">
             <div className="wrapper-coins">
             <h1>REFER A FRIENDS</h1>
@@ -33,7 +33,7 @@ function Advertisement() {
                  you to place an order and get your product delivered.</p>
                  
             </div>
-            <div className=" main-items_boxs">
+            <div className="main-items_boxs">
                 <div className="main-items_boxs-img">
                     <div className="label">2</div>
                     <img src={img} alt="" />
@@ -69,6 +69,7 @@ function Advertisement() {
             </div>
             </div>
             <button className='main-items_btn'>Choose your Weed</button>
+            <button className='main-items_btn'>Refer Here</button>
         </div>
     </div> );
 }

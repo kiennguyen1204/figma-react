@@ -1,4 +1,4 @@
-.wrapper {
+.wrapper-Advertisement {
     margin-top: 20rem;
     width: 100%;
     position: relative;
@@ -76,11 +76,10 @@ text-align:center;
 
 .main-items_boxs-img {
     display: flex;
-    justify-content: center;
     width: 100%;
 }
 
-.main-items_boxs-img .label {
+.main .main-items_boxs-img .label {
     width: 40px;
     height: 40px;
     padding: 4px, 32px, 5px, 32px;
@@ -90,6 +89,9 @@ text-align:center;
     justify-content: center;
     align-items: center;
 background-color: var(--color-other-orange);
+margin-right: -10rem;
+margin-left: 10rem;
+
 }
 
 .main h1 {
@@ -119,10 +121,12 @@ left: 172px;
 gap: 24px;
 text-align: center;
 margin-bottom: 2.5rem;
+
 }
 .main-items .main-items_boxs img {
     width: 144px;
 height: 144px;
+margin-left: 10rem;
 
 }
 .main-items .main-items_boxs div {
@@ -149,3 +153,115 @@ font-size: 16px;
 color: #fff;
 background-color: var(--color-primary-base);
 }
+.main .main-items_btn:last-child {
+    display: none;
+}
+/* media @media only screen and (max-width: 740px) { */
+    @media only screen and (max-width: 740px) { 
+        .wrapper-Advertisement {
+            margin-top: 20rem;
+        }
+        .wrapper-Advertisement .coins {
+            flex-direction: column;
+            width: 342px;
+            height: 268px;
+            border-radius: 24px;
+            padding:1rem 1rem;
+        }
+        .wrapper-Advertisement .coins .wrapper-coins h1{
+            font-size: 32px;
+           letter-spacing: 0.1px;
+            line-height: 38px;
+        }
+        .wrapper-Advertisement .coins .wrapper-coins_item {
+            font-size: 25px;
+            margin: 5px 15px;
+            margin-bottom: 1rem;
+        }
+        /* main */
+        .main {
+            padding:0;
+            padding-top: 4rem;
+            width: 369px;
+            height: 1354px;
+            top: 6310px;
+            background-position: center center;
+            background-size: cover;
+        }
+        .main .main-items_btn{
+            display: none;
+        } 
+        .main .main-items_btn:last-child {
+            display: block;
+            width: 165px;
+            height: 56px;
+            border-radius: 100px;
+            gap: 8px;
+            font-size: 16px;
+            font-weight: 500;
+            margin-top: 3rem;
+            margin: 3rem auto;
+        }
+        .wrapper-Advertisement .main h1 {
+        margin-left: 0;
+        font-family: Lexend;
+        font-size: 23px;
+        font-weight: 600;
+        line-height: 38px;
+        letter-spacing: -1px;
+        text-align: center;
+        color: #fff;
+        }
+        .wrapper-Advertisement .main p {
+           
+        font-family: Lexend;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 21px;
+        letter-spacing: 0px;
+        text-align: center;
+        margin-bottom: 0;
+        }
+        .wrapper-Advertisement .main .main-items {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            
+        }
+        .wrapper-Advertisement .main .main-items .main-items_boxs {
+            width: 159px;
+            height:312px;
+            top: 6806px;
+            left: 24px;
+            gap: 16px;
+margin-left: 1rem;
+        }
+
+        .wrapper-Advertisement .main .main-items .main-items_boxs .main-items_boxs-img  {
+            align-items: flex-end;
+
+        }
+        .wrapper-Advertisement .main .main-items .main-items_boxs .main-items_boxs-img img {
+            height: 64px;
+            width: 64px;
+            margin-left: 31px;
+        }
+        .wrapper-Advertisement .main .main-items .main-items_boxs .main-items_boxs-img .label {
+            width: 28px;
+            height: 28px;
+            margin-top: -1rem;
+            margin-right: -1rem;
+            margin-left: 0;
+        }
+        .wrapper-Advertisement .main .main-items .main-items_boxs p {
+
+        font-family: Lexend;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 21px;
+        letter-spacing: 0px;
+        text-align: center;
+
+        }
+        
+    }

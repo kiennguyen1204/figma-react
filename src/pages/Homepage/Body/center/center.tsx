@@ -7,8 +7,10 @@ import human2 from '..//..//..//..//assets/images/homepage/human2.png'
 import human3 from '..//..//..//..//assets/images/homepage/human3.png'
 import Advertisement from "../Advertisement/advertisement";
 import Information from "../Information/Information";
+import Weekeducation from "../Weekeducation/weekeducation";
+import InfoProduct from "../InfoProduct/InfoProduct";
 function Center() {
-    return ( <div className="wrapper">
+    return ( <div className="wrapper-center">
         <h1>CUSTOMER TESTIMONIALS</h1>
         <div className="box-lists">
             <div className="box-lists_main mr-20">
@@ -32,6 +34,7 @@ function Center() {
                
             </div>
              {/* section */}
+             <div className="box-lists flex">
              <div className="box-lists_items mr-20">
                     <div className="box-lists_items-img">
                         <img src={human1} alt="" />
@@ -94,14 +97,24 @@ function Center() {
                     </p>
                     <span>January 15, 2023</span>
                 </div>
+             </div>
                 {/* arrow */}
                 <img src="" className="btn-left"></img>
                 <img src="" className="btn-rihgt"></img>
         </div>
         {/* Advertisement */}
-        <Advertisement/>
+        <div className="advertisement"><Advertisement/></div>
+        
         {/* information */}
-        <Information/>
+       <div className="information">
+       <Information/>
+       </div>
+       {/* InfoProduct */}
+       <InfoProduct/>
+       
+       {/* weekeducation */}
+       <Weekeducation/>
+
     </div> );
 }
 
