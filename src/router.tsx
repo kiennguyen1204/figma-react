@@ -1,8 +1,6 @@
 import { BrowserRouter as RouterView, Routes, Route } from "react-router-dom"
 
 import HomePage from "./pages/Homepage/Homepage";
-
-import { Homepage } from "pages/Homepage"
 import { About } from "pages/About";
 
 import { PageNotFound } from "pages/PageNotFound"
@@ -24,7 +22,7 @@ const Router = (props: RouterProps) => {
 
             {children}
             <Routes>
-                <Route path="/" element={<Homepage />} />
+                <Route path="/" element={<HomePage />} />
                 <Route path="/about" element={<About />} />
                 <Route path="*" element={<PageNotFound />} />
             </Routes>

@@ -1,3 +1,4 @@
+
 import { ReactElement } from "react";
 import Button from "../../components/common/Button";
 import "./index.scss"
@@ -48,4 +49,3 @@ export const BannerPattern = ():ReactElement => {
         </div>
     );
 }
-export default BannerPattern;
