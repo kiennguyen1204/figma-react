@@ -1,0 +1,85 @@
+.serviceListContainer {
+
+    padding: 80px 64px;
+    margin-bottom: 35px;
+
+    @media screen and (max-width: 575.98px) {
+        padding: 80px 24px;
+    }
+
+    .listContainerBox  {
+        $gapContainer: 32px;
+        gap: $gapContainer;
+
+        @media screen and (max-width: 991.98px) {
+            gap: $gapContainer * 2;
+        }
+
+        .serviceListContainerBox {
+            display: flex;
+            flex-direction: row;
+            gap: 24px;
+
+            width: calc((100% / 3) - $gapContainer);
+            height: auto;
+
+            @media screen and (max-width: 1199.98px) {
+                width: calc((100% / 2) - $gapContainer);
+            }
+
+            @media screen and (max-width: 991.98px) {
+                width: 100%;
+            }
+            @media screen and (max-width: 419.98px) {
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            .serviceListBoxLeft {
+                display: block;
+                position: relative;
+                margin-top: 1rem;
+
+                svg {
+                    width: 56px;
+                    height: 56px;
+                }
+            }
+        
+            .serviceListBoxRight {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: flex-start;
+
+                gap: 16px;
+            
+                .serviceListTitle {
+                    display: block;
+                    position: relative;
+
+                    color: var(--color-neutral-base);
+                    font-size: var(--font-size-xxl);
+                    font-weight: var(--font-weight-medium);
+                    font-family: var(--font-family-medium);
+
+                    line-height: 1.5;
+                    letter-spacing: -0.5px;
+                }
+
+                .serviceListDescription {
+                    display: block;
+                    position: relative;
+
+                    color: var(--color-neutral-light);
+                    font-size: var(--font-size-normal);
+                    font-weight: var(--font-weight-normal);
+                    font-family: var(--font-family-regular);
+
+                    line-height: 1.5;
+                }
+            }
+        }
+    }
+
+}
