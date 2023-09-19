@@ -4,6 +4,7 @@ import viteImagemin from 'vite-plugin-imagemin';
 import react from "@vitejs/plugin-react";
 import EnvironmentPlugin from 'vite-plugin-environment';
 import tsconfigPaths from 'vite-tsconfig-paths';
+import svgr from 'vite-plugin-svgr'
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -12,6 +13,7 @@ export default defineConfig({
     tsconfigPaths(),
     EnvironmentPlugin('all'),
     viteCompression(),
+    svgr(),
     viteImagemin({
       gifsicle: {
         optimizationLevel: 7,
@@ -28,20 +30,10 @@ export default defineConfig({
         speed: 4
       },
       svgo: {
-        plugins: [
-          {
-            name: 'removeViewBox'
-          },
-          {
-            name: 'removeEmptyAttrs',
-            active: false
-          }
-        ]
+        plugins: [ { name: 'removeEmptyAttrs', active: false } ]
       }
     })
   ],
 
-  server: {
-    port: 8200
-  }
+  server: { port: 3200 }
 });

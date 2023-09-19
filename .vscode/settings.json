@@ -5,6 +5,10 @@
         "interac",
         "mozjpeg",
         "optipng",
-        "pngquant"
+        "pngquant",
+        "Splide",
+        "splidejs",
+        "strikethrough",
+        "svgr"
     ]
 }
