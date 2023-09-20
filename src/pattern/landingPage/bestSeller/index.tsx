@@ -41,7 +41,6 @@ export const BestSeller = () => {
                     </div>
                     <div className={`tab-pane fade ${currentTab === 1 ? "show active" : ""}`} tabIndex={0}>b</div>
                     <div className={`tab-pane fade ${currentTab === 2 ? "show active" : ""}`} tabIndex={0}>c</div>
-
                 </div>
             </div>
 

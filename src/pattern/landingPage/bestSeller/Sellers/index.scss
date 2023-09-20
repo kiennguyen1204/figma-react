@@ -168,133 +168,170 @@
                     overflow: hidden;
                     z-index: 0;
 
-                    .splideProductImage {
-                        display: block;
-                        position: relative;
-                        width: 100%;
-                    }
-
-                    .sellContainerBoxContent {
-                        display: flex;
-                        flex-direction: column;
-                        align-items: center;
-                        justify-content: flex-start;
-                        gap: 8px;
-
-                        .category {
+                    .sellContainerBoxHeader {
+                        .cardImage {
                             display: block;
                             position: relative;
+                            overflow: hidden;
 
-                            color: var(--color-neutral-lighter);
-
-                            font-size: var(--font-size-medium);
-                            font-weight: var(--font-weight-light);
-                            font-family: var(--font-family-regular);
-
-                            text-align: center;
-                            line-height: var(--light-height-small);
-                        }
-
-                        .title {
-                            display: block;
-                            position: relative;
-
-                            color: var(--color-neutral-base);
-                            font-size: var(--font-size-large);
-                            font-weight: var(--font-weight-normal);
-                            font-family: var(--font-family-regular);
-
-                            text-align: center;
-                            line-height: var(--line-height-small);
-                        }
-
-                        .flexBox {
-                            display: flex;
-                            flex-direction: row;
-                            align-items: center;
-                            justify-content: center;
-
-                            gap: 24px;
-
-                            color: var(--color-neutral-base);
-                            font-size: var(--font-size-medium);
-                            font-weight: var(--font-weight-normal);
-                            font-family: var(--font-family-regular);
-
-                            line-height: var(--light-height-small);
-                            
-                            .rateBox {
+                            .soldOut {
                                 display: flex;
-                                flex-direction: row;
                                 align-items: center;
-                                justify-content: flex-start;
-                                gap: 6px;
+                                justify-content: center;
+                                width: 152px;
+                                height: 64px;
 
+                                position: absolute;
+                                top: 50%;
+                                left: 50%;
+                                transform: translate(-50%, -50%);
+
+                                padding: 5px 32px;
+
+                                border-radius: 100px;
+                                background: rgba(5, 66, 44, 0.30);
+                                backdrop-filter: blur(4px);
+
+                                color: var(--color-neutral-white);
+                                font-size: var(--font-size-medium);
+                                font-weight: var(--font-weight-regular);
+                                font-family: var(--font-family-regular);
+
+                                z-index: 1;
+                            }
+
+                            .splideProductImage {
+                                display: block;
+                                position: relative;
+                                max-width: 100%;
+                                height: auto;
+
+                                margin: auto;
+                            }
+                        }
+
+                        .sellContainerBoxContent {
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            justify-content: flex-start;
+                            gap: 8px;
+
+                            .category {
+                                display: block;
                                 position: relative;
 
-                                &::after {
-                                    content: '';
-                                    display: block;
-                                    position: absolute;
-                                    top: 50%;
-                                    right: -13px;
+                                color: var(--color-neutral-lighter);
 
-                                    width: 1px;
-                                    height: 12px;
-                                    background: var(--color-neutral-lightest);
-                                    transform: translateY(-50%);
-                                }
+                                font-size: var(--font-size-medium);
+                                font-weight: var(--font-weight-light);
+                                font-family: var(--font-family-regular);
+
+                                text-align: center;
+                                line-height: var(--light-height-small);
                             }
 
-                            .previews {
-                                color: var(--color-neutral-lightest);
-                            }
-                        }
+                            .title {
+                                display: block;
+                                position: relative;
 
-                        .saleBox {
-                            display: block;
-                            position: relative;
-                            margin-top: 12px;
-
-                            .saleText {
-                                color: var(--color-secondary-dark);
-                                font-size: var(--font-size-small);
+                                color: var(--color-neutral-base);
+                                font-size: var(--font-size-large);
                                 font-weight: var(--font-weight-normal);
                                 font-family: var(--font-family-regular);
 
-                                line-height: var(--line-height-small);
                                 text-align: center;
+                                line-height: var(--line-height-small);
                             }
-                        }
 
-                        .priceBox {
-                            display: flex;
-                            flex-flow: row wrap;
-                            align-items: center;
-                            justify-content: center;
+                            .flexBox {
+                                display: flex;
+                                flex-direction: row;
+                                align-items: center;
+                                justify-content: center;
 
-                            gap: 16px;
+                                gap: 24px;
 
-                            color: var(--color-other-red);
-                            font-size: var(--font-size-normal);
-                            font-weight: var(--font-weight-regular);
-                            font-family: var(--font-family-regular);
-
-                            .discount {
-                                color: var(--color-neutral-lighter);
+                                color: var(--color-neutral-base);
                                 font-size: var(--font-size-medium);
-                                text-decoration: line-through;
+                                font-weight: var(--font-weight-normal);
+                                font-family: var(--font-family-regular);
+
+                                line-height: var(--light-height-small);
+                                
+                                .rateBox {
+                                    display: flex;
+                                    flex-direction: row;
+                                    align-items: center;
+                                    justify-content: flex-start;
+                                    gap: 6px;
+
+                                    position: relative;
+
+                                    &::after {
+                                        content: '';
+                                        display: block;
+                                        position: absolute;
+                                        top: 50%;
+                                        right: -13px;
+
+                                        width: 1px;
+                                        height: 12px;
+                                        background: var(--color-neutral-lightest);
+                                        transform: translateY(-50%);
+                                    }
+                                }
+
+                                .previews {
+                                    color: var(--color-neutral-lightest);
+                                }
                             }
 
-                            .unit {
-                                font-size: var(--font-size-medium);
-                                color: var(--color-neutral-lightest)
-                            }
-                        }
+                            .saleBox {
+                                display: block;
+                                position: relative;
+                                margin-top: 12px;
 
-                        .kg {
-                            color: var(--color-neutral-base);
-                            font-size: var(--font-size-small);
+                                .saleText {
+                                    color: var(--color-secondary-dark);
+                                    font-size: var(--font-size-small);
+                                    font-weight: var(--font-weight-normal);
+                                    font-family: var(--font-family-regular);
+
+                                    line-height: var(--line-height-small);
+                                    text-align: center;
+                                }
+                            }
+
+                            .priceBox {
+                                display: flex;
+                                flex-flow: row wrap;
+                                align-items: center;
+                                justify-content: center;
+
+                                gap: 16px;
+
+                                color: var(--color-other-red);
+                                font-size: var(--font-size-normal);
+                                font-weight: var(--font-weight-regular);
+                                font-family: var(--font-family-regular);
+
+                                .discount {
+                                    color: var(--color-neutral-lighter);
+                                    font-size: var(--font-size-medium);
+                                    text-decoration: line-through;
+                                }
+
+                                .unit {
+                                    font-size: var(--font-size-medium);
+                                    color: var(--color-neutral-lightest)
+                                }
+                            }
+
+                            .kg {
+                                color: var(--color-neutral-base);
+                                font-size: var(--font-size-small);
+                            }
                         }
                     }
 

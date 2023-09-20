@@ -20,7 +20,7 @@ export const Sellers = () => {
         price: '$80.00',
         unit: 'gram',
         kg: ['28g', '1/2lb', '1/4lb'],
-        image: '/src/assets/images/products/image1.png'
+        image: '/src/assets/images/products/image_12_prev_ui_1.png'
     }, {
         category: 'CONCENTRATES',
         soldOut: 'Out Of Stock',
@@ -32,7 +32,7 @@ export const Sellers = () => {
         price: '$102.00',
         unit: '',
         kg: ['28g', '1/2lb', '1/4lb'],
-        image: '/src/assets/images/products/image2.png'
+        image: '/src/assets/images/products/image_12_prev_ui_2.png'
 
     }, {
         category: 'FLOWER',
@@ -45,7 +45,7 @@ export const Sellers = () => {
         price: '$102.00',
         unit: '',
         kg: ['28g', '1/2lb', '1/4lb'],
-        image: '/src/assets/images/products/image3.png'
+        image: '/src/assets/images/products/image_13_prev_ui_2.png'
 
     },]
 
@@ -97,9 +97,12 @@ export const Sellers = () => {
                                 <SplideSlide key={index}>
                                     <div className="sellContainerBox">
                                         <div className="sellContainerBoxHeader">
-                                            <img decoding="async" loading="lazy" src={el.image} className="splideProductImage" alt="Image 1"/>
+                                            <div className="cardImage">
+                                                {el.soldOut && <div className="soldOut">{el.soldOut}</div>}
+                                                <img decoding="async" loading="lazy" src={el.image} className="splideProductImage" alt="Image 1"/>
+                                            </div>
 
-                                            <div className="sellContainerBoxContent">
+                                            <div className="sellContainerBoxContent mt-4">
                                                 <h5 className="category">{el.category}</h5>
                                                 <h3 className="title">{el.title}</h3>
                                                 <div className="flexBox">
@@ -125,7 +128,7 @@ export const Sellers = () => {
                                                     
                                                 </div>
 
-                                                <div className="kgBox">
+                                                <div className="kgBox d-flex flex-row gap-2">
                                                     {el.kg.map((kg, index) => (
                                                         <span key={index} className="kg">{kg}</span>
                                                     ))}
