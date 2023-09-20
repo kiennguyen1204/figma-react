@@ -1,0 +1,75 @@
+.serviceListContainer {
+  padding: 80px 64px;
+  margin-bottom: 35px;
+}
+@media screen and (max-width: 575.98px) {
+  .serviceListContainer {
+    padding: 80px 24px;
+  }
+}
+.serviceListContainer .listContainerBox {
+  gap: 32px;
+}
+@media screen and (max-width: 991.98px) {
+  .serviceListContainer .listContainerBox {
+    gap: 64px;
+  }
+}
+.serviceListContainer .listContainerBox .serviceListContainerBox {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+  width: calc(33.3333333333% - 32px);
+  height: auto;
+}
+@media screen and (max-width: 1199.98px) {
+  .serviceListContainer .listContainerBox .serviceListContainerBox {
+    width: calc(50% - 32px);
+  }
+}
+@media screen and (max-width: 991.98px) {
+  .serviceListContainer .listContainerBox .serviceListContainerBox {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 419.98px) {
+  .serviceListContainer .listContainerBox .serviceListContainerBox {
+    flex-direction: column;
+    gap: 12px;
+  }
+}
+.serviceListContainer .listContainerBox .serviceListContainerBox .serviceListBoxLeft {
+  display: block;
+  position: relative;
+  margin-top: 1rem;
+}
+.serviceListContainer .listContainerBox .serviceListContainerBox .serviceListBoxLeft svg {
+  width: 56px;
+  height: 56px;
+}
+.serviceListContainer .listContainerBox .serviceListContainerBox .serviceListBoxRight {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 16px;
+}
+.serviceListContainer .listContainerBox .serviceListContainerBox .serviceListBoxRight .serviceListTitle {
+  display: block;
+  position: relative;
+  color: var(--color-neutral-base);
+  font-size: var(--font-size-xxl);
+  font-weight: var(--font-weight-medium);
+  font-family: var(--font-family-medium);
+  line-height: 1.5;
+  letter-spacing: -0.5px;
+}
+.serviceListContainer .listContainerBox .serviceListContainerBox .serviceListBoxRight .serviceListDescription {
+  display: block;
+  position: relative;
+  color: var(--color-neutral-light);
+  font-size: var(--font-size-normal);
+  font-weight: var(--font-weight-normal);
+  font-family: var(--font-family-regular);
+  line-height: 1.5;
+}

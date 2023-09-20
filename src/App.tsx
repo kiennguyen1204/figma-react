@@ -8,7 +8,7 @@ const App: React.FC = () => {
       <RouterViews
         header={<Navbar />}
         footer={<Footer />}
-      >
+      > 
       </RouterViews>
     </div>
   );

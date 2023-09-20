@@ -1,0 +1,278 @@
+.sellerListContainer {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+.sellerListContainer .sellerListContainerBox {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  height: auto;
+  gap: 32px;
+}
+@media screen and (max-width: 991.98px) {
+  .sellerListContainer .sellerListContainerBox {
+    flex-direction: column;
+  }
+}
+.sellerListContainer .sellerListContainerBox .bestSellerCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  gap: 24px;
+  position: relative;
+  max-width: 380px;
+  width: 100%;
+  height: auto;
+  color: var(--color-neutral-white);
+  background: var(--color-secondary-dark);
+  border-radius: 16px;
+  padding: 120px 40px 80px 40px;
+  overflow: hidden;
+  z-index: 0;
+}
+@media screen and (max-width: 991.98px) {
+  .sellerListContainer .sellerListContainerBox .bestSellerCard {
+    padding: 120px 24px 80px 24px;
+  }
+}
+.sellerListContainer .sellerListContainerBox .bestSellerCard::after {
+  content: "";
+  display: block;
+  position: absolute;
+  right: -55.024px;
+  top: -102px;
+  width: 262px;
+  height: 370px;
+  border-radius: 12px;
+  background: linear-gradient(180deg, rgba(52, 102, 84, 0) 0%, rgba(52, 102, 84, 0.4) 100%);
+  transform: rotate(5deg);
+  z-index: -1;
+}
+.sellerListContainer .sellerListContainerBox .bestSellerCard .bestSellerCardImage {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: auto;
+  margin: auto;
+}
+.sellerListContainer .sellerListContainerBox .bestSellerCard .bestSellerCardImage .bestProductImage {
+  display: block;
+  position: relative;
+  margin: auto;
+}
+.sellerListContainer .sellerListContainerBox .bestSellerCard .sellerCardContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+.sellerListContainer .sellerListContainerBox .bestSellerCard .sellerCardContent .bestSellerCardTitle {
+  display: block;
+  position: relative;
+  color: var(--color-neutral-white);
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-medium);
+  font-family: var(--font-family-medium);
+  text-align: center;
+  line-height: 1.5;
+}
+.sellerListContainer .sellerListContainerBox .bestSellerCard .sellerCardContent .bestSellerCardDescription {
+  display: block;
+  position: relative;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: var(--font-size-medium);
+  font-weight: var(--font-weight-normal);
+  font-family: var(--font-family-regular);
+  line-height: var(--line-height-small);
+  text-align: center;
+}
+.sellerListContainer .sellerListContainerBox .bestSellerCard .sellerCardContent .bestSellerCardDescription .bestSellerCardButton {
+  display: block;
+  position: relative;
+  margin-top: 20px;
+}
+.sellerListContainer .sellerListContainerBox .bestSellerCard .sellerCardContent .bestSellerCardDescription .bestSellerCardButton .baseSellerLink {
+  color: var(--color-primary-base);
+  font-size: var(--font-size-medium);
+  font-weight: var(--font-weight-normal);
+  font-family: var(--font-family-regular);
+  text-decoration: underline;
+}
+.sellerListContainer .sellerListContainerBox .sellerList {
+  display: block;
+  position: relative;
+  width: calc(100% - 380px);
+}
+@media screen and (max-width: 991.98px) {
+  .sellerListContainer .sellerListContainerBox .sellerList {
+    width: 100%;
+  }
+}
+.sellerListContainer .sellerListContainerBox .sellerList .splide__slide .sellContainerBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 24px;
+  position: relative;
+  max-width: 290px;
+  width: 100%;
+  height: 100%;
+  color: var(--color-neutral-white);
+  background: transparent;
+  border-radius: 16px;
+  padding-top: 35px;
+  overflow: hidden;
+  z-index: 0;
+}
+@media screen and (max-width: 767.98px) {
+  .sellerListContainer .sellerListContainerBox .sellerList .splide__slide .sellContainerBox {
+    height: auto;
+  }
+}
+@media screen and (max-width: 575.98px) {
+  .sellerListContainer .sellerListContainerBox .sellerList .splide__slide .sellContainerBox {
+    max-width: 100%;
+  }
+}
+.sellerListContainer .sellerListContainerBox .sellerList .splide__slide .sellContainerBox .splideProductImage {
+  display: block;
+  position: relative;
+  width: 100%;
+}
+.sellerListContainer .sellerListContainerBox .sellerList .splide__slide .sellContainerBox .sellContainerBoxContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 8px;
+}
+.sellerListContainer .sellerListContainerBox .sellerList .splide__slide .sellContainerBox .sellContainerBoxContent .category {
+  display: block;
+  position: relative;
+  color: var(--color-neutral-lighter);
+  font-size: var(--font-size-medium);
+  font-weight: var(--font-weight-light);
+  font-family: var(--font-family-regular);
+  text-align: center;
+  line-height: var(--light-height-small);
+}
+.sellerListContainer .sellerListContainerBox .sellerList .splide__slide .sellContainerBox .sellContainerBoxContent .title {
+  display: block;
+  position: relative;
+  color: var(--color-neutral-base);
+  font-size: var(--font-size-large);
+  font-weight: var(--font-weight-normal);
+  font-family: var(--font-family-regular);
+  text-align: center;
+  line-height: var(--line-height-small);
+}
+.sellerListContainer .sellerListContainerBox .sellerList .splide__slide .sellContainerBox .sellContainerBoxContent .flexBox {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  color: var(--color-neutral-base);
+  font-size: var(--font-size-medium);
+  font-weight: var(--font-weight-normal);
+  font-family: var(--font-family-regular);
+  line-height: var(--light-height-small);
+}
+.sellerListContainer .sellerListContainerBox .sellerList .splide__slide .sellContainerBox .sellContainerBoxContent .flexBox .rateBox {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 6px;
+  position: relative;
+}
+.sellerListContainer .sellerListContainerBox .sellerList .splide__slide .sellContainerBox .sellContainerBoxContent .flexBox .rateBox::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: -13px;
+  width: 1px;
+  height: 12px;
+  background: var(--color-neutral-lightest);
+  transform: translateY(-50%);
+}
+.sellerListContainer .sellerListContainerBox .sellerList .splide__slide .sellContainerBox .sellContainerBoxContent .flexBox .previews {
+  color: var(--color-neutral-lightest);
+}
+.sellerListContainer .sellerListContainerBox .sellerList .splide__slide .sellContainerBox .sellContainerBoxContent .saleBox {
+  display: block;
+  position: relative;
+  margin-top: 12px;
+}
+.sellerListContainer .sellerListContainerBox .sellerList .splide__slide .sellContainerBox .sellContainerBoxContent .saleBox .saleText {
+  color: var(--color-secondary-dark);
+  font-size: var(--font-size-small);
+  font-weight: var(--font-weight-normal);
+  font-family: var(--font-family-regular);
+  line-height: var(--line-height-small);
+  text-align: center;
+}
+.sellerListContainer .sellerListContainerBox .sellerList .splide__slide .sellContainerBox .sellContainerBoxContent .priceBox {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  color: var(--color-other-red);
+  font-size: var(--font-size-normal);
+  font-weight: var(--font-weight-regular);
+  font-family: var(--font-family-regular);
+}
+.sellerListContainer .sellerListContainerBox .sellerList .splide__slide .sellContainerBox .sellContainerBoxContent .priceBox .discount {
+  color: var(--color-neutral-lighter);
+  font-size: var(--font-size-medium);
+  text-decoration: line-through;
+}
+.sellerListContainer .sellerListContainerBox .sellerList .splide__slide .sellContainerBox .sellContainerBoxContent .priceBox .unit {
+  font-size: var(--font-size-medium);
+  color: var(--color-neutral-lightest);
+}
+.sellerListContainer .sellerListContainerBox .sellerList .splide__slide .sellContainerBox .sellContainerBoxContent .kg {
+  color: var(--color-neutral-base);
+  font-size: var(--font-size-small);
+}
+.sellerListContainer .sellerListContainerBox .sellerList .splide__slide .sellContainerBox .buttonBox {
+  display: flex;
+  justify-content: center;
+}
+.sellerListContainer .sellerListContainerBox .sellerList .splide__slide .sellContainerBox .buttonBox .addCartButton {
+  display: block;
+  position: relative;
+  height: 40px;
+  color: var(--color-neutral-white);
+  font-size: var(--font-size-medium);
+  font-weight: var(--font-weight-medium);
+  font-family: var(--font-family-medium);
+  padding: 0 24px;
+  background: var(--color-primary-base);
+  border-radius: 100px;
+  transition: all 0.3s ease-in-out;
+}
+.sellerListContainer .sellerListContainerBox .sellerList .splide__slide .sellContainerBox .buttonBox .addCartButton:hover {
+  color: var(--color-neutral-base);
+  background: var(--color-primary-dark);
+}
+.sellerListContainer .sellerListContainerBox .sellerList .splide__arrow {
+  width: 36px;
+  height: 36px;
+  background: var(--color-neutral-white);
+  box-shadow: 0px 6px 16px 0px rgba(0, 0, 0, 0.25);
+}
+.sellerListContainer .sellerListContainerBox .sellerList .splide__arrow.splide__arrow--prev svg {
+  transform: scaleX(1);
+}

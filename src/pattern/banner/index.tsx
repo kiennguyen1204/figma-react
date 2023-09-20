@@ -1,7 +1,9 @@
+
+import { ReactElement } from "react";
 import Button from "../../components/common/Button";
 import "./index.scss"
 
-export const BannerPattern = () => {
+export const BannerPattern = ():ReactElement => {
     return (
         <div className="bannerContainer">
             <div className="bannerBoxBackground">
