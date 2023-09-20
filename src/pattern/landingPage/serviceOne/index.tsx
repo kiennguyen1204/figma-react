@@ -2,9 +2,9 @@ import List from "components/common/List";
 
 import "./index.scss";
 
-import { ReactComponent as TruckFast } from 'assets/images/service/truckFast.svg';
-import { ReactComponent as SafeHome } from 'assets/images/service/safeHome.svg';
-import { ReactComponent as Money } from 'assets/images/service/money.svg';
+import TruckFast from 'assets/images/service/truckFast.svg?react';
+import SafeHome from 'assets/images/service/safeHome.svg?react';
+import Money from 'assets/images/service/money.svg?react';
 
 
 export const FirstServicePattern = () => {

@@ -13,7 +13,11 @@ export default defineConfig({
     tsconfigPaths(),
     EnvironmentPlugin('all'),
     viteCompression(),
-    svgr(),
+    svgr({ 
+      svgrOptions: {
+        // svgr options
+      },
+    }),
     viteImagemin({
       gifsicle: {
         optimizationLevel: 7,

@@ -7,8 +7,4 @@ declare module '*.svg' {
         React.ComponentProps<'svg'> & { title?: string }
     >
     export default ReactComponent
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> landingpage

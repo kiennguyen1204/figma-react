@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 import "./index.scss";
 import '@splidejs/react-splide/css';
-import { ReactComponent as Star } from 'assets/images/star.svg';
+import Star from 'assets/images/star.svg?react';
 
 import { Splide, SplideTrack, SplideSlide } from '@splidejs/react-splide';
 
