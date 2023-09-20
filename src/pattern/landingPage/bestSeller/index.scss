@@ -1,0 +1,108 @@
+.bestSellerContainer {
+    display: block;
+    position: relative;
+
+    overflow: hidden;
+
+    .bestSellerContainerBox {
+        display: block;
+        position: relative;
+
+        padding: 120px;
+
+        @media screen and (max-width: 991.98px) {
+            padding: 80px 24px;
+        }
+
+        .bestSellerTitle {
+            display: block;
+            position: relative;
+            max-width: 948px;
+            width: 100%;
+
+            color: var(--color-neutral-base);
+            font-size: var(--font-size-64);
+            font-weight: var(--font-weight-semibold);
+            font-family: var(--font-family-medium);
+            line-height: 1.1;
+            letter-spacing: -4px;
+
+            text-align: center;
+
+            margin: auto;
+            padding-bottom: 64px;
+
+            @media screen and (max-width: 575.98px) {
+                font-size: var(--font-size-32);
+                line-height: var(--line-height-xxl);
+                letter-spacing: -1.5px;
+            }
+        }
+
+        .bestSellerBoxWrapper {
+            display: block;
+            position: relative;
+
+            margin-bottom: 64px;
+            overflow: hidden;
+
+            @media screen and (max-width: 575.98px) {
+                width: 100%;
+                overflow-x: auto;
+                overflow-y: hidden;
+            }
+
+            .navPill {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: stretch;
+
+                gap: 32px;
+
+                @media screen and (max-width: 575.98px) {
+                    width: 30rem;
+                    padding-block: 1rem
+                    ;
+                }
+
+                .navItem {
+                    display: block;
+                    position: relative;
+
+                    width: calc((100% / 3) - 32px);
+                    
+                    color: var(--color-neutral-base);
+                    font-size: var(--font-size-normal);
+                    font-weight: var(--font-weight-medium);
+                    font-family: var(--font-family-medium);
+                    line-height: 1.5;
+
+                    margin: auto;
+                    border-radius: 100px;
+                    transition: all 0.3s ease-in-out;
+                    
+                    background: var(--color-secondary-ultra-light);
+                    overflow: hidden;
+
+                    .navLink {
+                        display: inline-block;
+                        position: relative;
+
+                        width: 100%;
+                        padding: 8px 20px;
+
+                        white-space: nowrap;
+                        border: none;
+                        background: transparent;
+                    }
+
+                    &.active {
+                        color: var(--color-secondary-dark);
+                        border: 1px solid var(--color-secondary-dark);
+                    }
+                }
+            }
+        }
+    }
+}

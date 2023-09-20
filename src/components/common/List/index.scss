@@ -1,0 +1,41 @@
+.listContainer {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: auto;
+
+    overflow: hidden;
+
+    .listContainerBox {
+        display: flex;
+        flex-flow: row wrap;
+
+        .listContainerBoxRow {
+            flex-direction: row;
+        }
+
+        .listContainerBoxColumn {
+            flex-direction: column;
+        }
+
+        .listContainerBoxHeader {
+            display: block;
+            position: relative;
+
+            color: var(--color-secondary-dark);
+            font-size: var(--font-size-xxl);
+            font-weight: var(--font-weight-semibold);
+            font-family: var(--font-family-medium);
+        }
+
+        .listContainerBoxFooter {
+            display: block;
+            position: relative;
+
+            color: var(--color-secondary-dark);
+            font-size: var(--font-size-xxl);
+            font-weight: var(--font-weight-semibold);
+            font-family: var(--font-family-medium);
+        }
+    }
+}
