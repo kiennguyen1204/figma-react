@@ -55,6 +55,7 @@
 
   --font-weight-light: 300;
   --font-weight-regular: 400;
+  --font-weight-normal: 400;
   --font-weight-medium: 500;
   --font-weight-semibold: 600;
 
@@ -70,5 +71,6 @@
   /* Fonts family */
   --font-family-all: 'Lexend', sans-serif;
   --font-family-regular: 'Lexend-Regular';
+  --font-family-normal: 'Lexend-Regular';
   --font-family-medium: 'Lexend-Medium';
 }
