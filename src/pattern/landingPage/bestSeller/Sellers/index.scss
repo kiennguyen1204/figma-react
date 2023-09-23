@@ -357,8 +357,11 @@
                             transition: all 0.3s ease-in-out;
                         
                             &:hover {
-                                color: var(--color-neutral-base);
-                                background: var(--color-primary-dark);
+                                // color: var(--color-neutral-base);
+                                // background: var(--color-primary-dark);
+                                background: var(--color-primary-base);
+                                opacity: 0.85;
+                                backdrop-filter: blur(2px);
                             }
                         }
                     }
