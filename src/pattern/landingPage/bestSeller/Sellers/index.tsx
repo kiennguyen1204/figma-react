@@ -95,7 +95,7 @@ export const Sellers = () => {
                         <SplideTrack>
                             {slideList.map((el, index) => (
                                 <SplideSlide key={index}>
-                                    <div className="sellContainerBox">
+                                    <Link className="sellContainerBox" to={`/detail/${index}`}>
                                         <div className="sellContainerBoxHeader">
                                             <div className="cardImage">
                                                 {el.soldOut && <div className="soldOut">{el.soldOut}</div>}
@@ -140,7 +140,7 @@ export const Sellers = () => {
                                             <button className="btn addCartButton">Add To Cart</button>
                                         </div>
 
-                                    </div>
+                                    </Link>
                                 </SplideSlide>
                             ))}
                         </SplideTrack>
