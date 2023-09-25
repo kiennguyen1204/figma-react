@@ -1,7 +1,7 @@
 export const About = () => {
     return (
         <div className="aboutContainer">
-            <div className="aboutBoxContainer">
+            <div className="aboutbox-container">
                 About
             </div>
         </div>

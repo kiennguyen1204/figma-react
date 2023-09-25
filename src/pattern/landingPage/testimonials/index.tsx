@@ -1,5 +1,3 @@
-import { Link } from 'react-router-dom';
-
 import './index.scss';
 import '@splidejs/react-splide/css';
 import Star from 'assets/images/star.svg?react';
@@ -82,39 +80,39 @@ export default function CustomerTestinmonials() {
   };
 
   return (
-    <div className="testimonialsListContainer">
-      <div className="testimonialsListContainerBox">
-        <div className="topHeaderTestitmonials">
-          <h3 className="titleHeader">
+    <div className="testimonials-list-container">
+      <div className="testimonials-list-containerBox">
+        <div className="top-header-testitmonials">
+          <h3 className="title-header">
             CUSTOMER
             TESTIMONIALS
           </h3>
-          <div className="boxVoted">
-            <p className="votedBoxTtitle">
+          <div className="box-voted">
+            <p className="voted-box-title">
               VOTED BEST
               ONLINE
               DISPENSARY IN
               CANADA
             </p>
-            <div className="lineHor"></div>
-            <div className="googleGrey">
+            <div className="line-hor"></div>
+            <div className="google-grey">
               <Google />
             </div>
-            <div className="bottomBoxVoted">
+            <div className="bottom-box-voted">
               <p className="exellencet">
                 EXELLENCET
               </p>
-              <div className="ratingBottom">
-                <div className="listStar">
+              <div className="rating-bottom">
+                <div className="list-star">
                   <Star />
                   <Star />
                   <Star />
                   <Star />
                   <Star />
                 </div>
-                <div className="totalReviews">
+                <div className="total-reviews">
                   on 135{' '}
-                  <span className="reviewText">
+                  <span className="review-text">
                     Reviews
                   </span>
                 </div>
@@ -123,7 +121,7 @@ export default function CustomerTestinmonials() {
           </div>
         </div>
 
-        <div className="testimonialsList">
+        <div className="testimonials-list">
           <Splide
             hasTrack={false}
             options={
@@ -153,27 +151,27 @@ export default function CustomerTestinmonials() {
                       key={
                         index
                       }>
-                      <div className="testimonialsContainerBox">
-                        <div className="testimonialsContainerBoxHeader">
-                          <div className="cardImage">
+                      <div className="testimonials-container-box">
+                        <div className="testimonials-container-box-header">
+                          <div className="card-image">
                             <img
                               decoding="async"
                               loading="lazy"
                               src={
                                 el.avatar
                               }
-                              className="splideProductImage"
+                              className="splide-product-image"
                               alt="Image 1"
                             />
-                            <span className="userName">
+                            <span className="user-name">
                               {
                                 el.userName
                               }
                             </span>
                           </div>
                         </div>
-                        <div className="boxContentTestimonials">
-                          <div className="ratingStar">
+                        <div className="box-content-testimonials">
+                          <div className="rating-star">
                             {arrStar.map(
                               (
                                 e
@@ -193,12 +191,12 @@ export default function CustomerTestinmonials() {
                                 )
                             )}
                           </div>
-                          <p className="commentContent">
+                          <p className="comment-content">
                             {
                               el.comment
                             }
                           </p>
-                          <p className="dateComment">
+                          <p className="date-comment">
                             {
                               el.date
                             }

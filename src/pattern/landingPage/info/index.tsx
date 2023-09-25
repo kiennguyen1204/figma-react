@@ -32,11 +32,11 @@ export default function InfoBottom() {
   ];
 
   return (
-    <div className="boxInfoBottomContainer">
-      <div className="boxcContainer">
+    <div className="box-info-bottom-container">
+      <div className="box-container">
         {data.map((e, i) => (
-            <div className="itemBox" key={i}>
-                <div className="cardImage">
+            <div className="item-box" key={i}>
+                <div className="card-image">
                     <img src={e.image} alt={e.title}/>
                 </div>
                 <p className="title">{e.title}</p>

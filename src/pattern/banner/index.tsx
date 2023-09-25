@@ -8,12 +8,12 @@ export const BannerPattern = ():ReactElement => {
         <div className="bannerContainer">
             <div className="bannerBoxBackground">
                 <picture className="bannerBackground">
-                    <source media="(max-width: 575.98px)" srcSet="/src/assets/images/banner/sm_bg.jpg" />
+                    <source media="(max-width: 575px)" srcSet="/src/assets/images/banner/sm_bg.jpg" />
                     <img src="/src/assets/images/banner/lg_bg.jpg" alt="banner" />
                 </picture>
             </div>
 
-            <div className="bannerBoxContainer">
+            <div className="bannerbox-container">
                 <div className="bannerBox">
                     <div className="bannerBoxContent">
                         <div className="bannerBoxTitle">

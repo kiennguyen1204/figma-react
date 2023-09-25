@@ -1,4 +1,4 @@
-.boxContainer {
+.box-container {
 
     font-family: var(--font-family-regular);
     margin-top: 64px;
@@ -21,12 +21,12 @@
         padding-left: 24px;
     }
 
-    .optionFilter{
+    .option-filter{
         overflow: hidden;
         width: 100%;
         position: relative;
 
-        .wrapperOption{
+        .wrapper-option{
             padding: 0 24px;
             margin-bottom: 32px;
 
@@ -37,7 +37,7 @@
             width: 100%;
             overflow: auto hidden;
 
-            .btnOptionWeed.actvie{
+            .btn-option-weed.actvie{
                 border-color: var( --color-secondary-dark);
                 color: var( --color-secondary-dark);
                 background: var(--color-secondary-ultra-light);
@@ -45,7 +45,7 @@
         }
     }
 
-    .containerListItem {
+    .container-list-item {
         display: flex;
         align-items: flex-start;
         flex-wrap: wrap;

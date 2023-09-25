@@ -1,5 +1,3 @@
-import { Link } from 'react-router-dom';
-
 import './index.scss';
 import '@splidejs/react-splide/css';
 import { Item } from '../../../constants/type';
@@ -458,15 +456,15 @@ export default function RecentlyAdded() {
   ];
 
   return (
-    <div className="boxContainer">
+    <div className="box-container">
       <h3 className="title">
         RECENTLY ADDED
       </h3>
       <p className="filter">
         Filter by Interest
       </p>
-      <div className="optionFilter">
-        <div className="wrapperOption">
+      <div className="option-filter">
+        <div className="wrapper-option">
           <button
             onClick={(e) => {
               e.preventDefault();
@@ -475,7 +473,7 @@ export default function RecentlyAdded() {
                 OPTION_WEED.FLOWERS
               );
             }}
-            className={`btn btnAction btnOptionWeed ${
+            className={`btn btn-action btn-option-weed ${
               option ==
               OPTION_WEED.FLOWERS
                 ? 'active'
@@ -491,7 +489,7 @@ export default function RecentlyAdded() {
                 OPTION_WEED.MUSHROOMS
               );
             }}
-            className={`btn btnAction btnOptionWeed ${
+            className={`btn btn-action btn-option-weed ${
               option ==
               OPTION_WEED.MUSHROOMS
                 ? 'active'
@@ -507,7 +505,7 @@ export default function RecentlyAdded() {
                 OPTION_WEED.CONCENTRACE
               );
             }}
-            className={`btn btnAction btnOptionWeed ${
+            className={`btn btn-action btn-option-weed ${
               option ==
               OPTION_WEED.CONCENTRACE
                 ? 'active'
@@ -517,7 +515,7 @@ export default function RecentlyAdded() {
           </button>
         </div>
       </div>
-      <div className="containerListItem">
+      <div className="container-list-item">
         {dataList.map(
           (e, i) => (
             <ItemCard

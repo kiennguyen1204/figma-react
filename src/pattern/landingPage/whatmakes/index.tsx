@@ -49,8 +49,8 @@ export default function WhatMake() {
 
 
   return (
-    <div className="boxContainerWhatMake">
-      <div className="wrapperElement">
+    <div className="box-container-what-make">
+      <div className="wrapper-element">
         <h3 className="title">
           WHAT MAKES US THE{' '}
           <span className="num_1">
@@ -77,13 +77,13 @@ export default function WhatMake() {
           feel makes us a cut
           above the rest.
         </p>
-        <div className="contentBoxContainer">
+        <div className="contentbox-container">
             {contentData.map((e, i) => (
-                <div className="itemBox">
+                <div className="item-box" key={i}>
                     <div className="icon">
                         {e.icon}
                     </div>
-                    <p className="titleBox">
+                    <p className="title-box">
                         {e.title}
                     </p>
                     <p className="description">

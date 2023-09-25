@@ -30,14 +30,14 @@ export default function ReferFriend() {
   ];
   return (
     <>
-      <div className="referBoxContainer">
-        <div className="cardBoxContainer">
+      <div className="referbox-container">
+        <div className="cardbox-container">
           <div className="cardBox">
-            <div className="cardBoxElement">
+            <div className="card-box-element">
               <div className="svg">
                 <ReferFriendSVG />
               </div>
-              <div className="cardWrapper">
+              <div className="card-wrapper">
                 <p className="title">
                   REFER A
                   FRIENDS
@@ -48,15 +48,15 @@ export default function ReferFriend() {
                     30%
                   </span>
                 </p>
-                <button className="btn btnAction customButton">
+                <button className="btn btn-action custom-button">
                   Refer Here
                 </button>
               </div>
             </div>
           </div>
         </div>
-        <div className="contentFullCard">
-          <h3 className="titleBottom">
+        <div className="content-full-card">
+          <h3 className="title-bottom">
             HOW TO ORDER WEED
             ONLINE FROM TOP
             SHELF BC - MAIL
@@ -79,19 +79,19 @@ export default function ReferFriend() {
             cannabis products
             online.
           </p>
-          <div className="contentBottom">
+          <div className="content-bottom">
             {dataBottom.map(
               (e, i) => (
-                <div className="itemBottom">
-                  <div className="topHeader">
-                    <div className="indexCircle">
+                <div className="item-bottom">
+                  <div className="top-header">
+                    <div className="index-circle">
                       {i + 1}
                     </div>
                     <div className="icon">
                       {e.icon}
                     </div>
                   </div>
-                  <div className="itemContent">
+                  <div className="item-content">
                     <p className="title">
                       {
                         e.title
@@ -107,7 +107,7 @@ export default function ReferFriend() {
               )
             )}
 
-            <button className="btn btnAction customButton">
+            <button className="btn btn-action custom-button">
               Refer Here
             </button>
           </div>

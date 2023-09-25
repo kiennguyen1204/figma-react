@@ -1,13 +1,13 @@
-.boxInfoBottomContainer {
+.box-info-bottom-container {
     padding: 0 24px;
 
     margin-bottom: 64px;
 
-    .boxcContainer {
+    .box-container {
         padding-top: 64px;
         border-top: 1px solid var(--color-neutral-light);
 
-        .itemBox {
+        .item-box {
             padding: 24px;
             margin-bottom: 24px;
 
@@ -19,7 +19,7 @@
             }
 
 
-            .cardImage {
+            .card-image {
                 background: var(--color-secondary-ultra-light);
                 border-radius: 8px;
 

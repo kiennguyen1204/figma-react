@@ -94,10 +94,10 @@ export const Sellers = () => {
   };
 
   return (
-    <div className="sellerListContainer">
-      <div className="sellerListContainerBox">
-        <div className="bestSellerCard">
-          <div className="bestSellerCardImage">
+    <div className="seller-list-container">
+      <div className="seller-list-container-box">
+        <div className="best-seller-card">
+          <div className="best-seller-card-image">
             <img
               width={213}
               height={213}
@@ -106,20 +106,20 @@ export const Sellers = () => {
               src={
                 BestProduct
               }
-              className="bestProductImage"
+              className="best-product-image"
               alt=""
             />
           </div>
 
           <div className="sellerCardContent">
-            <div className="bestSellerCardTitle">
+            <div className="best-seller-cardTitle">
               <h3>
                 Shop our Best
                 Sellers
               </h3>
             </div>
 
-            <div className="bestSellerCardDescription">
+            <div className="best-seller-card-description">
               <p>
                 Lorem ipsum
                 dolor sit amet
@@ -131,10 +131,10 @@ export const Sellers = () => {
                 feugiat.{' '}
               </p>
 
-              <div className="bestSellerCardButton">
+              <div className="best-seller-card-button">
                 <Link
                   to="/"
-                  className="baseSellerLink">
+                  className="base-seller-link">
                   View All
                 </Link>
               </div>
@@ -142,7 +142,7 @@ export const Sellers = () => {
           </div>
         </div>
 
-        <div className="sellerList">
+        <div className="seller-list">
           <Splide
             hasTrack={false}
             options={
@@ -159,11 +159,11 @@ export const Sellers = () => {
                     key={
                       index
                     }>
-                    <div className="sellContainerBox">
-                      <div className="sellContainerBoxHeader">
-                        <div className="cardImage">
+                    <div className="sell-container-box">
+                      <div className="sell-container-box-header">
+                        <div className="card-image">
                           {el.soldOut && (
-                            <div className="soldOut">
+                            <div className="sold-out">
                               {
                                 el.soldOut
                               }
@@ -175,12 +175,12 @@ export const Sellers = () => {
                             src={
                               el.image
                             }
-                            className="splideProductImage"
+                            className="splide-product-image"
                             alt="Image 1"
                           />
                         </div>
 
-                        <div className="sellContainerBoxContent mt-4">
+                        <div className="sell-container-box-content mt-4">
                           <h5 className="category">
                             {
                               el.category
@@ -191,19 +191,19 @@ export const Sellers = () => {
                               el.title
                             }
                           </h3>
-                          <div className="flexBox">
-                            <div className="rateBox">
-                              <div className="rateSvg">
+                          <div className="flex-box">
+                            <div className="rate-box">
+                              <div className="rate-svg">
                                 <Star />
                               </div>
-                              <span className="rateText">
+                              <span className="rate-text">
                                 {
                                   el.rate
                                 }
                               </span>
                             </div>
 
-                            <div className="reviewBox">
+                            <div className="review-box">
                               <div className="reviewText">
                                 {
                                   el.reviews
@@ -215,15 +215,15 @@ export const Sellers = () => {
                             </div>
                           </div>
 
-                          <div className="saleBox">
-                            <span className="saleText">
+                          <div className="sale-box">
+                            <span className="sale-text">
                               {
                                 el.sale
                               }
                             </span>
                           </div>
 
-                          <div className="priceBox">
+                          <div className="price-box">
                             {el.discount && (
                               <span className="discount">
                                 {
@@ -231,7 +231,7 @@ export const Sellers = () => {
                                 }
                               </span>
                             )}
-                            <span className="priceText">
+                            <span className="price-text">
                               {
                                 el.price
                               }
@@ -268,8 +268,8 @@ export const Sellers = () => {
                         </div>
                       </div>
 
-                      <div className="buttonBox">
-                        <button className="btn addCartButton">
+                      <div className="button-box">
+                        <button className="btn add-cart-button">
                           Add
                           To
                           Cart

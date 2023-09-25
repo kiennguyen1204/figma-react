@@ -12,14 +12,14 @@ export default function ItemCard({
 }) {
   return (
     <div
-      className="itemCard"
+      className="item-card"
       key={index}>
-      <div className="imageCard">
+      <div className="image-card">
         {item.perPrice && (
-          <p className="perPrice">{item.perPrice}</p>
+          <p className="per-price">{item.perPrice}</p>
         )}
         {item.isSoldOut && (
-          <p className="soldOut">
+          <p className="sold-out">
             Sold Out
           </p>
         )}
@@ -28,14 +28,14 @@ export default function ItemCard({
           alt={item.title}
         />
       </div>
-      <div className="contentItem">
-        <p className="cateItem">
+      <div className="content-item">
+        <p className="cate-item">
           {item.category}
         </p>
-        <p className="titleItem">
+        <p className="title-item">
           {item.title}
         </p>
-        <div className="starReview">
+        <div className="star-review">
           <span className="voted">
             <Star />
             {item.voted}/
@@ -51,7 +51,7 @@ export default function ItemCard({
         <div className="purity">
           {item.purity}
         </div>
-        <div className="discounNPrice">
+        <div className="discount-n-price">
           {item.discount && (
             <p className="discount">
               {item.discount}
@@ -77,16 +77,16 @@ export default function ItemCard({
               i: any
             ) => (
               <div
-                className="volumeChild"
+                className="volume-child"
                 key={i}>
                 {e}
               </div>
             )
           )}
         </div>
-        <div className="buttonBuy">
+        <div className="button-buy">
           <button
-            className="btn btnAddCart"
+            className="btn btn-add-cart"
             onClick={(e) =>
               e.preventDefault()
             }>
