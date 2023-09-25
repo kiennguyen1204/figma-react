@@ -1,0 +1,12 @@
+.description-box {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    .content {
+        color: var(--color-neutral-mid);
+        font-family: var(--font-family-normal);
+        font-size: var(--font-size-medium);
+        font-weight: var(--font-weight-regular);
+        line-height: 150%;
+    }
+}

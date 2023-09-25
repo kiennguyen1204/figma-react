@@ -29,7 +29,6 @@ export const BestSeller = () => {
                         {tabsList.map((tab, index) => {
                             return <li className={`navItem ${index === currentTab ? "active" : ""}`} onClick={() => changeTab(index)} key={index}>
                                 <button className="btn navLink" >{tab.title}</button>
-
                             </li>
                         })}
                     </ul>

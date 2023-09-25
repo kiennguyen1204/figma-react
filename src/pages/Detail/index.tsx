@@ -1,8 +1,11 @@
-import React from 'react';
+import React, {
+  useState
+} from 'react';
 import { useParams } from 'react-router-dom';
 import './index.scss';
 import Star from 'assets/images/star.svg?react';
-import Button from '../../components/common/Button';
+import Description from '../../pattern/landingPage/detailProduct/description';
+import Reviews from '../../pattern/landingPage/detailProduct/reviews';
 
 const fakeData = {
   category: 'CONCENTRATES',
@@ -59,8 +62,10 @@ const fakeData = {
   ],
   descrip:
     'Jungle Diamonds is a slightly indica dominant hybrid strain (60% indica/40% sativa) created through crossing the infamous Slurricane X Gorilla Glue #4 strains.',
-  descripDetail:
-    'Jungle Diamonds is a slightly indica dominant hybrid strain (60% indica/40% sativa) created through crossing the infamous Slurricane X Gorilla Glue #4 strains. Named for its gorgeous appearance and breeder, Jungle Diamonds is a favorite of indica and hybrid lovers alike thanks to its delicious taste and tingly, arousing high. Jungle Diamonds buds have sparkling oversized spade-shaped olive green nugs with vivid amber hairs and a thick frosty blanket of glittering tiny blue-tinted white crystal trichomes. As you pull apart each sticky little nugget, aromas of spicy mocha coffee and fruity herbs are released.\n \nThe flavor is of sweet chocolate with hints of fresh ripe berries to it, too. The Jungle Diamonds high is just as delicious, with happy effects that will boost the spirits and kick negative thoughts and moods to the curb. You’ll feel a tingly sense in your body from start to finish that serves to remove any aches or pains while leaving you pretty aroused at times. This is accompanied by a blissfully unfocused heady lift that leaves your head in the clouds without causing sedation. With these effects and its pretty high 17-24% THC level, Jungle Diamonds is ideal for experienced patients with chronic pain, cramps or muscle spasms and appetite loss or nausea.',
+  descripDetail: [
+    'Jungle Diamonds is a slightly indica dominant hybrid strain (60% indica/40% sativa) created through crossing the infamous Slurricane X Gorilla Glue #4 strains. Named for its gorgeous appearance and breeder, Jungle Diamonds is a favorite of indica and hybrid lovers alike thanks to its delicious taste and tingly, arousing high. Jungle Diamonds buds have sparkling oversized spade-shaped olive green nugs with vivid amber hairs and a thick frosty blanket of glittering tiny blue-tinted white crystal trichomes. As you pull apart each sticky little nugget, aromas of spicy mocha coffee and fruity herbs are released.',
+    'The flavor is of sweet chocolate with hints of fresh ripe berries to it, too. The Jungle Diamonds high is just as delicious, with happy effects that will boost the spirits and kick negative thoughts and moods to the curb. You’ll feel a tingly sense in your body from start to finish that serves to remove any aches or pains while leaving you pretty aroused at times. This is accompanied by a blissfully unfocused heady lift that leaves your head in the clouds without causing sedation. With these effects and its pretty high 17-24% THC level, Jungle Diamonds is ideal for experienced patients with chronic pain, cramps or muscle spasms and appetite loss or nausea.'
+  ],
   reviews: [
     {
       userName: 'Vikki Starr',
@@ -75,7 +80,7 @@ const fakeData = {
       userName:
         'Terry Baskey',
       avatar:
-        '/src/assets/images/products/reviews/Terry Baskey.png',
+        '/src/assets/images/products/reviews/TerryBaskey.png',
       date: 'January 15, 2023',
       rating: 5,
       comment:
@@ -86,20 +91,43 @@ const fakeData = {
 
 export default function Detail() {
   const { id } = useParams();
+  const [
+    currentTab,
+    setCurrentTab
+  ] = useState(0);
+  const tabsList = [
+    {
+      title: 'Description',
+      to: 'description'
+    },
+    {
+      title: 'Reviews',
+      to: 'reviews'
+    },
+    {
+      title: 'Refer a Friend',
+      to: 'refer'
+    }
+  ];
+  const changeTab = (
+    index: number
+  ) => {
+    setCurrentTab(index);
+  };
   return (
-    <div className="containerDetail">
-      <div className="imageContainer">
-        <div className="imageProduct">
+    <div className="container-detail">
+      <div className="image-container">
+        <div className="image-product">
           <img
             src={
               fakeData.image
             }
           />
         </div>
-        <div className="thumbList">
+        <div className="thumb-list">
           {fakeData.listImage.map(
             (item) => (
-              <a className="thumbItem">
+              <a className="thumb-item">
                 <img
                   src={item}
                 />
@@ -108,8 +136,8 @@ export default function Detail() {
           )}
         </div>
       </div>
-      <div className="infoContainer">
-        <div className="overviewContainer">
+      <div className="info-container">
+        <div className="overview-container">
           <p className="category">
             {
               fakeData.category
@@ -123,8 +151,8 @@ export default function Detail() {
               {fakeData.sale}
             </p>
           </div>
-          <div className="numeralContainer">
-            <div className="priceContainer">
+          <div className="numeral-container">
+            <div className="price-container">
               <p className="discount">
                 {
                   fakeData.discount
@@ -136,20 +164,20 @@ export default function Detail() {
                 }
               </p>
             </div>
-            <div className="reviewContainer">
-              <div className="rateBox">
-                <div className="rateSvg">
+            <div className="review-container">
+              <div className="rate-box">
+                <div className="rate-svg">
                   <Star />
                 </div>
-                <span className="rateText">
+                <span className="rate-text">
                   {
                     fakeData.rate
                   }
                 </span>
               </div>
               <div className="divider"></div>
-              <div className="reviewBox">
-                <div className="reviewText">
+              <div className="review-box">
+                <div className="review-text">
                   {
                     fakeData.totalReviews
                   }{' '}
@@ -161,16 +189,16 @@ export default function Detail() {
             </div>
           </div>
         </div>
-        <div className="effectsContainer">
+        <div className="effects-container">
           {fakeData.effects.map(
             (e) => (
-              <div className="effectsBox">
+              <div className="effects-box">
                 <img
                   src={
                     e.image
                   }
                 />
-                <div className="effectsText">
+                <div className="effects-text">
                   <p className="title">
                     {e.title}
                   </p>
@@ -184,7 +212,7 @@ export default function Detail() {
             )
           )}
         </div>
-        <div className="descripContainer">
+        <div className="descrip-container">
           <p className="title">
             description
           </p>
@@ -194,8 +222,8 @@ export default function Detail() {
             }
           </p>
         </div>
-        <div className="weightContainer">
-          <div className="weightBox">
+        <div className="weight-container">
+          <div className="weight-box">
             <div className="title">
               weight
             </div>
@@ -209,7 +237,7 @@ export default function Detail() {
               )}
             </div>
           </div>
-          <div className="integraPack">
+          <div className="integra-pack">
             <div className="title">
               add integra pack
             </div>
@@ -225,7 +253,7 @@ export default function Detail() {
             </div>
           </div>
         </div>
-        <div className="earnPoint">
+        <div className="earn-point">
           <p>
             Purchase this
             product now and
@@ -238,56 +266,177 @@ export default function Detail() {
             Points!
           </p>
         </div>
-        <div className="billContainer">
+        <div className="bill-container">
           <div className="products">
             <div className="item">
-              <p className='name'>Khalifa Kush (AAAA)<span className='amount'>2x</span></p>
-              <p className='price'>{fakeData.price}</p>
+              <p className="name">
+                Khalifa Kush
+                (AAAA)
+                <span className="amount">
+                  2x
+                </span>
+              </p>
+              <p className="price">
+                {
+                  fakeData.price
+                }
+              </p>
             </div>
             <div className="item">
-              <p className='name'>Add Integra Pack - 4g</p>
-              <p className='price'>$2.00</p>
+              <p className="name">
+                Add Integra
+                Pack - 4g
+              </p>
+              <p className="price">
+                $2.00
+              </p>
             </div>
           </div>
-          <div className="addCartContainer">
-            <div className="stockBox">
-              <div className="handleAmount">
+          <div className="add-cart-container">
+            <div className="stock-box">
+              <div className="handle-amount">
                 <a>-</a>
-                <a className='amount'><p>2</p></a>
+                <a className="amount">
+                  <p>2</p>
+                </a>
                 <a>+</a>
               </div>
               <div className="divider"></div>
-              <p className="inStock">{fakeData.soldOut}</p>
+              <p className="in-stock">
+                {
+                  fakeData.soldOut
+                }
+              </p>
             </div>
-            <button className='addCartBtn btn'>
-              Add to Cart<span className='divider'></span>$242.00
+            <button className="add-cart-btn btn">
+              Add to Cart
+              <span className="divider"></span>
+              $242.00
             </button>
           </div>
-          <div className="ourServices">
+          <div className="our-services">
             <div className="item">
               <img src="/src/assets/images/tick-circle.png" />
-              <p>Free Xpress Shipping on orders over <span>$149</span></p>
+              <p>
+                Free Xpress
+                Shipping on
+                orders over{' '}
+                <span>
+                  $149
+                </span>
+              </p>
             </div>
             <div className="item">
               <img src="/src/assets/images/tick-circle.png" />
-              <p>Order before 12:00pm for same day dispatch</p>
+              <p>
+                Order before
+                12:00pm for
+                same day
+                dispatch
+              </p>
             </div>
             <div className="item">
               <img src="/src/assets/images/tick-circle.png" />
-              <p>Support & ordering open 7 day a week</p>
+              <p>
+                Support &
+                ordering open
+                7 day a week
+              </p>
             </div>
           </div>
         </div>
-        <div className="skuCategories">
+        <div className="sku-categories">
           <div className="item">
-            <p className='key'>SKU</p>
-            <p className='key colon'>:</p>
-            <p className='value'>{fakeData.sku}</p>
+            <p className="key">
+              SKU
+            </p>
+            <p className="key colon">
+              :
+            </p>
+            <p className="value">
+              {fakeData.sku}
+            </p>
           </div>
           <div className="item">
-            <p className='key'>Categories</p>
-            <p className='key colon'>:</p>
-            <p className='value cate'>{fakeData.sale}</p>
+            <p className="key">
+              Categories
+            </p>
+            <p className="key colon">
+              :
+            </p>
+            <p className="value cate">
+              {fakeData.sale}
+            </p>
+          </div>
+        </div>
+        <div className="tab-product">
+          <ul className="nav-pill">
+            {tabsList.map(
+              (
+                tab,
+                index
+              ) => {
+                return (
+                  <li
+                    className={`nav-item ${
+                      index ===
+                      currentTab
+                        ? 'active'
+                        : ''
+                    }`}
+                    onClick={() =>
+                      changeTab(
+                        index
+                      )
+                    }
+                    key={
+                      index
+                    }>
+                    <button className="btn nav-link">
+                      {
+                        tab.title
+                      }
+                    </button>
+                  </li>
+                );
+              }
+            )}
+          </ul>
+          <div className="tab-content">
+            <div
+              className={`tab-pane fade ${
+                currentTab ===
+                0
+                  ? 'show active'
+                  : ''
+              }`}
+              tabIndex={0}>
+              <Description
+                content={
+                  fakeData.descripDetail
+                }
+              />
+            </div>
+            <div
+              className={`tab-pane fade ${
+                currentTab ===
+                1
+                  ? 'show active'
+                  : ''
+              }`}
+              tabIndex={0}>
+              <Reviews reviews={fakeData.reviews}/>
+            </div>
+            <div
+              className={`tab-pane fade ${
+                currentTab ===
+                2
+                  ? 'show active'
+                  : ''
+              }`}
+              tabIndex={0}>
+              c
+            </div>
           </div>
         </div>
       </div>
