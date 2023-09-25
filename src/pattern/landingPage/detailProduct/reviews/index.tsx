@@ -1,6 +1,8 @@
 import React from 'react';
 import Star from 'assets/images/star.svg?react';
 import WhiteStar from 'assets/images/white-star.svg?react';
+import { MAX_STAR } from '../../../../constants/enums';
+import './index.scss'
 
 export default function Reviews({
   reviews
@@ -20,6 +22,7 @@ export default function Reviews({
               <p className="user-name">
                 {e.userName}
               </p>
+              <div className="divider-small"></div>
               <p className="date">
                 {e.date}
               </p>
@@ -27,7 +30,7 @@ export default function Reviews({
             <div className="divider"></div>
             <div className="rating">
               {Array.from(
-                { length: 5 },
+                { length: MAX_STAR.TOTAL },
                 (_, i) =>
                   i + 1
               ).map(
