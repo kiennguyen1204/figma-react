@@ -50,3 +50,12 @@ export enum STATUS {
   SUCCESS = 'success',
   ERROR = 'error'
 }
+export enum MAX_STAR {
+  TOTAL = 5
+}
+
+export enum OPTION_WEED {
+  FLOWERS,
+  MUSHROOMS,
+  CONCENTRACE
+}

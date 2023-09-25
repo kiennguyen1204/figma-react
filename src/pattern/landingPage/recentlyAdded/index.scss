@@ -1,0 +1,58 @@
+.boxContainer {
+
+    font-family: var(--font-family-regular);
+    margin-top: 64px;
+
+    .title {
+        text-transform: uppercase;
+        color: var(--color-neutral-base);
+        font-size: var( --font-size-32);
+        font-style: normal;
+        font-weight: var(--font-weight-semibold);
+        letter-spacing: -1.5px;
+        padding-left: 24px;
+        padding-bottom: 24px;
+    }
+
+    .filter{
+        font-size: var(--font-size-normal);
+        color: var(--color-neutral-base);
+        padding-bottom: 24px;
+        padding-left: 24px;
+    }
+
+    .optionFilter{
+        overflow: hidden;
+        width: 100%;
+        position: relative;
+
+        .wrapperOption{
+            padding: 0 24px;
+            margin-bottom: 32px;
+
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            
+            width: 100%;
+            overflow: auto hidden;
+
+            .btnOptionWeed.actvie{
+                border-color: var( --color-secondary-dark);
+                color: var( --color-secondary-dark);
+                background: var(--color-secondary-ultra-light);
+            }
+        }
+    }
+
+    .containerListItem {
+        display: flex;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        gap: 24px;
+      
+        
+        padding: 0 15px;
+        margin-bottom: 64px;
+    }
+}

@@ -6,4 +6,29 @@ body {
   background-color: var(--color-neutral-white);
   overflow-y: scroll;
   height: 100vh;
+  font-family: var(--font-family-regular);
+}
+
+.block{
+  display: block;
+}
+
+.flex{
+  display: flex;
+}
+
+.relative{
+  position: relative;
+}
+
+.absolute{
+  position: absolute;
+}
+
+.btnAction{
+  border-radius: 100px;
+  height: 40px;
+  padding: 0 20px;
+  border: 1px solid var(--color-matte-white);
+  transition: all 0.3s;
 }

@@ -45,7 +45,8 @@
             z-index: 0;
 
             @media screen and (max-width: 991.98px) {
-                padding: 120px 24px 80px 24px;
+                padding: 24px;
+                width: calc(100% - 48px);
             }
 
 
@@ -53,7 +54,7 @@
                 content: '';
                 display: block;
                 position: absolute;
-                right: -55.024px;
+                right: -30%;
                 top: -102px;
 
                 width: 262px;
@@ -63,6 +64,10 @@
                 background: linear-gradient(180deg, rgba(52, 102, 84, 0.00) 0%, rgba(52, 102, 84, 0.40) 100%);
                 transform: rotate(5deg);
                 z-index: -1;
+
+                // @media only screen and (max-width: 767px){
+
+                // }
             }
 
             .bestSellerCardImage {
@@ -77,6 +82,11 @@
                     display: block;
                     position: relative;
                     margin: auto;
+
+                    @media only screen and (max-width: 767.98px) {
+                        width: 150px;
+                        height: 150px;
+                    }
                 }
             }
 
@@ -109,9 +119,11 @@
                     font-size: var(--font-size-medium);
                     font-weight: var(--font-weight-normal);
                     font-family: var(--font-family-regular);
-                
+
                     line-height: var(--line-height-small);
                     text-align: center;
+
+                    width: 80%;
 
                     .bestSellerCardButton {
                         display: block;
@@ -123,7 +135,7 @@
                             font-size: var(--font-size-medium);
                             font-weight: var(--font-weight-normal);
                             font-family: var(--font-family-regular);
-    
+
                             text-decoration: underline;
                         }
                     }
@@ -138,7 +150,7 @@
             width: calc(100% - 380px);
 
             @media screen and (max-width: 991.98px) {
-                width: 100%;
+                width: 100vw;
             }
 
             .splide__slide {
@@ -154,11 +166,9 @@
                     width: 100%;
                     height: 100%;
 
-                    @media screen and (max-width: 767.98px) {
-                        height: auto;
-                    }
                     @media screen and (max-width: 575.98px) {
                         max-width: 100%;
+
                     }
 
                     color: var(--color-neutral-white);
@@ -168,11 +178,27 @@
                     overflow: hidden;
                     z-index: 0;
 
+                    @media screen and (max-width: 767.98px) {
+                        height: auto;
+                        padding-top: 0;
+                        border-radius: 8px;
+                    }
+
                     .sellContainerBoxHeader {
                         .cardImage {
                             display: block;
                             position: relative;
                             overflow: hidden;
+                            background: var(--color-neutral-ultra-light);
+                            padding: 48px 56px;
+                            // margin-inline: 18px;
+
+                            border-radius: 8px;
+
+                            @media only screen and (max-width: 797.98px) {
+                                width: 291px;
+                                height: 240px;
+                            }
 
                             .soldOut {
                                 display: flex;
@@ -224,7 +250,7 @@
                                 color: var(--color-neutral-lighter);
 
                                 font-size: var(--font-size-medium);
-                                font-weight: var(--font-weight-light);
+                                // font-weight: var(--font-weight-light);
                                 font-family: var(--font-family-regular);
 
                                 text-align: center;
@@ -258,7 +284,7 @@
                                 font-family: var(--font-family-regular);
 
                                 line-height: var(--light-height-small);
-                                
+
                                 .rateBox {
                                     display: flex;
                                     flex-direction: row;
@@ -352,10 +378,10 @@
 
                             padding: 0 24px;
                             background: var(--color-primary-base);
-                        
+
                             border-radius: 100px;
                             transition: all 0.3s ease-in-out;
-                        
+
                             &:hover {
                                 // color: var(--color-neutral-base);
                                 // background: var(--color-primary-dark);
@@ -373,11 +399,12 @@
                 height: 36px;
                 background: var(--color-neutral-white);
                 box-shadow: 0px 6px 16px 0px rgba(0, 0, 0, 0.25);
+                margin-top: -42px;
 
                 &.splide__arrow--prev svg {
                     transform: scaleX(1);
                 }
             }
-        } 
+        }
     }
 }
