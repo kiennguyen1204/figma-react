@@ -7,6 +7,28 @@
     height: auto;
 }
 
+.cardBoxContainer .headerTitle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 24px;
+    margin: 24px;
+    border-bottom: 1px solid var(--color-neutral-lightest);
+
+}
+.cardBoxContainer .headerTitle  .title{
+    font-size: var(--font-size-xxl);
+    line-height: 36px;
+    letter-spacing: -0.05px;
+    font-weight: var(--font-weight-medium);
+    color: var(--color-neutral-base);
+}
+
+.cardBoxContainer .headerTitle .showAll{
+    color: var(--color-primary-base);
+    text-decoration: underline;
+    font-size: var(--font-size-medium);
+}
 .cardBoxContainer .cardBox {
     display: block;
     position: relative;

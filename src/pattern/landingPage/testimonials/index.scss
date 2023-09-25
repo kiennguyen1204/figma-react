@@ -1,0 +1,165 @@
+.testimonialsListContainer {
+    font-family: var(--font-family-regular);
+    .testimonialsListContainerBox {
+
+        .topHeaderTestitmonials {
+            margin-top: 64px;
+
+            .titleHeader {
+                display: block;
+                position: relative;
+                width: 100%;
+                max-width: 984px;
+                color: var(--color-neutral-base);
+                font-size: var(--font-size-64);
+                font-weight: var(--font-weight-semibold);
+                font-family: var(--font-family-medium);
+                line-height: 1.1;
+                letter-spacing: -4px;
+                text-align: center;
+                margin: auto;
+                text-transform: uppercase;
+
+                // padding-bottom: 64px;
+                @media only screen and (max-width: 575.98px) {
+                    font-size: var(--font-size-32);
+                    line-height: var(--line-height-xxl);
+                    letter-spacing: -1.5px;
+                    padding-bottom: 32px;
+                }
+            }
+
+            //mobile first
+            .boxVoted {
+                border-radius: 16px;
+                padding: 24px;
+                gap: 32px;
+                width: calc(100% - 48px);
+                margin: 0 auto;
+
+                background-color: var(--color-secondary-dark);
+
+                .votedBoxTtitle {
+                    font-size: var(--font-size-xxl);
+                    letter-spacing: -0.5px;
+                    font-weight: var(--font-weight-medium);
+                    color: var(--color-neutral-white);
+                    line-height: 36px;
+                }
+
+                .lineHor {
+                    margin: 32px 0;
+                    height: 1px;
+                    border: none;
+                    background: var(--color-secondary-base);
+                }
+
+                .bottomBoxVoted {
+                    margin-top: 32px;
+
+                    .exellencet {
+                        color: var(--color-neutral-white);
+                        font-size: var(--font-size-normal);
+                        font-weight: var(--font-weight-regular);
+
+                    }
+
+                    .ratingBottom {
+                        display: flex;
+                        align-items: center;
+                        gap: 48px;
+                        margin-top: 20px;
+
+                        .listStar {
+                            display: flex;
+                            align-items: center;
+                            gap: 4px;
+                        }
+
+                        .totalReviews {
+                            color: var(--color-neutral-white);
+                            font-size: var(--font-size-normal);
+                            font-weight: var(--font-weight-regular);
+                            position: relative;
+
+                            &::before{
+                                position: absolute;
+                                content: "";
+                                height: 100%;
+                                width: 1px;
+                                background: var(--color-secondary-mid);
+                                left: -14px;
+                            }
+
+                            .reviewText {
+                                color: var(--color-secondary-mid);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .testimonialsList {
+            position: relative;
+            display: block;
+            margin-top: 32px;
+
+            .testimonialsContainerBox {
+                padding: 24px;
+
+                border-radius: 16px;
+                border: 1px solid var(--color-matte-white);
+
+
+                .testimonialsContainerBoxHeader {
+                    padding-bottom: 32px;
+
+                    border-bottom: 1px solid var(--color-matte-white);
+                }
+
+                .boxContentTestimonials {
+                    padding-top: 32px;
+
+                    .ratingStar {
+                        display: flex;
+                        align-items: center;
+                        gap: 4px;
+                    }
+
+                    .commentContent {
+                        color: var(--color-neutral-base);
+                        font-size: var(--font-size-normal);
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 24px;
+
+                        padding-top: 16px;
+                        padding-bottom: 80px;
+                    }
+
+                    .dateComment {
+                        color: var(--color-neutral-lighter);
+                        font-size: var(--font-size-medium);
+                        font-weight: var(--font-weight-regular);
+                    }
+                }
+
+
+
+            }
+
+            .splide__arrow {
+                width: 36px;
+                height: 36px;
+                background: var(--color-neutral-white);
+                box-shadow: 0px 6px 16px 0px rgba(0, 0, 0, 0.25);
+                margin-top: 42px;
+
+                &.splide__arrow--prev svg {
+                    transform: scaleX(1);
+                }
+            }
+        }
+    }
+}

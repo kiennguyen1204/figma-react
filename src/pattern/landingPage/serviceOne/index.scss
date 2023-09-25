@@ -2,9 +2,11 @@
 
     padding: 80px 64px;
     margin-bottom: 35px;
+    background: #F2F6F4;
 
     @media screen and (max-width: 575.98px) {
-        padding: 80px 24px;
+        padding: 64px 24px;
+        margin-bottom: 0;
     }
 
     .listContainerBox  {
@@ -31,18 +33,37 @@
                 width: 100%;
             }
             @media screen and (max-width: 419.98px) {
-                flex-direction: column;
+                // flex-direction: column;
                 gap: 12px;
             }
 
             .serviceListBoxLeft {
                 display: block;
                 position: relative;
-                margin-top: 1rem;
+                // margin-top: 1rem;
 
-                svg {
-                    width: 56px;
-                    height: 56px;
+                .icon-box{
+                    padding: 8px;
+                    border-radius: 50%;
+                    background: #fff;
+                    width: 64px;
+                    height: 64px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    svg {
+                        width: 36px;
+                        height: 36px;
+                    }
+                    @media only screen and (min-width: 767.98px) {
+                        width: 100px;
+                        height: 100px;
+                        svg{
+                            width: 56px;
+                            height: 56px;
+                        }
+                    }
                 }
             }
         
@@ -52,7 +73,7 @@
                 align-items: flex-start;
                 justify-content: flex-start;
 
-                gap: 16px;
+                gap: 12px;
             
                 .serviceListTitle {
                     display: block;
@@ -72,7 +93,7 @@
                     position: relative;
 
                     color: var(--color-neutral-light);
-                    font-size: var(--font-size-normal);
+                    font-size: clamp(var(--font-size-medium), 2vw, var(--font-size-normal));
                     font-weight: var(--font-weight-normal);
                     font-family: var(--font-family-regular);
 

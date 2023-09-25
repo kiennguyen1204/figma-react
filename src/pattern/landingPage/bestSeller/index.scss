@@ -11,7 +11,7 @@
         padding: 120px;
 
         @media screen and (max-width: 991.98px) {
-            padding: 80px 24px;
+            padding: 64px 0;
         }
 
         .bestSellerTitle {
@@ -36,6 +36,7 @@
                 font-size: var(--font-size-32);
                 line-height: var(--line-height-xxl);
                 letter-spacing: -1.5px;
+                padding-bottom: 32px;
             }
         }
 
@@ -50,6 +51,7 @@
                 width: 100%;
                 overflow-x: auto;
                 overflow-y: hidden;
+                margin-bottom: 40px;
             }
 
             .navPill {
@@ -61,16 +63,17 @@
                 gap: 32px;
 
                 @media screen and (max-width: 575.98px) {
-                    width: 30rem;
-                    padding-block: 1rem
-                    ;
+                    // min-width: 30rem;
+                    // padding-block: 1rem;
+                    gap: 16px;
+                    padding: 0 24px;
                 }
 
                 .navItem {
                     display: block;
                     position: relative;
 
-                    width: calc((100% / 3) - 32px);
+                    // width: calc((100% / 3) - 32px);
                     
                     color: var(--color-neutral-base);
                     font-size: var(--font-size-normal);
@@ -83,14 +86,17 @@
                     transition: all 0.3s ease-in-out;
                     
                     background: var(--color-secondary-ultra-light);
-                    overflow: hidden;
+                    // overflow: hidden;
+                    padding: 8px 20px;
 
                     .navLink {
                         display: inline-block;
                         position: relative;
 
                         width: 100%;
-                        padding: 8px 20px;
+                        // padding: 8px 20px;
+                        margin:0;
+                        padding:0;
 
                         white-space: nowrap;
                         border: none;
