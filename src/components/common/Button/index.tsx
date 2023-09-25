@@ -33,7 +33,8 @@ const Button = ({
   type = BUTTON_TYPE.BUTTON,
   isDisabled,
   isLoading,
-  onClick
+  onClick,
+  padding
 }: Props | any): ReactElement => {
   const classes = `btn ${variant && `btn-${variant}-base`} ${color && `btn-${color}-base`} ${size && `btn-${size}`} ${isDisabled ? 'btn-disabled' : ''} ${isLoading ? 'btn-loading' : ''}`;
 

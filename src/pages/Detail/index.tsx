@@ -6,6 +6,7 @@ import './index.scss';
 import Star from 'assets/images/star.svg?react';
 import Description from '../../pattern/landingPage/detailProduct/description';
 import Reviews from '../../pattern/landingPage/detailProduct/reviews';
+import ReferFriend from '../../pattern/landingPage/detailProduct/referFriend';
 
 const fakeData = {
   category: 'CONCENTRATES',
@@ -435,7 +436,7 @@ export default function Detail() {
                   : ''
               }`}
               tabIndex={0}>
-              c
+              <ReferFriend />
             </div>
           </div>
         </div>
