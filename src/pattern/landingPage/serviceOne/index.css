@@ -2,7 +2,7 @@
   padding: 80px 64px;
   margin-bottom: 35px;
 }
-@media screen and (max-width: 575.98px) {
+@media screen and (max-width: 575px) {
   .serviceListContainer {
     padding: 80px 24px;
   }

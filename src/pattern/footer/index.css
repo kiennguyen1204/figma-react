@@ -101,13 +101,13 @@
     width: 100%;
   }
 }
-.footerContainer .footerInsiderContainer .footerInsiderBox .footerContent .footerContentItem {
+.footerContainer .footerInsiderContainer .footerInsiderBox .footerContent .footercontent-item {
   display: block;
   position: relative;
   width: 100%;
   color: var(--color-neutral-white);
 }
-.footerContainer .footerInsiderContainer .footerInsiderBox .footerContent .footerContentItem .footerTitle {
+.footerContainer .footerInsiderContainer .footerInsiderBox .footerContent .footercontent-item .footerTitle {
   display: block;
   position: relative;
   color: var(--color-neutral-white);
@@ -116,13 +116,13 @@
   line-height: var(--line-height-large);
   margin-bottom: 24px;
 }
-.footerContainer .footerInsiderContainer .footerInsiderBox .footerContent .footerContentItem .listGroup {
+.footerContainer .footerInsiderContainer .footerInsiderBox .footerContent .footercontent-item .listGroup {
   display: grid;
   grid-template-columns: repeat(2, minmax(50px, 1fr));
   width: 100%;
   row-gap: 16px;
 }
-.footerContainer .footerInsiderContainer .footerInsiderBox .footerContent .footerContentItem .listGroup .listGroupItem .footerLink {
+.footerContainer .footerInsiderContainer .footerInsiderBox .footerContent .footercontent-item .listGroup .listGroupItem .footerLink {
   display: block;
   position: relative;
   color: var(--color-neutral-lighter);
@@ -132,10 +132,10 @@
   text-decoration: none;
   transition: all 0.3s;
 }
-.footerContainer .footerInsiderContainer .footerInsiderBox .footerContent .footerContentItem .listGroup .listGroupItem:hover .footerLink {
+.footerContainer .footerInsiderContainer .footerInsiderBox .footerContent .footercontent-item .listGroup .listGroupItem:hover .footerLink {
   color: var(--color-neutral-white);
 }
-.footerContainer .footerInsiderContainer .footerInsiderBox .footerContent .footerContentItem.paymentMethod .listGroup {
+.footerContainer .footerInsiderContainer .footerInsiderBox .footerContent .footercontent-item.paymentMethod .listGroup {
   display: flex;
   flex-flow: row wrap;
   align-items: flex-start;

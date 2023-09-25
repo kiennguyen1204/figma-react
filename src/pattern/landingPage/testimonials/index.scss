@@ -2,7 +2,7 @@
     font-family: var(--font-family-regular);
     .testimonialsListContainerBox {
 
-        .topHeaderTestitmonials {
+        .top-headerTestitmonials {
             margin-top: 64px;
 
             .titleHeader {
@@ -21,7 +21,7 @@
                 text-transform: uppercase;
 
                 // padding-bottom: 64px;
-                @media only screen and (max-width: 575.98px) {
+                @media only screen and (max-width: 575px) {
                     font-size: var(--font-size-32);
                     line-height: var(--line-height-xxl);
                     letter-spacing: -1.5px;
@@ -118,16 +118,16 @@
                     border-bottom: 1px solid var(--color-matte-white);
                 }
 
-                .boxContentTestimonials {
+                .box-content-testimonials {
                     padding-top: 32px;
 
-                    .ratingStar {
+                    .rating-star {
                         display: flex;
                         align-items: center;
                         gap: 4px;
                     }
 
-                    .commentContent {
+                    .comment-content {
                         color: var(--color-neutral-base);
                         font-size: var(--font-size-normal);
                         font-style: normal;
@@ -138,7 +138,7 @@
                         padding-bottom: 80px;
                     }
 
-                    .dateComment {
+                    .date-comment {
                         color: var(--color-neutral-lighter);
                         font-size: var(--font-size-medium);
                         font-weight: var(--font-weight-regular);

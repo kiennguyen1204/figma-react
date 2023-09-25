@@ -180,7 +180,7 @@ export const FooterPattern =
           </div>
 
           <div className="footerContent">
-            <div className="footerContentItem">
+            <div className="footercontent-item">
               <h3 className="footerTitle">
                 QUICK LINK
               </h3>
@@ -211,7 +211,7 @@ export const FooterPattern =
               </ul>
             </div>
 
-            <div className="footerContentItem">
+            <div className="footercontent-item">
               <h3 className="footerTitle">
                 CONTACT US
               </h3>
@@ -226,7 +226,7 @@ export const FooterPattern =
               </ul>
             </div>
 
-            <div className="footerContentItem">
+            <div className="footercontent-item">
               <h3 className="footerTitle">
                 MORE
               </h3>
@@ -256,7 +256,7 @@ export const FooterPattern =
               </ul>
             </div>
 
-            <div className="footerContentItem paymentMethod">
+            <div className="footercontent-item paymentMethod">
               <ul className="listGroup list-unstyled">
                 {paymentMethod.map(
                   (

@@ -1,4 +1,4 @@
-.cardBoxContainer {
+.cardbox-container {
     display: block;
     position: relative;
 
@@ -7,7 +7,7 @@
     height: auto;
 }
 
-.cardBoxContainer .headerTitle {
+.cardbox-container .headerTitle {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -16,7 +16,7 @@
     border-bottom: 1px solid var(--color-neutral-lightest);
 
 }
-.cardBoxContainer .headerTitle  .title{
+.cardbox-container .headerTitle  .title{
     font-size: var(--font-size-xxl);
     line-height: 36px;
     letter-spacing: -0.05px;
@@ -24,18 +24,18 @@
     color: var(--color-neutral-base);
 }
 
-.cardBoxContainer .headerTitle .showAll{
+.cardbox-container .headerTitle .showAll{
     color: var(--color-primary-base);
     text-decoration: underline;
     font-size: var(--font-size-medium);
 }
-.cardBoxContainer .cardBox {
+.cardbox-container .cardBox {
     display: block;
     position: relative;
     padding: 0 120px;
 }
 
-.cardBoxContainer .cardBox .cardBoxElement {
+.cardbox-container .cardBox .card-box-element {
     display: block;
     position: relative;
     border-radius: 24px;
@@ -46,11 +46,11 @@
 }
 
 @media screen and (max-width: 767.98px) {
-    .cardBoxContainer .cardBox {
+    .cardbox-container .cardBox {
         padding: 0 24px;
     }
 
-    .cardBoxContainer .cardBox .cardBoxElement {
+    .cardbox-container .cardBox .card-box-element {
         padding: 24px;
     }
 }
