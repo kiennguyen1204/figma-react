@@ -147,6 +147,16 @@ export const EndNavbar = ({
     setPosition(index);
   };
 
+  useEffect(() =>{
+
+    const el = document.querySelectorAll('.dropdown-menu-box.active')
+    if(el && el.length > 0) {
+        for(const e of el){
+
+        }
+    }
+  }, [position])
+
 
   const dropdownMenuBox = (
     el: any,
