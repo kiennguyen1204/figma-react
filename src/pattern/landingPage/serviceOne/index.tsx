@@ -24,18 +24,18 @@ export const FirstServicePattern = () => {
     ]
 
     return (
-        <List classes="serviceListContainer" direction="row">
+        <List classes="service-list-container" direction="row">
             {serviceList.map((el: any, index) => (
-                <div className="serviceListContainerBox" key={index}>
-                    <div className="serviceListBoxLeft">
+                <div className="service-list-container-box" key={index}>
+                    <div className="service-list-box-left">
                         <div className="icon-box">
 
                         {el.icon}
                         </div>
                     </div>
-                    <div className="serviceListBoxRight">
-                        <div className="serviceListTitle">{el.title}</div>
-                        <div className="serviceListDescription">{el.description}</div>
+                    <div className="service-list-box-right">
+                        <div className="service-list-title">{el.title}</div>
+                        <div className="service-list-description">{el.description}</div>
                     </div>
                 </div>
             ))}

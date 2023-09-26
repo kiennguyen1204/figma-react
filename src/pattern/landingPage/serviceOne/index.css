@@ -1,21 +1,21 @@
-.serviceListContainer {
+.service-list-container {
   padding: 80px 64px;
   margin-bottom: 35px;
 }
 @media screen and (max-width: 575px) {
-  .serviceListContainer {
+  .service-list-container {
     padding: 80px 24px;
   }
 }
-.serviceListContainer .listContainerBox {
+.service-list-container .list-container-box {
   gap: 32px;
 }
 @media screen and (max-width: 991px) {
-  .serviceListContainer .listContainerBox {
+  .service-list-container .list-container-box {
     gap: 64px;
   }
 }
-.serviceListContainer .listContainerBox .serviceListContainerBox {
+.service-list-container .list-container-box .service-list-container-box {
   display: flex;
   flex-direction: row;
   gap: 24px;
@@ -23,38 +23,38 @@
   height: auto;
 }
 @media screen and (max-width: 1199px) {
-  .serviceListContainer .listContainerBox .serviceListContainerBox {
+  .service-list-container .list-container-box .service-list-container-box {
     width: calc(50% - 32px);
   }
 }
 @media screen and (max-width: 991px) {
-  .serviceListContainer .listContainerBox .serviceListContainerBox {
+  .service-list-container .list-container-box .service-list-container-box {
     width: 100%;
   }
 }
 @media screen and (max-width: 419px) {
-  .serviceListContainer .listContainerBox .serviceListContainerBox {
+  .service-list-container .list-container-box .service-list-container-box {
     flex-direction: column;
     gap: 12px;
   }
 }
-.serviceListContainer .listContainerBox .serviceListContainerBox .serviceListBoxLeft {
+.service-list-container .list-container-box .service-list-container-box .service-list-box-left {
   display: block;
   position: relative;
   margin-top: 1rem;
 }
-.serviceListContainer .listContainerBox .serviceListContainerBox .serviceListBoxLeft svg {
+.service-list-container .list-container-box .service-list-container-box .service-list-box-left svg {
   width: 56px;
   height: 56px;
 }
-.serviceListContainer .listContainerBox .serviceListContainerBox .serviceListBoxRight {
+.service-list-container .list-container-box .service-list-container-box .service-list-box-right {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
   gap: 16px;
 }
-.serviceListContainer .listContainerBox .serviceListContainerBox .serviceListBoxRight .serviceListTitle {
+.service-list-container .list-container-box .service-list-container-box .service-list-box-right .service-list-title {
   display: block;
   position: relative;
   color: var(--color-neutral-base);
@@ -64,7 +64,7 @@
   line-height: 1.5;
   letter-spacing: -0.5px;
 }
-.serviceListContainer .listContainerBox .serviceListContainerBox .serviceListBoxRight .serviceListDescription {
+.service-list-container .list-container-box .service-list-container-box .service-list-box-right .service-list-description {
   display: block;
   position: relative;
   color: var(--color-neutral-light);
