@@ -29,7 +29,6 @@ export default function ReferFriend() {
       </div>
       <div className="divider"></div>
       <div className="refer-code-box">
-        <div className="refer-red"></div>
         <div className="refer-text">
           <p className="title">
             Your Referral URL
@@ -46,7 +45,6 @@ export default function ReferFriend() {
         </div>
       </div>
       <div className="refer-code-box">
-        <div className="refer-red"></div>
         <div className="refer-text">
           <p className="title">
             Your Coupon Code
