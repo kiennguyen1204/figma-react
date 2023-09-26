@@ -13,7 +13,7 @@
         $gapContainer: 32px;
         gap: $gapContainer;
 
-        @media screen and (max-width: 991.98px) {
+        @media screen and (max-width: 991px) {
             gap: $gapContainer * 2;
         }
 
@@ -25,14 +25,14 @@
             width: calc((100% / 3) - $gapContainer);
             height: auto;
 
-            @media screen and (max-width: 1199.98px) {
+            @media screen and (max-width: 1199px) {
                 width: calc((100% / 2) - $gapContainer);
             }
 
-            @media screen and (max-width: 991.98px) {
+            @media screen and (max-width: 991px) {
                 width: 100%;
             }
-            @media screen and (max-width: 419.98px) {
+            @media screen and (max-width: 419px) {
                 // flex-direction: column;
                 gap: 12px;
             }
@@ -56,7 +56,7 @@
                         width: 36px;
                         height: 36px;
                     }
-                    @media only screen and (min-width: 767.98px) {
+                    @media only screen and (min-width: 767px) {
                         width: 100px;
                         height: 100px;
                         svg{

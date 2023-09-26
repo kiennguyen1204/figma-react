@@ -10,7 +10,7 @@
 .serviceListContainer .listContainerBox {
   gap: 32px;
 }
-@media screen and (max-width: 991.98px) {
+@media screen and (max-width: 991px) {
   .serviceListContainer .listContainerBox {
     gap: 64px;
   }
@@ -22,17 +22,17 @@
   width: calc(33.3333333333% - 32px);
   height: auto;
 }
-@media screen and (max-width: 1199.98px) {
+@media screen and (max-width: 1199px) {
   .serviceListContainer .listContainerBox .serviceListContainerBox {
     width: calc(50% - 32px);
   }
 }
-@media screen and (max-width: 991.98px) {
+@media screen and (max-width: 991px) {
   .serviceListContainer .listContainerBox .serviceListContainerBox {
     width: 100%;
   }
 }
-@media screen and (max-width: 419.98px) {
+@media screen and (max-width: 419px) {
   .serviceListContainer .listContainerBox .serviceListContainerBox {
     flex-direction: column;
     gap: 12px;

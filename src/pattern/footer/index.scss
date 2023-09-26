@@ -30,7 +30,7 @@ $backgroundGradient: linear-gradient(180deg, var(--color-neutral-base), var(--co
         width: 100%;
         padding: 120px 120px 64px 120px;
 
-        @media screen and (max-width: 767.98px) {
+        @media screen and (max-width: 767px) {
             padding: 64px 24px;
         }
 
@@ -57,12 +57,12 @@ $backgroundGradient: linear-gradient(180deg, var(--color-neutral-base), var(--co
                 position: relative;
                 width: calc($footerStart - $footerGap);
 
-                @media screen and (max-width: 1199.98px) {
+                @media screen and (max-width: 1199px) {
                     $footerStart: 50%;
                     width: calc($footerStart - $footerGap);
                 }
 
-                @media screen and (max-width: 991.98px) {
+                @media screen and (max-width: 991px) {
                     width: 100%;
                 }
 
@@ -95,7 +95,7 @@ $backgroundGradient: linear-gradient(180deg, var(--color-neutral-base), var(--co
                         line-height: var(--line-height-medium);
                         color: var(--color-neutral-lighter);
 
-                        @media screen and (max-width: 991.98px) {
+                        @media screen and (max-width: 991px) {
                             max-width: 100%;
                         }
                     }
@@ -111,12 +111,12 @@ $backgroundGradient: linear-gradient(180deg, var(--color-neutral-base), var(--co
 
                 width: calc($footerEnd - $footerGap);
 
-                @media screen and (max-width: 1199.98px) {
+                @media screen and (max-width: 1199px) {
                     $footerEnd: 50%;
                     width: calc($footerEnd - $footerGap);
                 }
 
-                @media screen and (max-width: 991.98px) {
+                @media screen and (max-width: 991px) {
                     width: 100%;
                 }
 
@@ -205,7 +205,7 @@ $backgroundGradient: linear-gradient(180deg, var(--color-neutral-base), var(--co
 
                 gap: 40px;
 
-                @media only screen and (min-width: 767.98px) {
+                @media only screen and (min-width: 767px) {
                     align-items: flex-start;
                 }
 

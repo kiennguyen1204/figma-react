@@ -1,19 +1,19 @@
-.bestSellerContainer {
+.best-seller-container {
   display: block;
   position: relative;
   overflow: hidden;
 }
-.bestSellerContainer .bestSellerContainerBox {
+.best-seller-container .best-seller-container-box {
   display: block;
   position: relative;
   padding: 120px;
 }
-@media screen and (max-width: 991.98px) {
-  .bestSellerContainer .bestSellerContainerBox {
+@media screen and (max-width: 991px) {
+  .best-seller-container .best-seller-container-box {
     padding: 80px 24px;
   }
 }
-.bestSellerContainer .bestSellerContainerBox .bestSellerTitle {
+.best-seller-container .best-seller-container-box .best-seller-title {
   display: block;
   position: relative;
   max-width: 948px;
@@ -29,26 +29,26 @@
   padding-bottom: 64px;
 }
 @media screen and (max-width: 575px) {
-  .bestSellerContainer .bestSellerContainerBox .bestSellerTitle {
+  .best-seller-container .best-seller-container-box .best-seller-title {
     font-size: var(--font-size-32);
     line-height: var(--line-height-xxl);
     letter-spacing: -1.5px;
   }
 }
-.bestSellerContainer .bestSellerContainerBox .bestSellerBoxWrapper {
+.best-seller-container .best-seller-container-box .best-seller-box-wrapper {
   display: block;
   position: relative;
   margin-bottom: 64px;
   overflow: hidden;
 }
 @media screen and (max-width: 575px) {
-  .bestSellerContainer .bestSellerContainerBox .bestSellerBoxWrapper {
+  .best-seller-container .best-seller-container-box .best-seller-box-wrapper {
     width: 100%;
     overflow-x: auto;
     overflow-y: hidden;
   }
 }
-.bestSellerContainer .bestSellerContainerBox .bestSellerBoxWrapper .navPill {
+.best-seller-container .best-seller-container-box .best-seller-box-wrapper .nav-pill {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -56,12 +56,12 @@
   gap: 32px;
 }
 @media screen and (max-width: 575px) {
-  .bestSellerContainer .bestSellerContainerBox .bestSellerBoxWrapper .navPill {
+  .best-seller-container .best-seller-container-box .best-seller-box-wrapper .nav-pill {
     width: 30rem;
     padding-block: 1rem;
   }
 }
-.bestSellerContainer .bestSellerContainerBox .bestSellerBoxWrapper .navPill .navItem {
+.best-seller-container .best-seller-container-box .best-seller-box-wrapper .nav-pill .nav-item {
   display: block;
   position: relative;
   width: calc(33.3333333333% - 32px);
@@ -76,7 +76,7 @@
   background: var(--color-secondary-ultra-light);
   overflow: hidden;
 }
-.bestSellerContainer .bestSellerContainerBox .bestSellerBoxWrapper .navPill .navItem .navLink {
+.best-seller-container .best-seller-container-box .best-seller-box-wrapper .nav-pill .nav-item .nav-link {
   display: inline-block;
   position: relative;
   width: 100%;
@@ -85,7 +85,7 @@
   border: none;
   background: transparent;
 }
-.bestSellerContainer .bestSellerContainerBox .bestSellerBoxWrapper .navPill .navItem.active {
+.best-seller-container .best-seller-container-box .best-seller-box-wrapper .nav-pill .nav-item.active {
   color: var(--color-secondary-dark);
   border: 1px solid var(--color-secondary-dark);
 }

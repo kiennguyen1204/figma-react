@@ -1,36 +1,65 @@
-.testimonialsListContainer {
+.testimonials-list-container {
     font-family: var(--font-family-regular);
-    .testimonialsListContainerBox {
 
-        .top-headerTestitmonials {
+    .testimonials-list-containerBox {
+        @media only screen and (min-width: 1400px) {
+            padding-inline: 120px;
+        }
+
+        .top-header-testitmonials {
             margin-top: 64px;
 
-            .titleHeader {
+            .title-header {
                 display: block;
                 position: relative;
+                max-width: 948px;
                 width: 100%;
-                max-width: 984px;
+
                 color: var(--color-neutral-base);
-                font-size: var(--font-size-64);
+
                 font-weight: var(--font-weight-semibold);
                 font-family: var(--font-family-medium);
-                line-height: 1.1;
                 letter-spacing: -4px;
-                text-align: center;
-                margin: auto;
-                text-transform: uppercase;
+                text-align: left;
+                font-size: var(--font-size-32);
+                line-height: var(--line-height-xxl);
+                letter-spacing: -1.5px;
+                padding-bottom: 32px;
+                padding-inline: 24px;
 
-                // padding-bottom: 64px;
-                @media only screen and (max-width: 575px) {
-                    font-size: var(--font-size-32);
-                    line-height: var(--line-height-xxl);
-                    letter-spacing: -1.5px;
-                    padding-bottom: 32px;
+
+                @media screen and (min-width: 1200px) {
+                    font-size: var(--font-size-64);
+                    line-height: 1.1;
+                    padding-bottom: 64px;
+
+                }
+                
+                @media screen and (min-width: 1400px) {
+                  padding-inline: unset;
+
                 }
             }
 
             //mobile first
-            .boxVoted {
+        }
+
+        .list-data {
+            display: block;
+            position: relative;
+            width: 100%;
+            padding-inline: 24px;
+
+            @media only screen and (min-width: 1024px) {
+                display: flex;
+                gap: 32px;
+            }
+            @media only screen and (min-width: 1400px) {
+                padding-inline: 0;
+            }
+
+
+            .box-voted {
                 border-radius: 16px;
                 padding: 24px;
                 gap: 32px;
@@ -39,22 +68,26 @@
 
                 background-color: var(--color-secondary-dark);
 
-                .votedBoxTtitle {
-                    font-size: var(--font-size-xxl);
+                @media only screen and (min-width: 1024px) {
+                    width: 380px;
+                }
+
+                .voted-box-title {
+                    font-size: clamp(var(--font-size-xxl), 3vw, var(--font-size-32));
                     letter-spacing: -0.5px;
                     font-weight: var(--font-weight-medium);
                     color: var(--color-neutral-white);
                     line-height: 36px;
                 }
 
-                .lineHor {
+                .line-hor {
                     margin: 32px 0;
                     height: 1px;
                     border: none;
                     background: var(--color-secondary-base);
                 }
 
-                .bottomBoxVoted {
+                .bottom-box-voted {
                     margin-top: 32px;
 
                     .exellencet {
@@ -64,25 +97,25 @@
 
                     }
 
-                    .ratingBottom {
+                    .rating-bottom {
                         display: flex;
                         align-items: center;
                         gap: 48px;
                         margin-top: 20px;
 
-                        .listStar {
+                        .list-star {
                             display: flex;
                             align-items: center;
                             gap: 4px;
                         }
 
-                        .totalReviews {
+                        .total-reviews {
                             color: var(--color-neutral-white);
                             font-size: var(--font-size-normal);
                             font-weight: var(--font-weight-regular);
                             position: relative;
 
-                            &::before{
+                            &::before {
                                 position: absolute;
                                 content: "";
                                 height: 100%;
@@ -91,75 +124,80 @@
                                 left: -14px;
                             }
 
-                            .reviewText {
+                            .review-text {
                                 color: var(--color-secondary-mid);
                             }
                         }
                     }
                 }
             }
+
+            .testimonials-list {
+                position: relative;
+                display: block;
+                margin-top: 32px;
+
+                @media only screen and (min-width: 1024px) {
+                    width: calc(100% - 380px - 32px);
+                }
+
+                .testimonials-container-box {
+                    padding: 24px;
+
+                    border-radius: 16px;
+                    border: 1px solid var(--color-matte-white);
+
+
+                    .testimonials-container-box-header {
+                        padding-bottom: 32px;
+
+                        border-bottom: 1px solid var(--color-matte-white);
+                    }
+
+                    .box-content-testimonials {
+                        padding-top: 32px;
+
+                        .rating-star {
+                            display: flex;
+                            align-items: center;
+                            gap: 4px;
+                        }
+
+                        .comment-content {
+                            color: var(--color-neutral-base);
+                            font-size: var(--font-size-normal);
+                            font-style: normal;
+                            font-weight: 400;
+                            line-height: 24px;
+
+                            padding-top: 16px;
+                            padding-bottom: 80px;
+                        }
+
+                        .date-comment {
+                            color: var(--color-neutral-lighter);
+                            font-size: var(--font-size-medium);
+                            font-weight: var(--font-weight-regular);
+                        }
+                    }
+
+
+
+                }
+
+                .splide__arrow {
+                    width: 36px;
+                    height: 36px;
+                    background: var(--color-neutral-white);
+                    box-shadow: 0px 6px 16px 0px rgba(0, 0, 0, 0.25);
+                    margin-top: 42px;
+
+                    &.splide__arrow--prev svg {
+                        transform: scaleX(1);
+                    }
+                }
+            }
         }
 
-        .testimonialsList {
-            position: relative;
-            display: block;
-            margin-top: 32px;
-
-            .testimonialsContainerBox {
-                padding: 24px;
-
-                border-radius: 16px;
-                border: 1px solid var(--color-matte-white);
-
-
-                .testimonialsContainerBoxHeader {
-                    padding-bottom: 32px;
-
-                    border-bottom: 1px solid var(--color-matte-white);
-                }
-
-                .box-content-testimonials {
-                    padding-top: 32px;
-
-                    .rating-star {
-                        display: flex;
-                        align-items: center;
-                        gap: 4px;
-                    }
-
-                    .comment-content {
-                        color: var(--color-neutral-base);
-                        font-size: var(--font-size-normal);
-                        font-style: normal;
-                        font-weight: 400;
-                        line-height: 24px;
-
-                        padding-top: 16px;
-                        padding-bottom: 80px;
-                    }
-
-                    .date-comment {
-                        color: var(--color-neutral-lighter);
-                        font-size: var(--font-size-medium);
-                        font-weight: var(--font-weight-regular);
-                    }
-                }
-
-
-
-            }
-
-            .splide__arrow {
-                width: 36px;
-                height: 36px;
-                background: var(--color-neutral-white);
-                box-shadow: 0px 6px 16px 0px rgba(0, 0, 0, 0.25);
-                margin-top: 42px;
-
-                &.splide__arrow--prev svg {
-                    transform: scaleX(1);
-                }
-            }
-        }
     }
 }

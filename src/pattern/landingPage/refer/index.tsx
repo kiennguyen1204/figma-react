@@ -79,7 +79,10 @@ export default function ReferFriend() {
             cannabis products
             online.
           </p>
+
           <div className="content-bottom">
+            <div className="list-content">
+
             {dataBottom.map(
               (e, i) => (
                 <div className="item-bottom">
@@ -106,6 +109,7 @@ export default function ReferFriend() {
                 </div>
               )
             )}
+            </div>
 
             <button className="btn btn-action custom-button">
               Refer Here

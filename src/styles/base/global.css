@@ -32,3 +32,10 @@ body {
   border: 1px solid var(--color-matte-white);
   transition: all 0.3s;
 }
+
+.truncate_3lines{
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;  
+  overflow: hidden;
+}

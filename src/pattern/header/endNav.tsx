@@ -53,7 +53,7 @@ export const EndNavbar = ({ isDrawerOpen, isOpenDrawer }: { isDrawerOpen: boolea
 
         return (
             <button type="button" className="btn dropdownMenuBox" onClick={openList}>
-                <span className="navLink">{el.name}</span>
+                <span className="nav-link">{el.name}</span>
                 {el.dropdown.length > 0 && (
                     <svg
                         width="13"
@@ -87,10 +87,10 @@ export const EndNavbar = ({ isDrawerOpen, isOpenDrawer }: { isDrawerOpen: boolea
                 <ul className="navGroup list-unstyled">
                     {
                         listItem.map((el, index : number) => (
-                            <li className="navItem" key={index}>
+                            <li className="nav-item" key={index}>
                                 {
                                     !el.hasOwnProperty("dropdown") ? (
-                                        <Link to={el.to} className="navLink">{el.name}</Link>
+                                        <Link to={el.to} className="nav-link">{el.name}</Link>
                                     ) : (
                                         dropdownMenuBox(el)
                                     )

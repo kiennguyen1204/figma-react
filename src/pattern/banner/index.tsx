@@ -5,42 +5,42 @@ import "./index.scss"
 
 export const BannerPattern = ():ReactElement => {
     return (
-        <div className="bannerContainer">
-            <div className="bannerBoxBackground">
-                <picture className="bannerBackground">
+        <div className="banner-container">
+            <div className="banner-box-background">
+                {/* <picture className="banner-background">
                     <source media="(max-width: 575px)" srcSet="/src/assets/images/banner/sm_bg.jpg" />
                     <img src="/src/assets/images/banner/lg_bg.jpg" alt="banner" />
-                </picture>
+                </picture> */}
             </div>
 
             <div className="bannerbox-container">
-                <div className="bannerBox">
-                    <div className="bannerBoxContent">
-                        <div className="bannerBoxTitle">
-                            <h4 className="bannerSubtitle">BEST SELLER</h4>
-                            <h2 className="bannerTitle">BEST DISPENSARY TO BUY WEED ONLINE </h2>
+                <div className="banner-box">
+                    <div className="banner-box-content">
+                        <div className="banner-box-title">
+                            <h4 className="banner-subtitle">BEST SELLER</h4>
+                            <h2 className="banner-title">BEST DISPENSARY TO BUY WEED ONLINE </h2>
                         </div>
-                        <div className="bannerBoxDescription">
-                            <p className="bannerDescription">Vitamins & Supplements</p>
+                        <div className="banner-box-description">
+                            <p className="banner-description">Vitamins & Supplements</p>
                         </div>
                     </div>
 
-                    <div className="bannerBoxService">
-                        <ul className="bannerBoxServiceGroup list-unstyled">
-                            <li className="serviceItem">
+                    <div className="banner-box-service">
+                        <ul className="banner-box-service-group list-unstyled">
+                            <li className="service-item">
                                 <span className="text">Get 25% off</span>
                             </li>
-                            <li className="serviceItem">
+                            <li className="service-item">
                                 <span className="text">Free Shipping</span>
                             </li>
                         </ul>
 
-                        <div className="bannerBoxServiceButton">
+                        <div className="banner-box-service-button">
                             <Button
                                 size={"big"}
                                 label={"Shop All"}
                                 variant={"primary"}
-                                classes={"bannerButton"}
+                                classes={"banner-button"}
                             />
                         </div>
                     </div>

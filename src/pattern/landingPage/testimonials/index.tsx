@@ -64,16 +64,17 @@ export default function CustomerTestinmonials() {
 
   const splideOpts = {
     type: 'loop',
-    perPage: 3,
+    perPage: 1.8,
     perMove: 1,
     gap: '24px',
     padding: '15%',
     pagination: false,
     breakpoints: {
       576: { perPage: 1 },
-      690: { perPage: 2 },
-      768: { perPage: 3 },
-      992: { perPage: 3 },
+      991: { perPage: 2 },
+      1024: {
+        perPage: 1.5
+      },
       1100: { perPage: 1.5 },
       1200: { perPage: 2.5 }
     }
@@ -87,6 +88,8 @@ export default function CustomerTestinmonials() {
             CUSTOMER
             TESTIMONIALS
           </h3>
+        </div>
+        <div className="list-data">
           <div className="box-voted">
             <p className="voted-box-title">
               VOTED BEST
@@ -119,131 +122,132 @@ export default function CustomerTestinmonials() {
               </div>
             </div>
           </div>
-        </div>
 
-        <div className="testimonials-list">
-          <Splide
-            hasTrack={false}
-            options={
-              splideOpts
-            }
-            aria-label="My Favorite Images">
-            <SplideTrack>
-              {testimonialsList.map(
-                (
-                  el,
-                  index
-                ) => {
-                  const arrStar =
-                    Array.from(
-                      {
-                        length:
-                          MAX_STAR.TOTAL
-                      },
-                      (
-                        _,
-                        i
-                      ) =>
-                        i + 1
-                    );
-                  return (
-                    <SplideSlide
-                      key={
-                        index
-                      }>
-                      <div className="testimonials-container-box">
-                        <div className="testimonials-container-box-header">
-                          <div className="card-image">
-                            <img
-                              decoding="async"
-                              loading="lazy"
-                              src={
-                                el.avatar
-                              }
-                              className="splide-product-image"
-                              alt="Image 1"
-                            />
-                            <span className="user-name">
+          <div className="testimonials-list">
+            <Splide
+              hasTrack={false}
+              options={
+                splideOpts
+              }
+              aria-label="My Favorite Images">
+              <SplideTrack>
+                {testimonialsList.map(
+                  (
+                    el,
+                    index
+                  ) => {
+                    const arrStar =
+                      Array.from(
+                        {
+                          length:
+                            MAX_STAR.TOTAL
+                        },
+                        (
+                          _,
+                          i
+                        ) =>
+                          i +
+                          1
+                      );
+                    return (
+                      <SplideSlide
+                        key={
+                          index
+                        }>
+                        <div className="testimonials-container-box">
+                          <div className="testimonials-container-box-header">
+                            <div className="card-image">
+                              <img
+                                decoding="async"
+                                loading="lazy"
+                                src={
+                                  el.avatar
+                                }
+                                className="splide-product-image"
+                                alt="Image 1"
+                              />
+                              <span className="user-name">
+                                {
+                                  el.userName
+                                }
+                              </span>
+                            </div>
+                          </div>
+                          <div className="box-content-testimonials">
+                            <div className="rating-star">
+                              {arrStar.map(
+                                (
+                                  e
+                                ) =>
+                                  e <=
+                                  el.star ? (
+                                    <Star
+                                      key={
+                                        e
+                                      }
+                                    />
+                                  ) : (
+                                    <img
+                                      src="/src/assets/images/star.png"
+                                      alt="star"
+                                    />
+                                  )
+                              )}
+                            </div>
+                            <p className="comment-content">
                               {
-                                el.userName
+                                el.comment
                               }
-                            </span>
+                            </p>
+                            <p className="date-comment">
+                              {
+                                el.date
+                              }
+                            </p>
                           </div>
                         </div>
-                        <div className="box-content-testimonials">
-                          <div className="rating-star">
-                            {arrStar.map(
-                              (
-                                e
-                              ) =>
-                                e <=
-                                el.star ? (
-                                  <Star
-                                    key={
-                                      e
-                                    }
-                                  />
-                                ) : (
-                                  <img
-                                    src="/src/assets/images/star.png"
-                                    alt="star"
-                                  />
-                                )
-                            )}
-                          </div>
-                          <p className="comment-content">
-                            {
-                              el.comment
-                            }
-                          </p>
-                          <p className="date-comment">
-                            {
-                              el.date
-                            }
-                          </p>
-                        </div>
-                      </div>
-                    </SplideSlide>
-                  );
-                }
-              )}
-            </SplideTrack>
+                      </SplideSlide>
+                    );
+                  }
+                )}
+              </SplideTrack>
 
-            <div className="splide__arrows">
-              <button className="splide__arrow splide__arrow--prev">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="32"
-                  height="32"
-                  viewBox="0 0 24 24">
-                  <path
-                    fill="none"
-                    stroke="currentColor"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="m15 6l-6 6l6 6"
-                  />
-                </svg>
-              </button>
-              <button className="splide__arrow splide__arrow--next">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="32"
-                  height="32"
-                  viewBox="0 0 24 24">
-                  <path
-                    fill="none"
-                    stroke="currentColor"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="m9 6l6 6l-6 6"
-                  />
-                </svg>
-              </button>
-            </div>
-          </Splide>
+              <div className="splide__arrows">
+                <button className="splide__arrow splide__arrow--prev">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="32"
+                    height="32"
+                    viewBox="0 0 24 24">
+                    <path
+                      fill="none"
+                      stroke="currentColor"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="m15 6l-6 6l6 6"
+                    />
+                  </svg>
+                </button>
+                <button className="splide__arrow splide__arrow--next">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="32"
+                    height="32"
+                    viewBox="0 0 24 24">
+                    <path
+                      fill="none"
+                      stroke="currentColor"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="m9 6l6 6l-6 6"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </Splide>
+          </div>
         </div>
       </div>
     </div>
