@@ -125,10 +125,6 @@ export const EndNavbar = ({
     { name: 'Blog', to: '' }
   ];
 
-  const [
-    position,
-    setPosition
-  ] = useState(0);
 
   useEffect(() => {
     setIsDropdownOpen(
@@ -143,20 +139,11 @@ export const EndNavbar = ({
       window.innerWidth > 992
     )
       return;
-
-    setPosition(index);
-  };
-
-  useEffect(() =>{
-
-    const el = document.querySelectorAll('.dropdown-menu-box.active')
-    if(el && el.length > 0) {
-        for(const e of el){
-
-        }
+    const el = document.querySelector(`.dropdown-${index}`)
+    if(el){
+      el.classList.toggle('active')
     }
-  }, [position])
-
+  };
 
   const dropdownMenuBox = (
     el: any,
@@ -166,11 +153,7 @@ export const EndNavbar = ({
       <>
         <button
           type="button"
-          className={`btn dropdown-menu-box ${
-            position == index
-              ? 'active'
-              : ''
-          }`}
+          className={`btn dropdown-menu-box dropdown-${index}`}
           onClick={() =>
             openList(index)
           }>
