@@ -1,46 +1,51 @@
-.bestSellerContainer {
+.best-seller-container {
     display: block;
     position: relative;
 
     overflow: hidden;
 
-    .bestSellerContainerBox {
+    .best-seller-container-box {
         display: block;
         position: relative;
 
-        padding: 120px;
 
-        @media screen and (max-width: 991.98px) {
-            padding: 64px 0;
+        padding: 64px 0;
+
+        @media screen and (min-width: 1400px) {
+            padding: 120px;
         }
 
-        .bestSellerTitle {
+        .best-seller-title {
             display: block;
             position: relative;
             max-width: 948px;
             width: 100%;
 
             color: var(--color-neutral-base);
-            font-size: var(--font-size-64);
+
             font-weight: var(--font-weight-semibold);
             font-family: var(--font-family-medium);
-            line-height: 1.1;
             letter-spacing: -4px;
+            text-align: left;
+            font-size: var(--font-size-32);
+            line-height: var(--line-height-xxl);
+            letter-spacing: -1.5px;
+            padding-bottom: 32px;
+            padding-inline: 24px;
+            margin-inline: auto;
+            
 
-            text-align: center;
-
-            margin: auto;
-            padding-bottom: 64px;
-
-            @media screen and (max-width: 575px) {
-                font-size: var(--font-size-32);
-                line-height: var(--line-height-xxl);
-                letter-spacing: -1.5px;
-                padding-bottom: 32px;
+            @media screen and (min-width: 1200px) {
+                font-size: var(--font-size-64);
+                line-height: 1.1;
+                padding-bottom: 64px;
+                padding-inline: unset;
+                
             }
+
         }
 
-        .bestSellerBoxWrapper {
+        .best-seller-box-wrapper {
             display: block;
             position: relative;
 
@@ -54,49 +59,55 @@
                 margin-bottom: 40px;
             }
 
-            .navPill {
+            .nav-pill {
                 display: flex;
                 flex-direction: row;
-                justify-content: space-between;
+                justify-content: flex-start;
                 align-items: stretch;
-
                 gap: 32px;
+                gap: 16px;
+                padding-inline: 24px;
 
-                @media screen and (max-width: 575px) {
+                @media screen and (min-width: 1400px) {
                     // min-width: 30rem;
                     // padding-block: 1rem;
-                    gap: 16px;
-                    padding: 0 24px;
+                    // gap: 16px;
+                    // padding: 0 24px;
+                    padding-inline: unset;
                 }
 
-                .navItem {
+                .nav-item {
                     display: block;
                     position: relative;
 
                     // width: calc((100% / 3) - 32px);
-                    
+
                     color: var(--color-neutral-base);
                     font-size: var(--font-size-normal);
                     font-weight: var(--font-weight-medium);
                     font-family: var(--font-family-medium);
                     line-height: 1.5;
 
-                    margin: auto;
+                    // margin: auto;
+
                     border-radius: 100px;
                     transition: all 0.3s ease-in-out;
-                    
+
                     background: var(--color-secondary-ultra-light);
                     // overflow: hidden;
                     padding: 8px 20px;
+                    @media only screen and (min-width: 992px) {
+                        width: calc((100%/3) - 32px - 24px);
+                    }
 
-                    .navLink {
+                    .nav-link {
                         display: inline-block;
                         position: relative;
 
                         width: 100%;
                         // padding: 8px 20px;
-                        margin:0;
-                        padding:0;
+                        margin: 0;
+                        padding: 0;
 
                         white-space: nowrap;
                         border: none;

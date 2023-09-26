@@ -3,6 +3,10 @@
     font-family: var(--font-family-regular);
     margin-top: 64px;
 
+    @media only screen and (min-width: 1400px) {
+        padding: 0 120px;
+    }
+
     .title {
         text-transform: uppercase;
         color: var(--color-neutral-base);
@@ -52,7 +56,18 @@
         gap: 24px;
       
         
-        padding: 0 15px;
+        padding: 0 24px;
         margin-bottom: 64px;
+
+        .item-card{
+            width: calc(((100% + 24px) / 2) - 24px);
+
+            @media only screen and (min-width: 576px) {
+                width: calc(((100% + 24px) / 3) - 24px);
+            }
+            @media only screen and (min-width: 1024px) {
+                width: calc(((100% + 24px) / 4) - 24px);
+            }
+        }
     }
 }

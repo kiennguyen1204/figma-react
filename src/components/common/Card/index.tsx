@@ -4,7 +4,7 @@ const Card = (element: {
   children: any;
   classes: string;
   title?: any;
-  isShowAll?: boolean;
+  iShowAll?: boolean;
 }) => {
   return (
     <div
@@ -12,12 +12,12 @@ const Card = (element: {
       {element.title &&
         element.title.length >
           0 && (
-          <div className="flex headerTitle">
+          <div className="flex header-title">
             <div className="title">
               {element.title}
             </div>
-            {element.isShowAll && (
-              <div className="showAll">
+            {element.iShowAll && (
+              <div className="show-all">
                 Show All
               </div>
             )}

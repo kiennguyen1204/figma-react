@@ -59,7 +59,7 @@ export const Sellers = () => {
         '2 Oz Deal Ahi Tuna + Master Tuna',
       rate: '4.6/5',
       reviews: '135',
-      sale: '',
+      sale: '100%',
       discount: '$120.00',
       price: '$102.00',
       unit: '',
@@ -77,17 +77,20 @@ export const Sellers = () => {
     type: 'loop',
     perPage: 3,
     perMove: 1,
-    gap: '24px',
+    gap: '32px',
     padding: '15%',
 
     pagination: false,
     breakpoints: {
-      576: { perPage: 1 },
-      690: { perPage: 2 },
-      768: { perPage: 3 },
-      992: { perPage: 3 },
+      575: {
+        perPage: 1,
+        gap: '24px'
+      },
+      767: { perPage: 2 },
+      991: { perPage: 3 },
       1100: { perPage: 1.5 },
-      1200: { perPage: 2.5 }
+      1200: { perPage: 2.5 },
+      1920: { perPage: 2.65,padding: 0 }
     }
   };
 

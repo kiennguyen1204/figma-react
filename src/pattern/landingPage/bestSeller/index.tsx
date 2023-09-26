@@ -20,15 +20,15 @@ export const BestSeller = () => {
     };
 
     return (
-        <div className="bestSellerContainer">
-            <div className="bestSellerContainerBox">
-                <h2 className="bestSellerTitle">BEST DISPENSARY TO BUY WEED ONLINE IN CANADA</h2>
+        <div className="best-seller-container">
+            <div className="best-seller-container-box">
+                <h2 className="best-seller-title">BEST DISPENSARY TO BUY WEED ONLINE IN CANADA</h2>
 
-                <div className="bestSellerBoxWrapper">
-                    <ul className="navPill">
+                <div className="best-seller-box-wrapper">
+                    <ul className="nav-pill">
                         {tabsList.map((tab, index) => {
-                            return <li className={`navItem ${index === currentTab ? "active" : ""}`} onClick={() => changeTab(index)} key={index}>
-                                <button className="btn navLink" >{tab.title}</button>
+                            return <li className={`nav-item ${index === currentTab ? "active" : ""}`} onClick={() => changeTab(index)} key={index}>
+                                <button className="btn nav-link" >{tab.title}</button>
                             </li>
                         })}
                     </ul>

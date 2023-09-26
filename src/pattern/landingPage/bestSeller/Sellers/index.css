@@ -15,7 +15,7 @@
   height: auto;
   gap: 32px;
 }
-@media screen and (max-width: 991.98px) {
+@media screen and (max-width: 991px) {
   .seller-list-container .seller-list-container-box {
     flex-direction: column;
   }
@@ -37,7 +37,7 @@
   overflow: hidden;
   z-index: 0;
 }
-@media screen and (max-width: 991.98px) {
+@media screen and (max-width: 991px) {
   .seller-list-container .seller-list-container-box .best-seller-card {
     padding: 120px 24px 80px 24px;
   }
@@ -111,7 +111,7 @@
   position: relative;
   width: calc(100% - 380px);
 }
-@media screen and (max-width: 991.98px) {
+@media screen and (max-width: 991px) {
   .seller-list-container .seller-list-container-box .seller-list {
     width: 100%;
   }
@@ -133,7 +133,7 @@
   overflow: hidden;
   z-index: 0;
 }
-@media screen and (max-width: 767.98px) {
+@media screen and (max-width: 767px) {
   .seller-list-container .seller-list-container-box .seller-list .splide__slide .sell-container-box {
     height: auto;
   }

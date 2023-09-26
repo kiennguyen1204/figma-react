@@ -48,7 +48,7 @@ export const WeedEducationPattern =
           'weed-education-container'
         }
         title="WEED EDUCATION"
-        isShowAll={true}>
+        iShowAll={true}>
         <div className="weed-education-box">
           <div className="weed-education-group">
             {weedEducationList.map(
