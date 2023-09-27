@@ -10,7 +10,7 @@ import ReferFriend from '../../pattern/landingPage/detailProduct/referFriend';
 import {
   dataItemDetail,
   featuredProduct
-} from '../../constants/fakeData';
+} from '../../constants/fakeData'; 
 import ItemCard from '../../components/common/item';
 import Fancybox from '../../components/common/ViewImage';
 
@@ -61,7 +61,7 @@ export default function Detail() {
                   <a
                     data-fancybox="gallery"
                     href={e} 
-                    className={i == currentImage ? 'show':''}
+                    className={i == currentImage ? 'show':''} 
                     >
                     <img
                       alt=""
