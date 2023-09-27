@@ -6,9 +6,16 @@
 
     overflow: hidden;
 
-    // @media screen and (min-width: 768px) {
-    //     height: 180vw;
-    // }
+    @media screen and (min-width: 576px) {
+        height: 140vw;
+    }
+
+    @media screen and (min-width: 768px) {
+        height: 140vw;
+    }
+    @media screen and (min-width: 1024px) {
+        height: 720px;
+    }
 
     .banner-box-background {
         display: block;
@@ -19,11 +26,22 @@
 
         width: 100%;
         height: 100%;
-        background-image: url('/src/assets/images/banner/sm_bg.jpg');
+        background-image: url('/src/assets/images/banner/sm-mask-bg.png');
         background-repeat: no-repeat;
         background-position: center center;
         background-size: cover;
         z-index: -1;
+
+        @media only screen and (min-width: 1024px){
+            background-image: url('/src/assets/images/banner/lg_bg.jpg');
+            background-position-x: -300px;           
+        }
+        @media only screen and (min-width: 1141px){
+            background-position-x: -200px;           
+        }
+        @media only screen and (min-width: 1241px){
+            background-position-x: center;           
+        }
 
         .banner-background {
             display: block;

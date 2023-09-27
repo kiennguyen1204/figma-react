@@ -86,6 +86,8 @@
     height: auto;
     padding: 14px 56px;
     border-bottom: 1px solid var(--bs-gray-500);
+
+    margin-bottom: 80px;
 }
 
 .navbar-container .navbar-box .navbar-brand,
@@ -142,6 +144,8 @@
     height: auto;
 
     order: 1;
+    position: absolute;
+    top: 64px;
 }
 
 .navbar-container .navbar-box .navbar-search-box .form-group {
@@ -261,7 +265,7 @@
 @media screen and (max-width: 991px) {
 
     .navbar-container .navbar-box {
-        flex-flow: row wrap;
+        /* flex-flow: row wrap; */
         padding: 0;
         border-bottom: none;
     }
@@ -298,6 +302,15 @@
         display: block;
     }
 
+}
+
+@media only screen and (min-width: 992px) {
+    .navbar-container .navbar-box .navbar-search-box {
+        position: relative;
+        top: 0;
+        width: 55%;
+        order: 2
+    }
 }
 
 @media screen and (max-width: 575px) {

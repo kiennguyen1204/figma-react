@@ -78,6 +78,10 @@
                     font-weight: var(--font-weight-medium);
                     color: var(--color-neutral-white);
                     line-height: 36px;
+
+                    @media only screen and (min-width: 1024px) {
+                        max-width: 300px;
+                    }
                 }
 
                 .line-hor {
