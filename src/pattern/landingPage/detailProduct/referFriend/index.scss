@@ -54,12 +54,14 @@
     background: var(
       --color-green-white
     );
+    width: 100%;
     .refer-text {
       display: flex;
       flex-direction: column;
       gap: 8px;
       border-left: 2px solid var(--color-other-red);
       padding-left: 16px;
+      flex: 1;
     }
     .title {
       color: var(
@@ -103,6 +105,10 @@
     flex-direction: column;
     gap: 12px;
     width: 100%;
+    @media only screen and (min-width: 1200px) {
+      flex-direction: row;
+      gap: 24px;
+    }
     .social-box {
       display: flex;
       padding: 12px;
@@ -113,6 +119,11 @@
           --color-matte-white
         );
       align-items: center;
+      @media only screen and (min-width: 1200px) {
+        flex-direction: column;
+        width: calc(((100% + 24px) / 2) - 24px);
+        gap: 16px;
+      }
       .logo {
         width: 26px;
         height: 26px;
@@ -121,6 +132,10 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        @media only screen and (min-width: 1200px) {
+          width: 48px;
+          height: 48px;
+        }
       }
       .social-text {
         color: var(
@@ -133,9 +148,13 @@
           --font-weight-regular
         );
         line-height: 150%;
+        text-align: center;
       }
       .twitter {
         background-color: #eefbff;
+      }
+      .whatsapp {
+        background-color: #ECFFF5;
       }
     }
   }
@@ -151,6 +170,8 @@
       --font-weight-regular
     );
     line-height: 150%;
+    text-align: center;
+    width: 100%;
   }
   .form-input-info {
     display: flex;
@@ -163,10 +184,17 @@
       flex-direction: column;
       gap: 8px;
       width: 100%;
+      @media only screen and (min-width: 1200px) {
+        flex-direction: row;
+      }
       .item-input {
         display: flex;
         flex-direction: column;
         gap: 8px;
+        width: 100%;
+        @media only screen and (min-width: 1200px) {
+          width: calc(((100% + 8px) / 2) - 8px);
+        }
         .form-input {
           display: flex;
           flex-direction: column;
@@ -228,6 +256,9 @@
         flex-direction: row;
         align-items: flex-end;
         gap: 16px;
+        .form-input{
+          width: inherit;
+        }
       }
     }
     .gr-info {
@@ -235,6 +266,9 @@
       flex-direction: column;
       gap: 8px;
       width: 100%;
+      @media only screen and (min-width: 1200px) {
+        flex-direction: row;
+      }
       .gr-info-item {
         display: flex;
         height: 48px;

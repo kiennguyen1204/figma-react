@@ -5,7 +5,6 @@ import Twitter from 'assets/images/twitter.svg?react';
 import Whatsapp from 'assets/images/whatsapp.svg?react';
 import AddGreen from 'assets/images/add-green.svg?react';
 import './index.scss';
-import Button from '../../../../components/common/Button';
 
 export default function ReferFriend() {
   return (
@@ -122,7 +121,7 @@ export default function ReferFriend() {
           </div>
         </div>
       </div>
-      <a className='send-email-btn'>Send Emails</a>
+      <button className='btn send-email-btn'>Send Emails</button>
     </div>
   );
 }

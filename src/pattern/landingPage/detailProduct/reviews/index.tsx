@@ -4,7 +4,6 @@ import WhiteStar from 'assets/images/white-star.svg?react';
 import TransStar from 'assets/images/star-trans.svg?react';
 import { MAX_STAR } from '../../../../constants/enums';
 import './index.scss';
-import Button from '../../../../components/common/Button';
 
 export default function Reviews({
   reviews
