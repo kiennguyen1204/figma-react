@@ -298,7 +298,7 @@ export const FooterPattern =
                 <li className="InnerItem">
                   <Link
                     to="/home"
-                    className="innerItemLink">
+                    className="inneritem-link">
                     Out Of
                     Stock
                   </Link>
@@ -306,7 +306,7 @@ export const FooterPattern =
                 <li className="InnerItem">
                   <Link
                     to="/home"
-                    className="innerItemLink">
+                    className="inneritem-link">
                     Privacy
                     Policy
                   </Link>
@@ -314,7 +314,7 @@ export const FooterPattern =
                 <li className="InnerItem">
                   <Link
                     to="/home"
-                    className="innerItemLink">
+                    className="inneritem-link">
                     Terms &
                     Conditions
                   </Link>

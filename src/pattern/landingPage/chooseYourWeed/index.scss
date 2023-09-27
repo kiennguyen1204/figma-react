@@ -6,40 +6,46 @@
     .title {
         text-transform: uppercase;
         color: var(--color-neutral-base);
-        font-size: var( --font-size-32);
+        font-size: var(--font-size-32);
         font-style: normal;
         font-weight: var(--font-weight-semibold);
         letter-spacing: -1.5px;
         padding-left: 24px;
         padding-bottom: 24px;
+
+        @media only screen and (min-width: 1200px) {
+            font-size: var(--font-size-64);
+            line-height: 1.1;
+            padding-bottom: 64px;
+        }
     }
 
-    .filter{
+    .filter {
         font-size: var(--font-size-normal);
         color: var(--color-neutral-base);
         padding-bottom: 24px;
         padding-left: 24px;
     }
 
-    .option-filter{
+    .option-filter {
         overflow: hidden;
         width: 100%;
         position: relative;
 
-        .wrapper-option{
+        .wrapper-option {
             padding: 0 24px;
             margin-bottom: 32px;
 
             display: flex;
             align-items: center;
             gap: 16px;
-            
+
             width: 100%;
             overflow: auto hidden;
 
-            .btn-option-weed.actvie{
-                border-color: var( --color-secondary-dark);
-                color: var( --color-secondary-dark);
+            .btn-option-weed.actvie {
+                border-color: var(--color-secondary-dark);
+                color: var(--color-secondary-dark);
                 background: var(--color-secondary-ultra-light);
             }
         }
@@ -51,13 +57,11 @@
         flex-wrap: wrap;
         justify-content: space-between;
         gap: 24px;
-      
-        
+
+
         padding: 0 24px;
         margin-bottom: 64px;
 
-        @media only screen and (min-width: 1200px) {
-            
-        }
+        @media only screen and (min-width: 1200px) {}
     }
 }

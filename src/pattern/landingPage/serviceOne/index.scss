@@ -1,4 +1,4 @@
-.serviceListContainer {
+.service-list-container {
 
     padding: 80px 64px;
     margin-bottom: 35px;
@@ -9,7 +9,7 @@
         margin-bottom: 0;
     }
 
-    .listContainerBox  {
+    .list-container-box  {
         $gapContainer: 32px;
         gap: $gapContainer;
 
@@ -17,7 +17,7 @@
             gap: $gapContainer * 2;
         }
 
-        .serviceListContainerBox {
+        .service-list-container-box {
             display: flex;
             flex-direction: row;
             gap: 24px;
@@ -37,7 +37,7 @@
                 gap: 12px;
             }
 
-            .serviceListBoxLeft {
+            .service-list-box-left {
                 display: block;
                 position: relative;
                 // margin-top: 1rem;
@@ -67,7 +67,7 @@
                 }
             }
         
-            .serviceListBoxRight {
+            .service-list-box-right {
                 display: flex;
                 flex-direction: column;
                 align-items: flex-start;
@@ -75,7 +75,7 @@
 
                 gap: 12px;
             
-                .serviceListTitle {
+                .service-list-title {
                     display: block;
                     position: relative;
 
@@ -88,7 +88,7 @@
                     letter-spacing: -0.5px;
                 }
 
-                .serviceListDescription {
+                .service-list-description {
                     display: block;
                     position: relative;
 

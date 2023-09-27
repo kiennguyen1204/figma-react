@@ -5,10 +5,10 @@ import Logo from '..//..//assets/images/Logo.png';
 
 export const MiddleNavbar = ({ onClick }: { onClick: () => void }) => {
     return (
-        <div className="navbarContainer">
-            <div className="navbarBox">
-                <div className="navbarBrand">
-                    <button className="btn menuButtonHamburger" onClick={onClick}>
+        <div className="navbar-container">
+            <div className="navbar-box">
+                <div className="navbar-brand">
+                    <button className="btn menu-button-hamburger" onClick={onClick}>
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M3 7H21" stroke="#062A09" strokeWidth="1.5" strokeLinecap="round"/>
                             <path d="M3 12H21" stroke="#062A09" strokeWidth="1.5" strokeLinecap="round"/>
@@ -21,14 +21,14 @@ export const MiddleNavbar = ({ onClick }: { onClick: () => void }) => {
                     </Link>
                 </div>
 
-                <div className="navbarSearchBox">
+                <div className="navbar-search-box">
                     <div className="form-group">
-                        <div className="floatingForm">
+                        <div className="floating-form">
                             <input
                                 type="search"
-                                className="form-control floatingCustomControl"
+                                className="form-control floating-custom-control"
                                 placeholder="Search..."/>
-                            <button className="btn searchButton">
+                            <button className="btn search-button">
                                 <svg
                                     width="18"
                                     height="18"
@@ -53,18 +53,18 @@ export const MiddleNavbar = ({ onClick }: { onClick: () => void }) => {
                     </div>
                 </div>
 
-                <div className="navbarBoxEnd">
-                    <div className="navbarGroupInfo">
-                        <div className="navbarItem">
-                            <Link to="/home" className="itemLink">
+                <div className="navbar-box-end">
+                    <div className="navbar-group-info">
+                        <div className="navbar-item">
+                            <Link to="/home" className="item-link">
                                 <span className="text">Your account</span>
                                 <span className="icon">
                                     <i className="bi bi-person-fill"></i>
                                 </span>
                             </Link>
                         </div>
-                        <div className="navbarItem">
-                            <button className="btn cartButton">
+                        <div className="navbar-item">
+                            <button className="btn cart-button">
                                 <svg
                                     width="24"
                                     height="24"
@@ -99,7 +99,7 @@ export const MiddleNavbar = ({ onClick }: { onClick: () => void }) => {
                                         strokeLinejoin="round"/>
                                 </svg>
                             </button>
-                            <span className="productQuality">0</span>
+                            <span className="product-quality">0</span>
                         </div>
                     </div>
                 </div>

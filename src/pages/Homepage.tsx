@@ -11,7 +11,7 @@ import WhatMake from "../pattern/landingPage/whatmakes";
 
 export const Homepage = () => {
     return (
-        <div className="containerHomepage">
+        <div className="container-homepage">
             <BannerPattern />
             <FirstServicePattern />
             <BestSeller />

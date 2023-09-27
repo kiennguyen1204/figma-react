@@ -250,7 +250,7 @@ $backgroundGradient: linear-gradient(180deg, var(--color-neutral-base), var(--co
                             display: block;
                             position: relative;
 
-                            .innerItemLink {
+                            .inneritem-link {
                                 display: block;
                                 position: relative;
 
@@ -266,7 +266,7 @@ $backgroundGradient: linear-gradient(180deg, var(--color-neutral-base), var(--co
                             }
 
                             &:hover {
-                                .innerItemLink {
+                                .inneritem-link {
                                     color: var(--color-neutral-white);
                                 }
                             }

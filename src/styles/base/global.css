@@ -9,23 +9,27 @@ body {
   font-family: var(--font-family-regular);
 }
 
-.block{
+.hidden-e {
+  display: none;
+}
+
+.block {
   display: block;
 }
 
-.flex{
+.flex {
   display: flex;
 }
 
-.relative{
+.relative {
   position: relative;
 }
 
-.absolute{
+.absolute {
   position: absolute;
 }
 
-.btn-action{
+.btn-action {
   border-radius: 100px;
   height: 40px;
   padding: 0 20px;
@@ -33,9 +37,9 @@ body {
   transition: all 0.3s;
 }
 
-.truncate_3lines{
+.truncate_3lines {
   display: -webkit-box;
   -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;  
+  -webkit-box-orient: vertical;
   overflow: hidden;
 }

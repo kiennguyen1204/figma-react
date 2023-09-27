@@ -70,7 +70,7 @@ export default function CustomerTestinmonials() {
     padding: '15%',
     pagination: false,
     breakpoints: {
-      576: { perPage: 1 },
+      576: { perPage: 1, padding: "5%" },
       991: { perPage: 2 },
       1024: {
         perPage: 1.5

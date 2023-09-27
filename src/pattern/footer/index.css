@@ -185,7 +185,7 @@
   display: block;
   position: relative;
 }
-.footerContainer .footerInsiderContainer .copyright .listGroupCopyright .groupItem .groupItemInner .InnerItem .innerItemLink {
+.footerContainer .footerInsiderContainer .copyright .listGroupCopyright .groupItem .groupItemInner .InnerItem .inneritem-link {
   display: block;
   position: relative;
   color: var(--color-neutral-lighter);
@@ -196,6 +196,6 @@
   text-decoration: none;
   transition: all 0.3s;
 }
-.footerContainer .footerInsiderContainer .copyright .listGroupCopyright .groupItem .groupItemInner .InnerItem:hover .innerItemLink {
+.footerContainer .footerInsiderContainer .copyright .listGroupCopyright .groupItem .groupItemInner .InnerItem:hover .inneritem-link {
   color: var(--color-neutral-white);
 }

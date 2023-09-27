@@ -3,13 +3,13 @@ import "./style.css";
 
 export  const TopNavbar = ():ReactElement => {
     return (
-        <section className="limitToolbarContainer">
-            <div className="limitToolbarBox">
-                <div className="limitToolbarInfo">
-                    <div className="limitToolbarText">
+        <section className="limit-toolbar-container">
+            <div className="limit-toolbar-box">
+                <div className="limit-toolbar-info">
+                    <div className="limit-toolbar-text">
                         LIMITED OFFER: 30% OFF. Use RABBIT30 at Checkout.
                     </div>
-                    <div className="limitToolbarTime">00:00:00</div>
+                    <div className="limit-toolbar-time">00:00:00</div>
                 </div>
             </div>
         </section>

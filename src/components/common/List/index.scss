@@ -1,4 +1,4 @@
-.listContainer {
+.list-container {
     display: block;
     position: relative;
     width: 100%;
@@ -6,19 +6,19 @@
 
     overflow: hidden;
 
-    .listContainerBox {
+    .list-container-box {
         display: flex;
         flex-flow: row wrap;
 
-        .listContainerBoxRow {
+        .list-container-box-row {
             flex-direction: row;
         }
 
-        .listContainerBoxColumn {
+        .list-container-box-column {
             flex-direction: column;
         }
 
-        .listContainerBoxHeader {
+        .list-container-box-header {
             display: block;
             position: relative;
 
@@ -28,7 +28,7 @@
             font-family: var(--font-family-medium);
         }
 
-        .listContainerBoxFooter {
+        .list-container-box-footer {
             display: block;
             position: relative;
 
