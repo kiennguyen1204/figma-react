@@ -590,3 +590,40 @@ export const dataItemDetail =
       }
     ]
   };
+
+export const dataCart = {
+  total: 305.00,
+  cart: [
+    {
+      name: 'Mix And Match Shatter/Budder 28g (4 X 7G)',
+      image: "/src/assets/images/products/image1.png",
+      price: 120.00,
+      amount: 2,
+      total: 240.00,
+      integra: [
+        {
+          namePack:
+            'Add Integra Pack - 4g',
+          amount: 1,
+          price: 2.0
+        },
+        {
+          namePack:
+            'Add Integra Pack - 8g',
+          amount: 1,
+          price: 3.0
+        }
+      ],
+      subTotal: 245.0
+    },
+    {
+      name: 'Mix And Match Shatter/Budder 28g (4 X 7G)',
+      image: "/src/assets/images/products/image3.png",
+      price: 13.0,
+      amount: 5,
+      total: 65.0,
+      integra: [],
+      subTotal: 65.0
+    }
+  ]
+};
