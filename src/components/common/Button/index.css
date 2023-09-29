@@ -29,6 +29,15 @@
   font: normal var(--font-weight-regular) var(--font-size-normal) / var(--line-height-medium);
 }
 
+.btn-primary-base:hover, .btn.btn-primary-base:hover{
+  opacity: 0.85;
+  background: var(--color-primary-base);
+  border-color: var(--color-primary-base);
+  color: var(--color-neutral-white);
+  transition: all 0.3s;
+  backdrop-filter: blur(2px);
+}
+
 .btn-color-text-secondary,
 .btn.btn-color-text-secondary {
   color: var(--color-neutral-mid);

@@ -1,0 +1,13 @@
+.category-product-container{
+    width: 100%;
+    min-height: 100vh;
+
+    .top-title-wrapper{
+        display: flex;
+        align-items: center;
+        padding-inline: 24px;
+        .first-title{
+            font-size: var(--font-size-normal);
+        }
+    }
+}
