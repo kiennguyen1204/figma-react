@@ -18,9 +18,17 @@
         justify-content: center;
         align-items: center;
 
+        @media only screen and (min-width: 1024px) {
+            padding: 38px 56px;
+        }
+
         img {
             width: 120px;
             height: 120px;
+            @media only screen and (min-width: 1024px) {
+                width: 164px;
+                height: 164px;
+            }
         }
 
         .per-price{

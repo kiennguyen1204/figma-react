@@ -5,7 +5,7 @@ import "./index.css"
 
 export const Footer = () => {
     return (
-        <footer className="footerContainer">
+        <footer className="footer-container">
             <CTA />
             <FooterPattern />
         </footer>

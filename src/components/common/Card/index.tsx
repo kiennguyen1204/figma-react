@@ -8,7 +8,7 @@ const Card = (element: {
 }) => {
   return (
     <div
-      className={`cardbox-container ${element.classes}`}>
+      className={`card-box-container ${element.classes}`}>
       {element.title &&
         element.title.length >
           0 && (
@@ -23,7 +23,7 @@ const Card = (element: {
             )}
           </div>
         )}
-      <div className="cardBox">
+      <div className="card-box">
         <div className="card-box-element">
           {element.children}
         </div>

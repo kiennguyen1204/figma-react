@@ -548,6 +548,7 @@
             font-size: var(--font-size-small);
             font-weight: var(--font-weight-medium);
             font-family: var(--font-family-medium);
+            white-space: nowrap;
           }
 
           &.active {

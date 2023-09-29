@@ -13,6 +13,7 @@
     @media screen and (min-width: 768px) {
         height: 140vw;
     }
+
     @media screen and (min-width: 1024px) {
         height: 720px;
     }
@@ -32,15 +33,66 @@
         background-size: cover;
         z-index: -1;
 
-        @media only screen and (min-width: 1024px){
+        @media only screen and (min-width: 476px) {
+            background-position-y: 68%;
+        }
+
+        @media only screen and (min-width: 1024px) {
             background-image: url('/src/assets/images/banner/lg_bg.jpg');
-            background-position-x: -300px;           
+            background-position-x: -300px;
         }
-        @media only screen and (min-width: 1141px){
-            background-position-x: -200px;           
+
+        @media only screen and (min-width: 1141px) {
+            background-position-x: -200px;
         }
-        @media only screen and (min-width: 1241px){
-            background-position-x: center;           
+
+        @media only screen and (min-width: 1241px) {
+            background-position-x: center;
+        }
+
+        .image-homepage-absolute {
+            position: absolute;
+            bottom: 86px;
+
+            @media only screen and (min-width: 1024px) {
+                display: none;
+            }
+
+            img {
+                width: 147px;
+                height: 147px;
+
+                // @media only screen and (min-width: 476px) {
+                //     width: 100px;
+                //     height: 100px;
+                // }
+            }
+        }
+
+        .image-1 {
+            left: -12px;
+            @media only screen and (min-width: 476px) {
+                left: 8%;
+                bottom: 3%;
+            }
+        }
+
+        .image-2 {
+            bottom: 27%;
+            left: 30%;
+            @media only screen and (min-width: 476px) {
+                bottom: 27%;
+            }
+        }
+
+        .image-3 {
+            right: -3%;
+
+            @media only screen and (min-width: 476px) {
+                // right: 
+                bottom: 8%;
+                right: 15%;
+            }
         }
 
         .banner-background {
@@ -80,7 +132,7 @@
 
             width: 100%;
             height: auto;
-           
+
             margin-top: 56px;
 
             @media only screen and (min-width: 768px) {

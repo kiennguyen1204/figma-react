@@ -13,7 +13,7 @@ export const CTA = () => {
                     <p className="ctaDescription">Get 20% off your first purchase when you sign up for our newsletter.</p>
                 </div>
 
-                <hr className="spacingLine" />
+                <hr className="spacing-line" />
 
                 <div className="ctaFooterFlex">
                     <div className="ctaInput">

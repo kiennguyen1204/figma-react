@@ -460,6 +460,7 @@ export default function RecentlyAdded() {
       <h3 className="title">
         RECENTLY ADDED
       </h3>
+      <div className="wrapper-filter">
       <p className="filter">
         Filter by Interest
       </p>
@@ -514,6 +515,7 @@ export default function RecentlyAdded() {
             Concentrace
           </button>
         </div>
+      </div>
       </div>
       <div className="container-list-item">
         {dataList.map(
