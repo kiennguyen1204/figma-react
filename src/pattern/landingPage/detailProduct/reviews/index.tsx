@@ -1,15 +1,15 @@
 import React from 'react';
 import Star from 'assets/images/star.svg?react';
 import WhiteStar from 'assets/images/white-star.svg?react';
+import TransStar from 'assets/images/star-trans.svg?react';
 import { MAX_STAR } from '../../../../constants/enums';
-import './index.scss'
+import './index.scss';
 
 export default function Reviews({
   reviews
 }: {
   reviews: any;
 }) {
-
   return (
     <div className="reviews-container">
       {reviews.map(
@@ -30,7 +30,10 @@ export default function Reviews({
             <div className="divider"></div>
             <div className="rating">
               {Array.from(
-                { length: MAX_STAR.TOTAL },
+                {
+                  length:
+                    MAX_STAR.TOTAL
+                },
                 (_, i) =>
                   i + 1
               ).map(
@@ -50,6 +53,39 @@ export default function Reviews({
           </div>
         )
       )}
+      <a className="show-more-btn">
+        Show More
+      </a>
+      <div className="divider"></div>
+      <div className="add-review">
+        <p className="title">
+          Add A Review
+        </p>
+        <div className="your-rating">
+          <p className="label">
+            Your rating
+          </p>
+          <p>:</p>
+          <div className="rating-box">
+            {Array.from(
+              {
+                length:
+                  MAX_STAR.TOTAL
+              },
+              (_, i) => i + 1
+            ).map(
+              (r: any) => (
+                <TransStar />
+              )
+            )}
+          </div>
+        </div>
+        <div className="your-review-box">
+          <div className="label">Your Review <span>*</span></div>
+          <textarea placeholder='Enter your review' className='enter-review'></textarea>
+        </div>
+        <a className='submit-btn'>Submit</a>
+      </div>
     </div>
   );
 }

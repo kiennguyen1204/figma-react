@@ -47,3 +47,7 @@ a{
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
+
+p+p{
+  margin-top: 0;
+}
