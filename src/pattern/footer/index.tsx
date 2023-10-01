@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom';
-import Logo from 'assets/images/footer_logo.svg'
 
 import Mastercard from 'assets/images/mastercard.svg'
 import Visa from 'assets/images/visa.svg'
@@ -55,7 +54,7 @@ export const FooterPattern = () => {
                     <div className="footerLogo">
                         <h3 className="footerTitle">
                             <Link to="/home">
-                                <img src={Logo} className="footerLogo" alt="logo" />
+                                <img decoding='async' loading='lazy' src="/src/assets/images/footer_logo.svg" className="footerLogo" alt="logo" />
                             </Link>
                         </h3>
 
@@ -99,7 +98,7 @@ export const FooterPattern = () => {
 
                     <div className="footerContentItem paymentMethod">
                         <ul className="listGroup list-unstyled">
-                            {paymentMethod.map((el: { image: string, name: string }, index: number) => (
+                            {paymentMethod.map((el: any, index: number) => (
                                 <li className="listGroupItem" key={index}>
                                     <img decoding='async' loading='lazy' src={el.image} alt={el.name} />
                                 </li>

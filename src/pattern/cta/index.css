@@ -1,10 +1,10 @@
 /** ctaContainer */
-.ctaContainer {
+.cta-container {
     display: block;
     position: relative;
 }
 
-.ctaContainer .cardWrapper {
+.cta-container .card-wrapper {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -13,7 +13,17 @@
     gap: 32px;
 }
 
-.ctaContainer .cardWrapper .ctaText {
+.cta-container .card-wrapper {
+    padding: 24px;
+}
+
+@media screen and (min-width: 768px) {
+    .cta-container .card-wrapper {
+        padding: 64px;
+    }
+}
+
+.cta-container .card-wrapper .cta-text {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -23,7 +33,7 @@
     position: relative;
 }
 
-.ctaContainer .cardWrapper .ctaText .ctaTitle {
+.cta-container .card-wrapper .cta-text .cta-title {
     display: block;
     position: relative;
     max-width: 789px;
@@ -39,7 +49,7 @@
     color: var(--color-matte-white);
 }
 
-.ctaContainer .cardWrapper .ctaText .ctaDescription {
+.cta-container .card-wrapper .cta-text .cta-description {
     display: block;
     position: relative;
     font-size: var(--font-size-xl);
@@ -50,7 +60,7 @@
     color: var(--color-secondary-light);
 }
 
-.ctaContainer .cardWrapper .spacingLine {
+.cta-container .card-wrapper .spacingLine {
     display: block;
     position: relative;
 
@@ -61,7 +71,7 @@
     margin-block: 0px;
 }
 
-.ctaContainer .cardWrapper .ctaFooterFlex {
+.cta-container .card-wrapper .cta-footer-flex {
     display: flex;
     flex-flow: row nowrap;
     justify-content: flex-start;
@@ -74,19 +84,19 @@
     width: 100%;
 }
 
-.ctaContainer .cardWrapper .ctaFooterFlex .ctaInput {
+.cta-container .card-wrapper .cta-footer-flex .cta-input {
     display: block;
     position: relative;
     width: 81%;
 }
-.ctaContainer .cardWrapper .ctaFooterFlex .ctaInput input {
+.cta-container .card-wrapper .cta-footer-flex .cta-input input {
     color: var(--color-secondary-light);
     background: var(--color-secondary-dark);
 }
-.ctaContainer .cardWrapper .ctaFooterFlex .ctaInput input::placeholder {
+.cta-container .card-wrapper .cta-footer-flex .cta-input input::placeholder {
     color: var(--color-secondary-light);
 }
-.ctaContainer .cardWrapper .ctaFooterFlex .ctaButton {
+.cta-container .card-wrapper .cta-footer-flex .cta-button {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
@@ -95,30 +105,30 @@
     width: auto;
 }
 @media screen and (max-width: 991.98px) {
-    .ctaContainer .cardWrapper .ctaText {
+    .cta-container .card-wrapper .cta-text {
         gap: 12px;
     }
-    .ctaContainer .cardWrapper .ctaText .ctaTitle {
+    .cta-container .card-wrapper .cta-text .cta-title {
         font-size: 42px;
         line-height: 62px;
     }
-    .ctaContainer .cardWrapper .ctaFooterFlex {
+    .cta-container .card-wrapper .cta-footer-flex {
         flex-flow: row wrap;
         gap: 8px
     }
-    .ctaContainer .cardWrapper .ctaFooterFlex .ctaInput {
+    .cta-container .card-wrapper .cta-footer-flex .cta-input {
         width: 100%;
     }
-    .ctaContainer .cardWrapper .ctaFooterFlex .ctaButton,
-    .ctaContainer .cardWrapper .ctaFooterFlex .ctaButton .btn {
+    .cta-container .card-wrapper .cta-footer-flex .cta-button,
+    .cta-container .card-wrapper .cta-footer-flex .cta-button .btn {
         width: 100%;
     }
 }
 @media screen and (max-width: 767.98px) {
-    .ctaContainer .cardWrapper {
+    .cta-container .card-wrapper {
         gap: 24px;
     }
-    .ctaContainer .cardWrapper .ctaText .ctaTitle {
+    .cta-container .card-wrapper .cta-text .cta-title {
         font-size: var(--font-size-32);
         line-height: 42px;
     }

@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom"
-import Card from "../../../components/common/Card"
+import { Card } from "components/common/Card"
 
 import "./index.scss";
 
@@ -26,7 +26,7 @@ export const WeedEducationPattern = () => {
     }]
     
     return (
-        <Card classes={"weed-education-container"}>
+        <Card classes={"weed-education-container"} color="white">
             <div className="weed-education-box">
                 <div className="weed-education-group">
                     {weedEducationList.map((item, index) => {

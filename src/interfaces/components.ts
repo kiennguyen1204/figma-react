@@ -1,7 +1,10 @@
 import { ChangeEvent } from "react";
 
+export type rounded = "circle" | "pill" | "none";
+
+
 export interface PropsType {
-    children?: React.ReactNode;
+    children?: React.ReactNode | Array<React.ReactElement>;
     classes?: string;
     slot?: string;
     align?: string;
@@ -9,6 +12,7 @@ export interface PropsType {
     colorText?: string;
     size?: string;
     colorLevel?: string;
+    gap?: string | number;
 }
 
 export interface PropsTypeRate extends PropsType {
@@ -20,4 +24,13 @@ export interface PropsTypeRate extends PropsType {
     disabled?: boolean;
     readOnly?: boolean;
     onChange?: (e: ChangeEvent<HTMLInputElement>) => void;
+}
+
+export interface PropsTypeImage extends PropsType {
+    src: string | any;
+    alt?: string;
+    width?: number;
+    height?: number;
+    style?: React.CSSProperties;
+    rounded?: rounded | "pill";
 }

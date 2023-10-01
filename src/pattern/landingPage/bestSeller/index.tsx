@@ -1,6 +1,6 @@
 import { useState } from "react";
-import "./index.scss"
 import { Sellers } from "./Sellers";
+import "./index.scss"
 
 export const BestSeller = () => {
     const [currentTab, setCurrentTab] = useState(0);

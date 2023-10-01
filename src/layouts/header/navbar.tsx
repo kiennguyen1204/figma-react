@@ -14,7 +14,7 @@ export const Navbar = () => {
 
   return (
     <nav className="navbar navbar-expand-lg navbarCustom py-0">
-      <div className="customContainer">
+      <div className="customContainer w-100">
         <TopNavbar />
         <MiddleNavbar onClick={openDrawerFunction} />
         <EndNavbar isOpenDrawer={openDrawerFunction} isDrawerOpen={isDrawerOpen} />

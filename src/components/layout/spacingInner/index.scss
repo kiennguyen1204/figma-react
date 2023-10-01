@@ -1,0 +1,42 @@
+.spacing-inner {
+
+    &.spacing-inner-center {
+        padding: 32px;
+
+        @media screen and (min-width: 576px) {
+            padding: 64px;
+        }
+    }
+
+    &.spacing-inner-end {
+        padding-right: 64px;
+
+        @media screen and (min-width: 576px) {
+            padding-right: 32px;
+        }
+    }
+
+    &.spacing-inner-start {
+        padding-left: 64px;
+
+        @media screen and (min-width: 576px) {
+            padding-left: 32px;
+        }
+    }
+
+    &.spacing-inner-top {
+        padding-top: 64px;
+
+        @media screen and (min-width: 576px) {
+            padding-top: 32px;
+        }
+    }
+
+    &.spacing-inner-bottom {
+        padding-bottom: 64px;
+
+        @media screen and (min-width: 576px) {
+            padding-bottom: 32px;
+        }
+    }
+}
