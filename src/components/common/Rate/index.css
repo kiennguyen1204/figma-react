@@ -1,0 +1,12 @@
+.rate-container {
+    display: block;
+    position: relative;
+}
+
+.rate-container .rate-box {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    gap: 1px;
+}

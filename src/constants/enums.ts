@@ -1,7 +1,12 @@
+// references color name from https://www.color-meanings.com/shades-of-green-color-names-html-hex-rgb-codes/
+
 export enum BUTTON_VARIANT {
   PRIMARY = 'primary',
   SECONDARY = 'secondary',
-  TERTIARY = 'tertiary'
+  TERTIARY = 'tertiary',
+  LIGHT = 'light',
+  DARK = 'dark',
+  SACRAMENTO = 'sacramento',
 }
 
 export enum BUTTON_SIZE {
