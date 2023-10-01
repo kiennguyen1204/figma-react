@@ -1,0 +1,11 @@
+.normal-text {
+    display: block;
+    position: relative;
+    margin: 0;
+    
+    font-size: var(--font-size-normal);
+    font-weight: var(--font-weight-normal);
+    font-family: var(--font-family-regular);
+
+    line-height: var(--line-height-normal);
+}

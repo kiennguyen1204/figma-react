@@ -3,7 +3,153 @@
 }
 
 body {
+  margin: 0;
+  padding: 0;
   background-color: var(--color-neutral-white);
-  overflow-y: scroll;
-  height: 100vh;
+  box-sizing: border-box;
+}
+
+.p-120 {
+  padding: 120px;
+}
+.ps-120 {
+  padding-left: 120px;
+}
+
+.pe-120 {
+  padding-right: 120px;
+}
+
+.pb-120 {
+  padding-bottom: 120px;
+}
+
+.pt-120 {
+  padding-top: 120px;
+}
+
+.px-120 {
+  padding-left: 120px;
+  padding-right: 120px;
+}
+
+.fw-normal {
+  font-weight: var(--font-weight-normal);
+}
+
+.fw-medium {
+  font-weight: var(--font-weight-medium);
+}
+
+.fw-semibold {
+  font-weight: var(--font-weight-semibold);
+}
+
+.bg-white {
+  color: var(--color-neutral-base);
+  background-color: var(--color-neutral-white);
+}
+
+.bg-sacramento {
+  color: var(--color-neutral-white);
+  background-color: var(--color-sacramento);
+}
+
+.bg-sacramento-light {
+  background-color: var(--color-secondary-light);
+}
+
+.bg-sacramento-mid {
+  background-color: var(--color-secondary-mid);
+}
+
+.bg-sacramento-base {
+  background-color: var(--color-secondary-base);
+}
+
+.bg-sacramento-extreme-light {
+  background-color: var(--color-secondary-ultra-light);
+}
+
+.bg-sacramento-dark {
+  background-color: var(--color-secondary-dark);
+}
+
+.bg-sacramento-extreme-dark {
+  background-color: var(--color-secondary-ultra-dark);
+}
+
+.heading-color-dark {
+  color: var(--color-neutral-base);
+}
+
+.heading-color-black {
+  color: var(--color-neutral-black);
+}
+
+.heading-color-gray {
+  color: var(--color-neutral-lighter);
+}
+
+.heading-color-white {
+  color: var(--color-neutral-white);
+}
+
+.heading-color-sacramento {
+  color: var(--color-sacramento);
+}
+.heading-color-sacramento-mid {
+  color: var(--color-secondary-mid);
+}
+
+.heading-color-light {
+  color: var(--color-neutral-light);
+}
+
+.text-color-dark {
+  color: var(--color-neutral-base);
+}
+
+.text-color-black {
+  color: var(--color-neutral-black);
+}
+
+.text-color-gray {
+  color: var(--color-neutral-lighter);
+}
+
+.text-color-white {
+  color: var(--color-neutral-white);
+}
+
+.text-color-sacramento {
+  color: var(--color-sacramento);
+}
+.text-color-sacramento-mid {
+  color: var(--color-secondary-mid);
+}
+
+.text-color-light {
+  color: var(--color-neutral-light);
+}
+
+.border-top-sacramento {
+  border-top: 1px solid var(--color-sacramento);
+}
+
+.border-top-sacramento-light {
+  border-top: 1.5px solid var(--color-secondary-light);
+}
+
+.border-top-sacramento-mid {
+  border-top: 1.5px solid var(--color-secondary-mid);
+}
+
+.border-top-sacramento-base {
+  border-top: 1.5px solid var(--color-secondary-base);
+}
+
+.my-32px {
+  margin-top: 32px;
+  margin-bottom: 32px;
 }

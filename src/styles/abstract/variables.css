@@ -19,6 +19,12 @@
   --color-primary-base: #17af26;
   --color-neutral-dark-green: #062a09;
 
+
+  --color-dark: #1a1e26;
+  --color-black: #060709;
+  --color-sacramento: #062a09;
+
+
   --color-secondary-light: #c3d2cc;
   --color-secondary-mid: #648a7c;
   --color-secondary-base: #346654;
@@ -65,6 +71,7 @@
   --line-height-large: 30px;
   --line-height-xl: 36px;
   --line-height-xxl: 38.4px;
+  --line-height-48: 48px;
   --line-height-56: 56px;
   --line-height-70: 70.4px;
 
@@ -73,4 +80,10 @@
   --font-family-regular: 'Lexend-Regular';
   --font-family-normal: 'Lexend-Regular';
   --font-family-medium: 'Lexend-Medium';
+
+  /* Letter spacing */
+  --letter-spacing-xxs: -4px;
+  --letter-spacing-xs: -1.5px;
+  --letter-spacing-s: -0.5px;
+  --letter-spacing-normal: 0;
 }

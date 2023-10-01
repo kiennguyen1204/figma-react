@@ -1,0 +1,20 @@
+.heading2 {
+    display: block;
+    position: relative;
+    margin: 0;
+    
+    font-size: var(--font-size-xxl);
+    font-weight: var(--font-weight-semibold);
+    font-family: var(--font-family-medium);
+
+    text-transform: uppercase;
+    line-height: var(--line-height-xl);
+    letter-spacing: var(--letter-spacing-s);
+    
+    @media screen and (min-width: 576px) {
+        font-size: var(--font-size-32);
+        font-weight: var(--font-weight-medium);
+        letter-spacing: var(--letter-spacing-xs);
+        line-height: var(--line-height-xxl);
+    }
+}

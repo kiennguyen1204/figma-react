@@ -1,12 +1,13 @@
-import Button from "../../components/common/Button";
-import Input from "../../components/common/Input";
+import Button from "components/common/Button";
+import Input from "components/common/Input";
+
+import { Card } from 'components/common/Card/index';
 
 import "./index.css";
-import Card from '../../components/common/Card/index';
 
 export const CTA = () => {
     return (
-        <Card classes={"ctaContainer"}>
+        <Card classes={"ctaContainer"} color="sacramento" colorLevel="dark">
             <div className="cardWrapper">
                 <div className="ctaText">
                     <h3 className="ctaTitle">UNLOCK 20% OFF YOUR FIRST ORDER</h3>
