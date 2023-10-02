@@ -9,7 +9,7 @@ body {
   font-family: var(--font-family-regular);
 }
 
-a{
+a, a:hover, a:active, a:focus{
   text-decoration: none;
 }
 
