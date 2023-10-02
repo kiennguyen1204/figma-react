@@ -2,8 +2,8 @@ import React from 'react';
 import Star from 'assets/images/star.svg?react';
 import WhiteStar from 'assets/images/white-star.svg?react';
 import TransStar from 'assets/images/star-trans.svg?react';
-import { MAX_STAR } from '../../../../constants/enums';
 import './index.scss';
+import { MAX_STAR } from '../../../constants/enums';
 
 export default function Reviews({
   reviews

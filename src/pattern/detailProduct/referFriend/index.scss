@@ -23,9 +23,7 @@
       color: var(
         --color-neutral-black
       );
-      font-size: var(
-        --font-size-large
-      );
+      font-size: clamp(var(--font-size-large), 2vw, var(--font-size-xl));
       font-weight: var(
         --font-weight-regular
       );
@@ -36,9 +34,7 @@
       color: var(
         --color-neutral-light
       );
-      font-size: var(
-        --font-size-medium
-      );
+      font-size: clamp(var(--font-size-medium), 2vw, var(--font-size-normal));
       font-weight: var(
         --font-weight-regular
       );
