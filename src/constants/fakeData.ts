@@ -605,13 +605,15 @@ export const dataCart = {
           namePack:
             'Add Integra Pack - 4g',
           amount: 1,
-          price: 2.0
+          price: 2.0,
+          total: 2.0
         },
         {
           namePack:
             'Add Integra Pack - 8g',
           amount: 1,
-          price: 3.0
+          price: 3.0,
+          total: 3.0
         }
       ],
       subTotal: 245.0

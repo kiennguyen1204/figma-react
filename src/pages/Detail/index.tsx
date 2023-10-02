@@ -4,15 +4,15 @@ import React, {
 import { useParams } from 'react-router-dom';
 import './index.scss';
 import Star from 'assets/images/star.svg?react';
-import Description from '../../pattern/landingPage/detailProduct/description';
-import Reviews from '../../pattern/landingPage/detailProduct/reviews';
-import ReferFriend from '../../pattern/landingPage/detailProduct/referFriend';
 import {
   dataItemDetail,
   featuredProduct
 } from '../../constants/fakeData'; 
 import ItemCard from '../../components/common/item';
 import Fancybox from '../../components/common/ViewImage';
+import Description from '../../pattern/detailProduct/description';
+import Reviews from '../../pattern/detailProduct/reviews';
+import ReferFriend from '../../pattern/detailProduct/referFriend';
 
 export default function Detail() {
   const { id } = useParams();

@@ -88,7 +88,7 @@
 
       .category {
         color: var(--color-neutral-lighter);
-        font-size: var(--font-size-medium);
+        font-size: clamp(var(--font-size-small), 2vw, var(--font-size-medium));
         font-weight: var(--font-weight-light);
         font-family: var(--font-family-regular);
         line-height: var(--light-height-small);
@@ -96,9 +96,9 @@
 
       .title {
         color: var(--color-neutral-black);
-        font-size: var(--font-size-xl);
+        font-size: clamp(var(--font-size-xl), 2vw, var(--font-size-32));
         font-family: var(--font-family-medium);
-        font-weight: var(--font-weight-medium);
+        font-weight: clamp(var(--font-weight-medium), 2vw, var(--font-weight-semibold));
         line-height: var(--line-height-large);
       }
 
@@ -131,7 +131,7 @@
 
           .discount {
             color: var(--color-neutral-lighter);
-            font-size: var(--font-size-medium);
+            font-size: clamp(var(--font-size-medium), 2vw, var(--font-size-normal));
             font-family: var(--font-family-normal);
             font-weight: var(--font-weight-regular);
             line-height: 150%;
@@ -140,7 +140,7 @@
 
           .price {
             color: var(--color-other-red);
-            font-size: var(--font-size-normal);
+            font-size: clamp(var(--font-size-normal), 2vw, var(--font-size-xl));
             font-family: var(--font-family-medium);
             font-weight: var(--font-weight-medium);
             line-height: 150%;
@@ -157,17 +157,17 @@
             gap: 6px;
             align-items: center;
 
-            .rateSvg {
+            .rate-svg {
               display: flex;
               align-items: center;
               width: 14px;
               height: 14px;
             }
 
-            .rateText {
+            .rate-text {
               color: var(--color-neutral-black);
               font-family: var(--font-family-regular);
-              font-size: var(--font-size-medium);
+              font-size: clamp(var(--font-size-medium), 2vw, var(--font-size-normal));
               font-weight: var(--font-weight-normal);
               line-height: 150%;
             }
@@ -180,17 +180,16 @@
           }
 
           .review-box {
-            .reviewText {
+            .review-text {
               color: var(--color-neutral-black);
               font-family: var(--font-family-regular);
-              font-size: var(--font-size-medium);
+              font-size: clamp(var(--font-size-medium), 2vw, var(--font-size-normal));
               font-weight: var(--font-weight-normal);
               line-height: 150%;
-
               .reviews {
                 color: var(--color-neutral-lighter);
                 font-family: var(--font-family-regular);
-                font-size: var(--font-size-small);
+                font-size: clamp(var(--font-size-small), 2vw, var(--font-size-medium));
                 font-weight: var(--font-weight-normal);
                 line-height: 150%;
               }
@@ -585,7 +584,7 @@
             border: none;
             background: transparent;
             color: var(--color-neutral-base);
-            font-size: var(--font-size-small);
+            font-size: clamp(var(--font-size-small), 2vw, var(--font-size-normal));
             font-weight: var(--font-weight-medium);
             font-family: var(--font-family-medium);
             white-space: nowrap;

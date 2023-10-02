@@ -3,12 +3,10 @@ import React, {
 } from 'react';
 import CartSvg from 'assets/images/cart.svg?react';
 import XCircle from 'assets/images/x-circle.svg?react';
-import MasterCard from 'assets/images/payments/master-card.svg?react';
-import Visa from 'assets/images/payments/visa.svg?react';
-import Bitcoin from 'assets/images/payments/bitcoin.svg?react';
-import Interact from 'assets/images/payments/interact.svg?react';
 import './index.scss';
 import { dataCart } from '../../constants/fakeData';
+import Payments from '../payments';
+import { useNavigate } from 'react-router-dom';
 
 export default function Cart() {
   const [
@@ -19,6 +17,7 @@ export default function Cart() {
     amountProduct,
     setAmountProduct
   ] = useState(0);
+  const navigation = useNavigate();
   return (
     <div className="cart-container">
       <div className="header">
@@ -116,7 +115,7 @@ export default function Cart() {
                             <p className="price-total">
                               $
                               {
-                                e.total
+                                pack.total
                               }
                             </p>
                           </div>
@@ -150,30 +149,11 @@ export default function Cart() {
               </p>
             </div>
           </div>
-          <button className="btn checkout-btn">
+          <button className="btn checkout-btn" onClick={() => navigation('/checkout')}>
             Checkout
           </button>
           <div className="divider"></div>
-          <div className="payments">
-            <p className="title-payments">
-              SECURE PAYMENTS
-              PROVIDED BY
-            </p>
-            <div className="list-payments">
-              <div className="item-payment">
-                <MasterCard />
-              </div>
-              <div className="item-payment">
-                <Visa />
-              </div>
-              <div className="item-payment">
-                <Bitcoin />
-              </div>
-              <div className="item-payment">
-                <Interact />
-              </div>
-            </div>
-          </div>
+          <Payments />
         </div>
       )}
     </div>

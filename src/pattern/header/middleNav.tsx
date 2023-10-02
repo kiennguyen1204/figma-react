@@ -18,10 +18,6 @@ export const MiddleNavbar = ({
   const windowWidth = useRef(
     window.innerWidth
   ).current;
-  console.log(
-    'width: ',
-    windowWidth
-  );
 
   return (
     <div className="navbar-container">

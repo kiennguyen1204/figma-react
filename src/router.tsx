@@ -5,6 +5,7 @@ import { About } from "pages/About";
 import { PageNotFound } from "pages/PageNotFound"
 import Detail from "./pages/Detail";
 import CategoryProduct from "./pages/Category";
+import Checkout from "./pages/Checkout";
 
 interface RouterProps {
     children: React.ReactNode;
@@ -27,6 +28,7 @@ const Router = (props: RouterProps) => {
                 <Route path="/about" element={<About />} />
                 <Route path="/detail/:id" element={<Detail />} />
                 <Route path="/cate" element={<CategoryProduct />} />
+                <Route path="/checkout" element={<Checkout />} />
                 <Route path="*" element={<PageNotFound />} />
             </Routes>
 
