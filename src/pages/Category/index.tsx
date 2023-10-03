@@ -1,4 +1,5 @@
 import ItemCard from '../../components/common/item';
+import { MAX_STAR } from '../../constants/enums';
 import { dataList } from '../../constants/fakeData';
 import { FirstServicePattern } from '../../pattern/landingPage/serviceOne';
 import './index.scss';
@@ -12,6 +13,7 @@ import {
   HiMiniChevronLeft,
   HiMiniChevronRight
 } from 'react-icons/hi2';
+import Star from 'assets/images/star.svg?react';
 
 export default function CategoryProduct() {
   const splideOpts = {
@@ -181,7 +183,29 @@ export default function CategoryProduct() {
             )}
           </div>
           <div className="banner-bottom">
-            <div className="banner-item-wrapper"></div>
+            <div className="banner-item-wrapper">
+              <p className="cate">
+              CONCENTRATES
+              </p>
+              <p className="title">
+              Mix And Match Shatter/Budder 28g (4 X 7G)
+              </p>
+              <p className="rating-n-review">
+                <span className="rating">
+                  <Star/>
+                  <span className="star-text">
+                    4.6/{MAX_STAR.TOTAL}
+                  </span>
+                </span>
+                <span className="sign">/</span>
+                <span className="reviews">
+                  135
+                  <span className="text-review">
+                    Reviews
+                  </span>
+                </span>
+              </p>
+            </div>
           </div>
           <div className="list-item-data">
             {dataList.map(

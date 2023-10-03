@@ -90,8 +90,10 @@
                 }
 
                 .banner-bottom {
-                    padding-top: 40px;
+                    margin: 40px 0;
                     // background-image: ;
+                    background: rgba(5, 66, 44, 0.20);
+                    backdrop-filter: blur(20px);
 
                     .banner-item-wrapper {
                         padding: 24px

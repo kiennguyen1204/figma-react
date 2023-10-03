@@ -48,6 +48,14 @@ a, a:hover, a:active, a:focus{
   overflow: hidden;
 }
 
+.text-reviews{
+  color: var(--color-neutral-lighter);
+  font-family: var(--font-family-regular);
+  font-size: clamp(var(--font-size-small), 2vw, var(--font-size-medium));
+  font-weight: var(--font-weight-normal);
+  line-height: 150%;
+}
+
 p+p{
   margin-top: 0;
 }
