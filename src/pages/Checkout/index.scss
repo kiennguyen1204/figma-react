@@ -164,7 +164,7 @@
               @media only screen and (min-width: 767px) {
                 flex-direction: row;
                 justify-content: space-between;
-                align-items: center; 
+                align-items: center;
               }
               .title {
                 color: var(
@@ -312,6 +312,9 @@
           var(
             --color-matte-white
           );
+        @media only screen and (min-width: 767px) {
+          flex-direction: row;
+        }
         .delivery-content {
           display: flex;
           flex-direction: column;
@@ -330,6 +333,7 @@
             --font-weight-regular
           );
           line-height: 150%;
+          height: 24px;
         }
         .delivery-box {
           display: flex;
@@ -447,6 +451,7 @@
         align-items: flex-start;
         justify-content: space-between;
         width: 100%;
+        gap: 16px;
         .coupon-input {
           display: flex;
           height: 48px;
@@ -457,7 +462,7 @@
             var(
               --color-matte-white
             );
-          width: 49%;
+          flex: 1;
           input {
             border: none;
             outline: none;

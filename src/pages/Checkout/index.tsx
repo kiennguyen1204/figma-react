@@ -166,53 +166,53 @@ export default function Checkout() {
                         pack
                       ) => (
                         <div className="product-box">
-                      <div className="title">
-                        {
-                          pack.namePack
-                        }
-                      </div>
-                      <div className="product-value">
-                        <div className="amount-price">
-                          <div className="amount">
-                            <button className="amount-btn">
-                              -
-                            </button>
-                            <p>
+                          <div className="title">
+                            {
+                              pack.namePack
+                            }
+                          </div>
+                          <div className="product-value">
+                            <div className="amount-price">
+                              <div className="amount">
+                                <button className="amount-btn">
+                                  -
+                                </button>
+                                <p>
+                                  {
+                                    pack.amount
+                                  }
+                                </p>
+                                <button className="amount-btn">
+                                  +
+                                </button>
+                              </div>
+                              <p className="price">
+                                $
+                                {
+                                  pack.price
+                                }
+                              </p>
+                            </div>
+                            {windowWidth <=
+                              767 && (
+                              <p className="total total-pc">
+                                $
+                                {
+                                  pack.total
+                                }
+                              </p>
+                            )}
+                          </div>
+                          {windowWidth >
+                            767 && (
+                            <p className="total">
+                              $
                               {
-                                pack.amount
+                                pack.total
                               }
                             </p>
-                            <button className="amount-btn">
-                              +
-                            </button>
-                          </div>
-                          <p className="price">
-                            $
-                            {
-                              pack.price
-                            }
-                          </p>
+                          )}
                         </div>
-                        {windowWidth <=
-                          767 && (
-                          <p className="total total-pc">
-                            $
-                            {
-                              pack.total
-                            }
-                          </p>
-                        )}
-                      </div>
-                      {windowWidth >
-                        767 && (
-                        <p className="total">
-                          $
-                          {
-                            pack.total
-                          }
-                        </p>
-                      )}
-                    </div>
                       )
                     )}
                     <div className="subtotal">
@@ -257,28 +257,35 @@ export default function Checkout() {
                 </p>
               </div>
             </div>
-            <div className="delivery-box">
-              <div className="deli-icon">
-                <Deli2 />
+            <div className="delivery-content">
+              {windowWidth >
+                767 && (
+                <p className="title"></p>
+              )}
+              <div className="delivery-box">
+                <div className="deli-icon">
+                  <Deli2 />
+                </div>
+                <p className="deli-bold">
+                  Free next
+                  day delivery
+                  to stores.
+                </p>
+                <p className="deli-text">
+                  Home
+                  delivery is
+                  $4.99 for
+                  orders under
+                  $100 and is
+                  FREE for all
+                  orders over
+                  $100
+                </p>
               </div>
-              <p className="deli-bold">
-                Free next day
-                delivery to
-                stores.
-              </p>
-              <p className="deli-text">
-                Home delivery
-                is $4.99 for
-                orders under
-                $100 and is
-                FREE for all
-                orders over
-                $100
-              </p>
             </div>
             <div className="delivery-content">
               <p className="title">
-                Delivery
+                Free Returns
               </p>
               <div className="delivery-box">
                 <div className="deli-icon">
