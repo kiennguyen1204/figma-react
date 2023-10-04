@@ -46,7 +46,7 @@
             width: 100%;
 
             @media screen and (min-width: 1024px) {
-                width: 380px;
+                width: 380px;                  
             }
 
             @media screen and (min-width: 1200px) {
@@ -70,11 +70,20 @@
                 background: linear-gradient(180deg, rgba(52, 102, 84, 0.00) 0%, rgba(52, 102, 84, 0.40) 100%);
                 transform: rotate(5deg);
                 z-index: -1;
-
-                // @media only screen and (max-width: 767px){
-
-                // }
+                
+                @media screen and (min-width: 576px) {
+                    right: -10%;                 
+                }
+                @media screen and (min-width: 1024px) {
+                    right: -25%;     
+                    top: -120px;            
+                }
+                @media screen and (min-width: 1200px) {    
+                    top: -30px;            
+                }
             }
+
+
 
             .best-seller-card-image {
                 display: block;
@@ -96,7 +105,7 @@
                 }
             }
 
-            .sellerCardContent {
+            .seller-card-content {
                 display: flex;
                 flex-direction: column;
                 align-items: center;

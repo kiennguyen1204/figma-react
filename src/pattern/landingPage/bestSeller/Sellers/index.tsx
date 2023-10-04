@@ -88,7 +88,7 @@ export const Sellers = () => {
       },
       767: { perPage: 2 },
       991: { perPage: 3 },
-      1100: { perPage: 1.5 },
+      1100: { perPage: 3 },
       1200: { perPage: 2.5 },
       1920: { perPage: 2.65,padding: 0 }
     }
@@ -112,7 +112,7 @@ export const Sellers = () => {
             />
           </div>
 
-          <div className="sellerCardContent">
+          <div className="seller-card-content">
             <div className="best-seller-cardTitle">
               <h3>
                 Shop our Best

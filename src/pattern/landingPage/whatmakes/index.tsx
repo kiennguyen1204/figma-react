@@ -77,7 +77,7 @@ export default function WhatMake() {
           feel makes us a cut
           above the rest.
         </p>
-        <div className="contentbox-container">
+        <div className="content-box-container">
             {contentData.map((e, i) => (
                 <div className="item-box" key={i}>
                     <div className="icon">

@@ -15,7 +15,7 @@
 
         @media only screen and (min-width: 1200px) {
             font-size: var(--font-size-64);
-            line-height: 1.1;
+            line-height: unset;
             padding-bottom: 64px;
         }
     }
@@ -25,6 +25,7 @@
         color: var(--color-neutral-base);
         padding-bottom: 24px;
         padding-left: 24px;
+
     }
 
     .option-filter {

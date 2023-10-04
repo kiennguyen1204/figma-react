@@ -9,6 +9,10 @@ body {
   font-family: var(--font-family-regular);
 }
 
+a, a:hover, a:active, a:focus{
+  text-decoration: none;
+}
+
 .hidden-e {
   display: none;
 }
@@ -42,6 +46,14 @@ body {
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
+}
+
+.text-reviews{
+  color: var(--color-neutral-lighter);
+  font-family: var(--font-family-regular);
+  font-size: clamp(var(--font-size-small), 2vw, var(--font-size-medium));
+  font-weight: var(--font-weight-normal);
+  line-height: 150%;
 }
 
 p+p{

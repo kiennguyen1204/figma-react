@@ -587,6 +587,7 @@
             font-size: clamp(var(--font-size-small), 2vw, var(--font-size-normal));
             font-weight: var(--font-weight-medium);
             font-family: var(--font-family-medium);
+            white-space: nowrap;
           }
 
           &.active {

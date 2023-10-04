@@ -76,7 +76,8 @@ export default function CustomerTestinmonials() {
         perPage: 1.5
       },
       1100: { perPage: 1.5 },
-      1200: { perPage: 2.5 }
+      1200: { perPage: 1 },
+      1920: {gap: '32px'}
     }
   };
 

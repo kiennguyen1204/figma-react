@@ -1,6 +1,6 @@
 $backgroundGradient: linear-gradient(180deg, var(--color-neutral-base), var(--color-secondary-ultra-dark));
 
-.footerContainer {
+.footer-container {
     display: block;
     position: relative;
     padding-top: 64px;
@@ -24,7 +24,7 @@ $backgroundGradient: linear-gradient(180deg, var(--color-neutral-base), var(--co
         z-index: -1;
     }
 
-    .footerInsiderContainer {
+    .footer-insider-container {
         display: block;
         position: relative;
         width: 100%;
@@ -34,7 +34,7 @@ $backgroundGradient: linear-gradient(180deg, var(--color-neutral-base), var(--co
             padding: 64px 24px;
         }
 
-        .footerInsiderBox {
+        .footer-insider-box {
             display: flex;
             flex-flow: row wrap;
             justify-content: space-between;
@@ -47,7 +47,7 @@ $backgroundGradient: linear-gradient(180deg, var(--color-neutral-base), var(--co
             $footerStart: 30%;
             $footerEnd: 70%;
 
-            .footerTop {
+            .footer-top {
                 display: flex;
                 flex-direction: column;
                 align-items: flex-start;
@@ -66,7 +66,7 @@ $backgroundGradient: linear-gradient(180deg, var(--color-neutral-base), var(--co
                     width: 100%;
                 }
 
-                .footerLogo {
+                .footer-logo {
                     display: flex;
                     flex-direction: column;
                     align-items: flex-start;
@@ -75,7 +75,7 @@ $backgroundGradient: linear-gradient(180deg, var(--color-neutral-base), var(--co
 
                     color: var(--color-neutral-white);
 
-                    .footerTitle {
+                    .footer-title {
                         display: block;
                         position: relative;
                         max-width: 173px;
@@ -83,7 +83,7 @@ $backgroundGradient: linear-gradient(180deg, var(--color-neutral-base), var(--co
                         height: auto;
                     }
 
-                    .footerDescription {
+                    .footer-description {
                         display: block;
                         position: relative;
                         max-width: 276px;
@@ -102,7 +102,7 @@ $backgroundGradient: linear-gradient(180deg, var(--color-neutral-base), var(--co
                 }
             }
 
-            .footerContent {
+            .footer-content {
                 display: flex;
                 flex-flow: column wrap;
                 justify-content: flex-start;
@@ -120,14 +120,14 @@ $backgroundGradient: linear-gradient(180deg, var(--color-neutral-base), var(--co
                     width: 100%;
                 }
 
-                .footercontent-item {
+                .footer-content-item {
                     display: block;
                     position: relative;
                     width: 100%;
 
                     color: var(--color-neutral-white);
 
-                    .footerTitle {
+                    .footer-title {
                         display: block;
                         position: relative;
 
@@ -139,15 +139,18 @@ $backgroundGradient: linear-gradient(180deg, var(--color-neutral-base), var(--co
                         margin-bottom: 24px;
                     }
 
-                    .listGroup {
+                    .list-group {
                         display: grid;
                         grid-template-columns: repeat(2, minmax(50px, 1fr));
                         width: 100%;
 
                         row-gap: 16px;
 
-                        .listGroupItem {
-                            .footerLink {
+                        .list-group-item {
+                            background: none;
+                            border: none;
+
+                            .footer-link {
                                 display: block;
                                 position: relative;
 
@@ -162,16 +165,16 @@ $backgroundGradient: linear-gradient(180deg, var(--color-neutral-base), var(--co
                             }
 
                             &:hover {
-                                .footerLink {
+                                .footer-link {
                                     color: var(--color-neutral-white);
                                 }
                             }
                         }
                     }
 
-                    &.paymentMethod {
+                    &.payment-method {
 
-                        .listGroup {
+                        .list-group {
                             display: flex;
                             flex-flow: row wrap;
                             align-items: flex-start;
@@ -184,7 +187,7 @@ $backgroundGradient: linear-gradient(180deg, var(--color-neutral-base), var(--co
             }
         }
 
-        .spacingLine {
+        .spacing-line {
             display: block;
             position: relative;
             width: 100%;
@@ -197,7 +200,7 @@ $backgroundGradient: linear-gradient(180deg, var(--color-neutral-base), var(--co
             display: block;
             position: relative;
 
-            .listGroupCopyright {
+            .list-list-group-copyright {
                 display: flex;
                 flex-flow: row wrap;
                 align-items: center;
@@ -209,11 +212,11 @@ $backgroundGradient: linear-gradient(180deg, var(--color-neutral-base), var(--co
                     align-items: flex-start;
                 }
 
-                .groupItem {
+                .group-item {
                     display: block;
                     position: relative;
 
-                    .copyrightText {
+                    .copyright-text {
                         display: block;
                         position: relative;
 
@@ -226,7 +229,7 @@ $backgroundGradient: linear-gradient(180deg, var(--color-neutral-base), var(--co
                         padding-bottom: 64px;
                     }
 
-                    .groupItemInner {
+                    .group-item-inner {
                         display: flex;
                         flex-flow: row wrap;
                         align-items: center;
@@ -246,11 +249,11 @@ $backgroundGradient: linear-gradient(180deg, var(--color-neutral-base), var(--co
                             font-size: var(--font-size-normal);
                         }
 
-                        .InnerItem {
+                        .inner-item {
                             display: block;
                             position: relative;
 
-                            .inneritem-link {
+                            .inner-item-link {
                                 display: block;
                                 position: relative;
 
@@ -266,7 +269,7 @@ $backgroundGradient: linear-gradient(180deg, var(--color-neutral-base), var(--co
                             }
 
                             &:hover {
-                                .inneritem-link {
+                                .inner-item-link {
                                     color: var(--color-neutral-white);
                                 }
                             }

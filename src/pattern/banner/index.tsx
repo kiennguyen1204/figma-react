@@ -6,7 +6,7 @@ import "./index.scss"
 export const BannerPattern = ():ReactElement => {
     return (
         <div className="banner-container">
-            <div className="banner-box-background">
+            <div className="banner-box-background">               
             </div>
 
             <div className="bannerbox-container">

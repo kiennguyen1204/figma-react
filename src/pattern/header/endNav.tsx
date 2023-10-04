@@ -24,105 +24,105 @@ export const EndNavbar = ({
     },
     {
       name: 'Flower',
-      to: '',
+      to: '/cate',
       dropdown: [
         {
           name: 'Strains',
-          to: ''
+          to: '/cate'
         },
         {
           name: 'Edibles',
-          to: ''
+          to: '/cate'
         },
         {
           name: 'Concentrates',
-          to: ''
+          to: '/cate'
         }
       ]
     },
     {
       name: 'Edibles',
-      to: ''
+      to: '/cate'
     },
     {
       name: 'Concentrates',
-      to: '',
+      to: '/cate',
       dropdown: [
         {
           name: 'Hybrid',
-          to: ''
+          to: '/cate'
         },
         {
           name: 'Sativa',
-          to: ''
+          to: '/cate'
         },
         {
           name: 'Indica',
-          to: ''
+          to: '/cate'
         },
         {
           name: 'CBD',
-          to: ''
+          to: '/cate'
         }
       ]
     },
     {
       name: 'Mushrooms',
-      to: ''
+      to: '/cate'
     },
     {
       name: 'Promotions/Bundles',
-      to: '',
+      to: '/cate',
       dropdown: [
         {
           name: 'Sale',
-          to: ''
+          to: '/cate'
         },
         {
           name: 'Bundle',
-          to: ''
+          to: '/cate'
         }
       ]
     },
     {
       name: 'Support',
-      to: '',
+      to: '/cate',
       dropdown: [
         {
           name: 'FAQ',
-          to: ''
+          to: '/cate'
         },
         {
           name: 'Contact',
-          to: ''
+          to: '/cate'
         },
         {
           name: 'About',
-          to: ''
+          to: '/cate'
         },
         {
           name: 'Privacy Policy',
-          to: ''
+          to: '/cate'
         },
         {
           name: 'Terms of Service',
-          to: ''
+          to: '/cate'
         },
         {
           name: 'Cookie Policy',
-          to: ''
+          to: '/cate'
         },
         {
           name: 'Cookie Settings',
-          to: ''
+          to: '/cate'
         }
       ]
     },
     {
       name: 'Rewards',
-      to: ''
+      to: '/cate'
     },
-    { name: 'Blog', to: '' }
+    { name: 'Blog', to: '/cate' }
   ];
 
 

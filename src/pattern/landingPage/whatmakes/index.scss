@@ -1,7 +1,12 @@
 .box-container-what-make {
     margin: 64px 0;
     padding-inline: 24px;
-    
+
+    @media only screen and (min-width: 1200px) {
+        padding: 0 120px;
+        margin: 120px 0;
+    }
+
 
     .wrapper-element {
         .title {
@@ -13,8 +18,12 @@
             .num_1 {
                 color: var(--color-other-orange);
             }
-            @media only screen and (min-width: 767.99px){
+
+            @media only screen and (min-width: 1200px) {
                 font-size: var(--font-size-64);
+                font-weight: var(--font-weight-semibold);
+                line-height: 110%;
+                letter-spacing: -4px;
             }
         }
 
@@ -27,13 +36,22 @@
 
             margin-top: 16px;
             margin-bottom: 32px;
+
+            @media only screen and (min-width: 1200px) {
+                margin-top: 24px;
+                margin-bottom: 64px;
+            }
         }
 
-        .contentbox-container {
+        .content-box-container {
             display: flex;
             flex-wrap: wrap;
             gap: 24px;
             justify-content: center;
+
+            @media only screen and (min-width: 1200px) {
+                gap: 32px;
+            }
 
             .item-box {
 
@@ -44,26 +62,44 @@
 
                 .icon {
                     margin-bottom: 16px;
+
+                    @media only screen and (min-width: 1200px) {
+                        margin-bottom: 44px;
+                    }
                 }
 
                 .title-box {
                     margin-bottom: 16px;
 
-                    font-size: var(--font-size-large);
+                    font-size: clamp(var(--font-size-large), 2vw, var(--font-size-xxl));
                     color: var(--color-neutral-base);
                     font-weight: var(--font-weight-medium);
+
+                    // @media only screen and (min-width: 1200px) {
+                    //     margin-bottom: 44px;
+                    // }
                 }
 
                 .description {
-                    font-size: var(--font-size-small);
+                    font-size: clamp(var(--font-size-small), 3vw, var(--font-size-medium));
                     color: var(--color-neutral-light);
                     line-height: var(--height-small);
                     margin-bottom: 0;
+
+                    @media only screen and (min-width: 1200px) {
+                        margin-top: 0;
+                    }
                 }
 
-                @media only screen and (min-width: 767.99px){
-                    width: calc((100% / 3) - 16px);
+                @media only screen and (min-width: 767px) {
+                    width: calc(((100% + 16px) / 3) - 16px);
                     height: auto;
+                }
+
+                @media only screen and (min-width: 1200px) {
+                    padding: 32px;
+                    height: 375px;
+                    width: calc(((100% + 32px) / 3) - 32px);
                 }
             }
         }

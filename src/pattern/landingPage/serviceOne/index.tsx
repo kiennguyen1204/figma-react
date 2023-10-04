@@ -29,7 +29,6 @@ export const FirstServicePattern = () => {
                 <div className="service-list-container-box" key={index}>
                     <div className="service-list-box-left">
                         <div className="icon-box">
-
                         {el.icon}
                         </div>
                     </div>

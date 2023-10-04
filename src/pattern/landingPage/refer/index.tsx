@@ -31,8 +31,8 @@ export default function ReferFriend() {
   return (
     <>
       <div className="referbox-container">
-        <div className="cardbox-container">
-          <div className="cardBox">
+        <div className="card-box-container">
+          <div className="card-box">
             <div className="card-box-element">
               <div className="svg">
                 <ReferFriendSVG />
@@ -112,7 +112,7 @@ export default function ReferFriend() {
             </div>
 
             <button className="btn btn-action custom-button">
-              Refer Here
+            Choose your Weed
             </button>
           </div>
         </div>
