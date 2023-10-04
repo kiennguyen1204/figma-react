@@ -593,6 +593,9 @@ export const dataItemDetail =
 
 export const dataCart = {
   total: 305.00,
+  shipping: 50,
+  payTotal: 355,
+  discount: 0,
   cart: [
     {
       name: 'Mix And Match Shatter/Budder 28g (4 X 7G)',
