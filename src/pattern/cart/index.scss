@@ -1,7 +1,8 @@
 .cart-container {
   padding: 24px;
   padding-top: 32px;
-
+  overflow-y: scroll;
+  height: 100%;
   .header {
     display: flex;
     align-items: center;
@@ -26,9 +27,7 @@
       color: var(
         --color-neutral-lighter
       );
-      font-size: var(
-        --font-size-medium
-      );
+      font-size: clamp(var(--font-size-medium), 2vw, var(--font-size-large));
       font-weight: var(
         --font-weight-light
       );
