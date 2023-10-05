@@ -2,7 +2,6 @@ import './index.scss';
 import Star from 'assets/images/star.svg?react';
 import { Item } from '../../../constants/type';
 import { MAX_STAR } from '../../../constants/enums';
-import { Link } from 'react-router-dom';
 
 export default function ItemCard({
   item,
