@@ -1,4 +1,5 @@
 import React, {
+  useEffect,
   useRef,
   useState
 } from 'react';
@@ -6,26 +7,30 @@ import CartSvg from 'assets/images/checkout/cart.svg?react';
 import CheckoutSvg from 'assets/images/checkout/checkout.svg?react';
 import OrderSvg from 'assets/images/checkout/order.svg?react';
 import TickSvg from 'assets/images/checkout/tick.svg?react';
-import Deli1 from 'assets/images/checkout/deli-1.svg?react';
-import Deli2 from 'assets/images/checkout/deli-2.svg?react';
 import Deli3 from 'assets/images/checkout/deli-3.svg?react';
 import './index.scss';
 import { dataCart } from '../../constants/fakeData';
 import Payments from '../../pattern/payments';
+import { STEPS_CART } from '../../constants/enums';
+import Step_1 from './partial/step_1';
+import Step_2 from './partial/step_2';
 export default function Checkout() {
   const steps = [
     {
       title: 'Shopping Cart',
-      icon: <CartSvg />
+      icon: <CartSvg />,
+      id: STEPS_CART.SHOPPING_CART
     },
     {
       title: 'Checkout',
-      icon: <CheckoutSvg />
+      icon: <CheckoutSvg />,
+      id: STEPS_CART.CHECKOUT
     },
     {
       title:
         'Order Complete ',
-      icon: <OrderSvg />
+      icon: <OrderSvg />,
+      id: STEPS_CART.ORDER_COMPLETE
     }
   ];
   const [
@@ -40,6 +45,9 @@ export default function Checkout() {
     window.innerWidth
   ).current;
 
+  const [step, setStep] =
+    useState(steps[0]);
+
   return (
     <div className="checkout-container">
       <div
@@ -49,7 +57,14 @@ export default function Checkout() {
         }`}>
         {steps.map((e, i) => (
           <>
-            <div className="step-item">
+            <div
+              className="step-item pe-auto"
+              onClick={() => {
+                setStep(e);
+                setCurrentStep(
+                  i
+                );
+              }}>
               <div
                 className={`step-icon ${
                   i ==
@@ -92,310 +107,125 @@ export default function Checkout() {
         ))}
       </div>
       <div className="checkout-content">
-        <div className="cart-content">
-          <div className="header-content">
-            <p className="title">
-              Your Cart
-            </p>
-            <p className="amount">
-              ({amountProduct}
-              )
-            </p>
-          </div>
-          <div className="list-cart">
-            {dataCart.cart.map(
-              (e) => (
-                <div className="item-cart">
-                  <img
-                    src={
-                      e.image
-                    }
-                    className="item-image"
-                  />
-                  <div className="content-item">
-                    <div className="product-box">
-                      <div className="title">
-                        {
-                          e.name
-                        }
-                      </div>
-                      <div className="product-value">
-                        <div className="amount-price">
-                          <div className="amount">
-                            <button className="amount-btn">
-                              -
-                            </button>
-                            <p>
-                              {
-                                e.amount
-                              }
-                            </p>
-                            <button className="amount-btn">
-                              +
-                            </button>
-                          </div>
-                          <p className="price">
-                            $
-                            {
-                              e.price
-                            }
-                          </p>
-                        </div>
-                        {windowWidth <=
-                          767 && (
-                          <p className="total total-pc">
-                            $
-                            {
-                              e.total
-                            }
-                          </p>
-                        )}
-                      </div>
-                      {windowWidth >
-                        767 && (
-                        <p className="total">
-                          $
-                          {
-                            e.total
-                          }
-                        </p>
-                      )}
-                    </div>
-                    {e.integra.map(
-                      (
-                        pack
-                      ) => (
-                        <div className="product-box">
-                          <div className="title">
-                            {
-                              pack.namePack
-                            }
-                          </div>
-                          <div className="product-value">
-                            <div className="amount-price">
-                              <div className="amount">
-                                <button className="amount-btn">
-                                  -
-                                </button>
-                                <p>
-                                  {
-                                    pack.amount
-                                  }
-                                </p>
-                                <button className="amount-btn">
-                                  +
-                                </button>
-                              </div>
-                              <p className="price">
-                                $
-                                {
-                                  pack.price
-                                }
-                              </p>
-                            </div>
-                            {windowWidth <=
-                              767 && (
-                              <p className="total total-pc">
-                                $
-                                {
-                                  pack.total
-                                }
-                              </p>
-                            )}
-                          </div>
-                          {windowWidth >
-                            767 && (
-                            <p className="total">
-                              $
-                              {
-                                pack.total
-                              }
-                            </p>
-                          )}
-                        </div>
-                      )
-                    )}
-                    <div className="subtotal">
-                      <p className="sub-title">
-                        Subtotal
-                      </p>
-                      <p className="subtotal-price">
-                        $
-                        {
-                          e.subTotal
-                        }
-                      </p>
-                    </div>
-                  </div>
+        {step.id ==
+          STEPS_CART.SHOPPING_CART && (
+          <Step_1
+            // setStep={}
+            windowWidth={
+              windowWidth
+            }
+            amountProduct={
+              amountProduct
+            }
+            dataCart={
+              dataCart
+            }
+          />
+        )}
+        {step.id ==
+          STEPS_CART.CHECKOUT && (
+          <Step_2
+            dataCart={
+              dataCart
+            }
+            amountProduct={
+              amountProduct
+            }
+            windowWidth={
+              windowWidth
+            }
+          />
+        )}
+        {step.id !=
+          STEPS_CART.ORDER_COMPLETE && (
+          <div className="payments-container">
+            <div className="price-group">
+              <div className="price-box">
+                <p className="title">
+                  Subtotal
+                </p>
+                <div className="price">
+                  $
+                  {
+                    dataCart.total
+                  }
                 </div>
-              )
-            )}
-          </div>
-          <div className="delivery-container">
-            <div className="delivery-content">
-              <p className="title">
-                Delivery
-              </p>
-              <div className="delivery-box">
-                <div className="deli-icon">
-                  <Deli1 />
+              </div>
+              <div className="price-box">
+                <p className="title">
+                  Discount
+                </p>
+                <div className="price">
+                  $
+                  {
+                    dataCart.discount
+                  }
                 </div>
-                <p className="deli-bold">
-                  Order by
-                  10pm for
-                  free next
-                  day delivery
-                  on Orders
-                  overs $100
-                </p>
-                <p className="deli-text">
-                  We deliver
-                  Monday to
-                  Saturday -
-                  excluding
-                  Holidays
-                </p>
               </div>
-            </div>
-            <div className="delivery-content">
-              {windowWidth >
-                767 && (
-                <p className="title"></p>
-              )}
-              <div className="delivery-box">
-                <div className="deli-icon">
-                  <Deli2 />
+              <div className="price-box">
+                <p className="title">
+                  Shipping
+                  Costs
+                </p>
+                <div className="price">
+                  $
+                  {
+                    dataCart.shipping
+                  }
                 </div>
-                <p className="deli-bold">
-                  Free next
-                  day delivery
-                  to stores.
+              </div>
+            </div>
+            <div className="coupon-group">
+              <div className="coupon-input">
+                <input placeholder="Coupon Code" />
+              </div>
+              <button className="btn coupon-btn">
+                Apply Coupon
+              </button>
+            </div>
+            <div className="free-ship">
+              <div className="progress-bar">
+                <div
+                  className="progress"
+                  style={{
+                    width:
+                      '70%'
+                  }}></div>
+              </div>
+              <div className="text-group">
+                <p>
+                  Get Free
+                  <span>
+                    {' '}
+                    Shipping{' '}
+                  </span>
+                  for orders
+                  over
+                  <span className="costs">
+                    {' '}
+                    $100
+                  </span>
                 </p>
-                <p className="deli-text">
-                  Home
-                  delivery is
-                  $4.99 for
-                  orders under
-                  $100 and is
-                  FREE for all
-                  orders over
-                  $100
-                </p>
+                <a>
+                  Continue
+                  Shopping
+                </a>
               </div>
             </div>
-            <div className="delivery-content">
-              <p className="title">
-                Free Returns
-              </p>
-              <div className="delivery-box">
-                <div className="deli-icon">
-                  <Deli1 />
-                </div>
-                <p className="deli-text">
-                  30 days to
-                  return it to
-                  us for a
-                  refund. We
-                  have made
-                  returns SO
-                  EASY - you
-                  can now
-                  return your
-                  order to a
-                  store or
-                  send it with
-                  FedEx FOR
-                  FREE
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="payments-container">
-          <div className="price-group">
-            <div className="price-box">
-              <p className="title">
-                Subtotal
-              </p>
-              <div className="price">
-                $
-                {
-                  dataCart.total
-                }
-              </div>
-            </div>
-            <div className="price-box">
-              <p className="title">
-                Discount
-              </p>
-              <div className="price">
-                $
-                {
-                  dataCart.discount
-                }
-              </div>
-            </div>
-            <div className="price-box">
-              <p className="title">
-                Shipping Costs
-              </p>
-              <div className="price">
-                $
-                {
-                  dataCart.shipping
-                }
-              </div>
-            </div>
-          </div>
-          <div className="coupon-group">
-            <div className="coupon-input">
-              <input placeholder="Coupon Code" />
-            </div>
-            <button className="btn coupon-btn">
-              Apply Coupon
-            </button>
-          </div>
-          <div className="free-ship">
-            <div className="progress-bar">
-              <div
-                className="progress"
-                style={{
-                  width: '70%'
-                }}></div>
-            </div>
-            <div className="text-group">
+            <button className="btn checkout-btn">
+              <p>Checkout</p>
+              <div className="divider"></div>
               <p>
-                Get Free
-                <span>
-                  {' '}
-                  Shipping{' '}
-                </span>
-                for orders
-                over
-                <span className="costs">
-                  {' '}
-                  $100
-                </span>
+                $
+                {
+                  dataCart.payTotal
+                }
               </p>
-              <a>
-                Continue
-                Shopping
-              </a>
-            </div>
-          </div>
-          <button className="btn checkout-btn">
-            <p>Checkout</p>
+            </button>
             <div className="divider"></div>
-            <p>
-              $
-              {
-                dataCart.payTotal
-              }
-            </p>
-          </button>
-          <div className="divider"></div>
-          <Payments />
-        </div>
+            <Payments />
+          </div>
+        )}
       </div>
     </div>
   );
