@@ -14,6 +14,7 @@ import Payments from '../../pattern/payments';
 import { STEPS_CART } from '../../constants/enums';
 import Step_1 from './partial/step_1';
 import Step_2 from './partial/step_2';
+import Step_3 from './partial/step_3';
 export default function Checkout() {
   const steps = [
     {
@@ -59,6 +60,7 @@ export default function Checkout() {
           <>
             <div
               className="step-item pe-auto"
+              key={i}
               onClick={() => {
                 setStep(e);
                 setCurrentStep(
@@ -136,95 +138,113 @@ export default function Checkout() {
             }
           />
         )}
+        {step.id ==
+          STEPS_CART.ORDER_COMPLETE && (
+          <Step_3
+            amountProduct={
+              amountProduct
+            }
+            dataCart={
+              dataCart
+            }
+            windowWidth={
+              windowWidth
+            }
+          />
+        )}
         {step.id !=
           STEPS_CART.ORDER_COMPLETE && (
-          <div className="payments-container">
-            <div className="price-group">
-              <div className="price-box">
-                <p className="title">
-                  Subtotal
-                </p>
-                <div className="price">
-                  $
-                  {
-                    dataCart.total
-                  }
+          <>
+            <div className="payments-container">
+              <div className="price-group">
+                <div className="price-box">
+                  <p className="title">
+                    Subtotal
+                  </p>
+                  <div className="price">
+                    $
+                    {
+                      dataCart.total
+                    }
+                  </div>
+                </div>
+                <div className="price-box">
+                  <p className="title">
+                    Discount
+                  </p>
+                  <div className="price">
+                    $
+                    {
+                      dataCart.discount
+                    }
+                  </div>
+                </div>
+                <div className="price-box">
+                  <p className="title">
+                    Shipping
+                    Costs
+                  </p>
+                  <div className="price">
+                    $
+                    {
+                      dataCart.shipping
+                    }
+                  </div>
                 </div>
               </div>
-              <div className="price-box">
-                <p className="title">
-                  Discount
-                </p>
-                <div className="price">
-                  $
-                  {
-                    dataCart.discount
-                  }
+              <div className="coupon-group">
+                <div className="coupon-input">
+                  <input placeholder="Coupon Code" />
+                </div>
+                <button className="btn coupon-btn">
+                  Apply Coupon
+                </button>
+              </div>
+              <div className="free-ship">
+                <div className="progress-bar">
+                  <div
+                    className="progress"
+                    style={{
+                      width:
+                        '70%'
+                    }}></div>
+                </div>
+                <div className="text-group">
+                  <p>
+                    Get Free
+                    <span>
+                      {' '}
+                      Shipping{' '}
+                    </span>
+                    for orders
+                    over
+                    <span className="costs">
+                      {' '}
+                      $100
+                    </span>
+                  </p>
+                  <a>
+                    Continue
+                    Shopping
+                  </a>
                 </div>
               </div>
-              <div className="price-box">
-                <p className="title">
-                  Shipping
-                  Costs
-                </p>
-                <div className="price">
-                  $
-                  {
-                    dataCart.shipping
-                  }
-                </div>
-              </div>
-            </div>
-            <div className="coupon-group">
-              <div className="coupon-input">
-                <input placeholder="Coupon Code" />
-              </div>
-              <button className="btn coupon-btn">
-                Apply Coupon
-              </button>
-            </div>
-            <div className="free-ship">
-              <div className="progress-bar">
-                <div
-                  className="progress"
-                  style={{
-                    width:
-                      '70%'
-                  }}></div>
-              </div>
-              <div className="text-group">
+              <button className="btn checkout-btn">
                 <p>
-                  Get Free
-                  <span>
-                    {' '}
-                    Shipping{' '}
-                  </span>
-                  for orders
-                  over
-                  <span className="costs">
-                    {' '}
-                    $100
-                  </span>
+                  Checkout
                 </p>
-                <a>
-                  Continue
-                  Shopping
-                </a>
-              </div>
-            </div>
-            <button className="btn checkout-btn">
-              <p>Checkout</p>
+                <div className="divider"></div>
+                <p>
+                  $
+                  {
+                    dataCart.payTotal
+                  }
+                </p>
+              </button>
               <div className="divider"></div>
-              <p>
-                $
-                {
-                  dataCart.payTotal
-                }
-              </p>
-            </button>
-            <div className="divider"></div>
-            <Payments />
-          </div>
+              <Payments />
+            </div>
+          </>
         )}
       </div>
     </div>

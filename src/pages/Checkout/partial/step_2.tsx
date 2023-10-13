@@ -24,7 +24,10 @@ export default function Step_2({
             </p>
             <input
               className="first-name input-text"
-              value="Hehe"></input>
+              onChange={(e) =>{
+                // console.log('kiennn')
+              }}
+              defaultValue="Hehe"/>
           </div>
           <div className="last-name title-input">
             <p className="text-first-name text-name">
@@ -32,7 +35,10 @@ export default function Step_2({
             </p>
             <input
               className="first-name input-text"
-              value="Alola"></input>
+              onChange={(e) =>{
+                // console.log('kiennn')
+              }}
+              defaultValue="Alola"/>
           </div>
         </div>
         <div className="group-name">
@@ -62,14 +68,20 @@ export default function Step_2({
             </p>
             <input
               className="first-name input-text"
-              value={
+              onChange={(e) =>{
+                // console.log('kiennn')
+              }}
+              defaultValue={
                 '3B 13OI'
-              }></input>
+              }/>
             <input
               className="first-name input-text input-2"
-              value={
+              onChange={(e) =>{
+                // console.log('kiennn')
+              }}
+              defaultValue={
                 'Apartment'
-              }></input>
+              }/>
           </div>
         </div>
         <div className="group-name">
@@ -79,9 +91,12 @@ export default function Step_2({
             </p>
             <input
               className="first-name input-text"
-              value={
+              onChange={(e) =>{
+                // console.log('kiennn')
+              }}
+              defaultValue={
                 'New York'
-              }></input>
+              }/>
           </div>
           <div className="city-province title-input">
             <p className="text-first-name text-name">
@@ -106,9 +121,12 @@ export default function Step_2({
             </p>
             <input
               className="first-name input-text"
-              value={
+              onChange={(e) =>{
+                // console.log('kiennn')
+              }}
+              defaultValue={
                 '21945'
-              }></input>
+              }/>
           </div>
         </div>
         {/* <div className="group-name">
@@ -137,9 +155,9 @@ export default function Step_2({
             </p>
             <input
               className="first-name input-text"
-              value={
+              defaultValue={
                 '21945'
-              }></input>
+              }/>
           </div>
         </div> */}
         <div className="group-name first-group">
@@ -149,7 +167,10 @@ export default function Step_2({
             </p>
             <input
               className="first-name input-text"
-              value="+1 23482385025"></input>
+              onChange={(e) =>{
+                // console.log('kiennn')
+              }}
+              defaultValue="+1 23482385025"/>
           </div>
           <div className="last-name title-input">
             <p className="text-first-name text-name">
@@ -157,7 +178,10 @@ export default function Step_2({
             </p>
             <input
               className="first-name input-text"
-              value="johndoe@example.com"></input>
+              onChange={(e) =>{
+                // console.log('kiennn')
+              }}
+              defaultValue="johndoe@example.com"/>
           </div>
         </div>
 
@@ -167,6 +191,9 @@ export default function Step_2({
             htmlFor="checkbox">
             <input
               type="checkbox"
+              onChange={(e) =>{
+                // console.log('kiennn')
+              }}
               hidden
               id="checkbox"
             />
@@ -186,7 +213,10 @@ export default function Step_2({
                 </p>
                 <input
                   className="first-name input-text"
-                  value="Hehe"></input>
+                  onChange={(e) =>{
+                    // console.log('kiennn')
+                  }}
+                  defaultValue="Hehe"/>
               </div>
               <div className="last-name title-input">
                 <p className="text-first-name text-name">
@@ -194,7 +224,10 @@ export default function Step_2({
                 </p>
                 <input
                   className="first-name input-text"
-                  value="Alola"></input>
+                  onChange={(e) =>{
+                    // console.log('kiennn')
+                  }}
+                  defaultValue="Alola"/>
               </div>
             </div>
             <div className="group-name">
@@ -224,14 +257,20 @@ export default function Step_2({
                 </p>
                 <input
                   className="first-name input-text"
-                  value={
+                  onChange={(e) =>{
+                    // console.log('kiennn')
+                  }}
+                  defaultValue={
                     '3B 13OI'
-                  }></input>
+                  }/>
                 <input
                   className="first-name input-text input-2"
-                  value={
+                  onChange={(e) =>{
+                    // console.log('kiennn')
+                  }}
+                  defaultValue={
                     'Apartment'
-                  }></input>
+                  }/>
               </div>
             </div>
             {/* <div className="group-name">
@@ -242,9 +281,9 @@ export default function Step_2({
                 </p>
                 <input
                   className="first-name input-text"
-                  value={
+                  defaultValue={
                     'New York'
-                  }></input>
+                  }/>
               </div>
             </div>
             <div className="group-name">
@@ -274,9 +313,9 @@ export default function Step_2({
                 </p>
                 <input
                   className="first-name input-text"
-                  value={
+                  defaultValue={
                     '21945'
-                  }></input>
+                  }/>
               </div>
             </div> */}
             <div className="group-name">
@@ -287,9 +326,12 @@ export default function Step_2({
                 </p>
                 <input
                   className="first-name input-text"
-                  value={
+                  onChange={(e) =>{
+                    // console.log('kiennn')
+                  }}
+                  defaultValue={
                     'New York'
-                  }></input>
+                  }/>
               </div>
               <div className="city-province title-input">
                 <p className="text-first-name text-name">
@@ -315,9 +357,9 @@ export default function Step_2({
                 </p>
                 <input
                   className="first-name input-text"
-                  value={
+                  defaultValue={
                     '21945'
-                  }></input>
+                  }/>
               </div>
             </div>
             <div className="group-name first-group">

@@ -1,0 +1,108 @@
+.step_3-container {
+    .header-content {
+        .title {
+            width: 100%;
+
+            .paid {
+                float: right;
+                display: flex;
+                align-items: center;
+                gap: 8px;
+            }
+        }
+    }
+
+    .container-cart-complete {
+        // margin-top: 24px;
+        width: 100%;
+
+        .item-wrapper {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid var(--color-matte-white);
+
+            &:nth-child(2n){
+                padding-top: 16px;
+            }
+
+            .img-product {
+                border-radius: 6px;
+                border: 1px solid var(--color-matte-white);
+                background-color: var(--color-neutral-white);
+                padding: 2px;
+
+                img {
+                    width: 40px;
+                    height: 40px;
+                }
+            }
+
+            .content-cart {
+                width: 100%;
+
+                .product {
+                    display: flex;
+                    gap: 12px;
+                    flex-direction: column;
+
+                    .data-product {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 12px;
+                    }
+
+                    font-size: clamp(var(--font-size-medium));
+
+                    .product-name {
+
+                        color: var(--color-neutral-lighter);
+                        line-height: 150%;
+                    }
+
+                    .amount {
+                        display: flex;
+                        width: 100%;
+                        align-items: center;
+                        justify-content: space-between;
+                        .amount-text {
+                            color: var(--color-neutral-lighter);
+                            display: flex;
+                            align-items: center;
+                            gap: 12px;
+
+                            .amount-per-product {
+                                color: var(--color-neutral-black);
+
+                            }
+
+                        }
+
+                        .total-amount {
+                            color: var(--color-neutral-lighter);
+                        }
+                    }
+                }
+
+                .sub-total {
+                    padding-top: 16px;
+                    border-top: 1px solid var(--color-matte-white);
+                    font-size: var(--font-size-medium);
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+
+                    .sub-total-text {
+                        color: var(--color-neutral-lighter);
+
+                    }
+
+                    .sub-total-price {
+                        color: var(--color-neutral-black);
+                    }
+                }
+            }
+        }
+    }
+}

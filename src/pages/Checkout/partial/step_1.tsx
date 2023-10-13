@@ -27,8 +27,8 @@ export default function Step_1({
       </div>
       <div className="list-cart">
         {dataCart.cart.map(
-          (e: any) => (
-            <div className="item-cart">
+          (e: any, i:number) => (
+            <div className="item-cart" key={i}>
               <img
                 src={e.image}
                 className="item-image"
@@ -81,8 +81,8 @@ export default function Step_1({
                   )}
                 </div>
                 {e.integra.map(
-                  (pack: any) => (
-                    <div className="product-box">
+                  (pack: any, j:number) => (
+                    <div className="product-box" key={j}>
                       <div className="title">
                         {
                           pack.namePack
