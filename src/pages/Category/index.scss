@@ -3,13 +3,73 @@
     min-height: 100vh;
     font-family: var(--font-family-regular);
 
+    .service-list-container {
+        padding: 16px 24px;
+
+        .list-container-box {
+            flex-flow: row nowrap;
+            gap: 40px;
+
+            @media only screen and (min-width: 1200px) {
+                gap: 64px;
+                align-items: center;
+            }
+
+            .service-list-container-box {
+                flex-direction: column;
+                gap: 8px;
+                position: relative;
+                @media only screen and (min-width: 1024px) {
+                    gap: 16px;
+                }
+
+                &::after {
+                    position: absolute;
+                    content: "";
+                    width: 1px;
+                    height: 24px;
+                    background: var(--color-secondary-light);
+                    right: -20px;
+
+                    @media only screen and (min-width: 1024px) {
+                        height: 100%;
+                    }
+                    @media only screen and (min-width: 1200px) {
+                        right: -31.5px
+                    }
+                }
+
+                &:last-child::after {
+                    display: none;
+                }
+
+                .icon-box {
+                    width: 32px;
+                    height: 32px;
+                }
+
+                .service-list-title {
+                    font-size: clamp(var(--font-size-medium), 2vw, var(--font-size-xl));
+                }
+            }
+        }
+
+        .service-list-description {
+            display: none !important;
+        }
+    }
+
     @media only screen and (min-width: 1024px) {
         .service-list-container {
             padding: 24px 64px;
 
             .list-container-box {
                 .service-list-container-box {
-                    justify-content: center;
+                    justify-content: flex-start;
+                    flex-direction: row;
+                    align-items: center;
+
+
                     .service-list-box-left {
                         .icon-box {
                             width: 48px;
@@ -18,22 +78,15 @@
                     }
 
                     .service-list-box-right {
-                        .service-list-title{
+                        .service-list-title {
                             font-size: var(--font-size-xl);
-                        }
-                        .service-list-description {
-                            display: none;
                         }
                     }
                 }
             }
         }
 
-        .service-list-container {
-            .service-list-description {
-                display: none;
-            }
-        }
+
     }
 
     .top-title-wrapper {
@@ -85,6 +138,7 @@
 
         .left-filter-container {
             display: none;
+
             @media only screen and (min-width: 1024px) {
                 display: block;
                 width: 304px;
@@ -395,6 +449,7 @@
 
                         .content-item {
                             background-color: var(--color-secondary-ultra-light);
+
                             .volumes {
                                 .volume-child {
                                     border-color: var(--color-neutral-white);

@@ -101,7 +101,7 @@ export const MiddleNavbar = ({
           <div className="navbar-group-info">
             <div className="navbar-item">
               <Link
-                to="/home"
+                to="/"
                 className="item-link">
                 <span className="text">
                   Your account

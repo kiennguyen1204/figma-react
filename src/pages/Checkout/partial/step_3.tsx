@@ -148,6 +148,101 @@ export default function Step_3({
             </div>
           </div>
         </div>
+
+        <div className="info-n-total">
+          <div className="total">
+            <span className="total-text">
+              Total
+            </span>
+            <span className="price">
+              $497.00
+            </span>
+          </div>
+          <div className="container-info-shiping">
+            <div className="left-info">
+              <p className="para">
+                <span className="text-title">
+                  Shipping
+                </span>
+                <span className="info">
+                  New York, US
+                </span>
+              </p>
+              <p className="para">
+                <span className="text-title">
+                  Shipping
+                  Options
+                </span>
+                <span className="info">
+                  Same-Day
+                  Dispatching
+                </span>
+              </p>
+              <p className="para">
+                <span className="text-title">
+                  Email Money
+                  Transfer
+                </span>
+                <span className="info">
+                  Interac
+                </span>
+              </p>
+            </div>
+            <div className="right-info">
+              <p className="para">
+                <span className="text-title">
+                  Subtotal
+                </span>
+                <span className="info">
+                  $497.00
+                </span>
+              </p>
+              <p className="para">
+                <span className="text-title">
+                  Discount
+                </span>
+                <span className="info">
+                  $0.0
+                </span>
+              </p>
+              <p className="para">
+                <span className="text-title">
+                  Shipping
+                  Costs{' '}
+                </span>
+                <span className="info">
+                  $50.00
+                </span>
+              </p>
+              <p className="para">
+                <span className="text-title">
+                  Point
+                </span>
+                <span className="info">
+                  - $250
+                </span>
+              </p>
+              <p className="total-price">
+                <span className="total-text">
+                  TOTAL
+                </span>
+                <span className="total-price-text">
+                  $297.00
+                </span>
+              </p>
+            </div>
+          </div>
+            <div className="bottom-content-shipping">
+              <p className="new-order-text">
+                New Order,
+                Click button
+                bellow
+              </p>
+              <button className="btn btn-shop-now">
+                Shop Now
+              </button>
+            </div>
+        </div>
       </div>
     </div>
   );

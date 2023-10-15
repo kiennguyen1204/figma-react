@@ -9,7 +9,7 @@
         margin-bottom: 0;
     }
 
-    .list-container-box  {
+    .list-container-box {
         $gapContainer: 32px;
         gap: $gapContainer;
 
@@ -32,6 +32,7 @@
             @media screen and (max-width: 991px) {
                 width: 100%;
             }
+
             @media screen and (max-width: 419px) {
                 // flex-direction: column;
                 gap: 12px;
@@ -42,7 +43,7 @@
                 position: relative;
                 // margin-top: 1rem;
 
-                .icon-box{
+                .icon-box {
                     padding: 8px;
                     border-radius: 50%;
                     background: #fff;
@@ -51,22 +52,41 @@
                     display: flex;
                     align-items: center;
                     justify-content: center;
+                    position: relative;
 
                     svg {
                         width: 36px;
                         height: 36px;
+                        position: relative;
+
+
                     }
+
                     @media only screen and (min-width: 767px) {
                         width: 100px;
                         height: 100px;
-                        svg{
+
+                        &.homepage {
+                            ::after {
+                                content: "";
+                                position: absolute;
+                                width: 40px;
+                                height: 4px;
+                                border-radius: 100px;
+                                background-color: #F2F6F4;
+                                bottom: 14px;
+                            }
+                        }
+
+
+                        svg {
                             width: 56px;
                             height: 56px;
                         }
                     }
                 }
             }
-        
+
             .service-list-box-right {
                 display: flex;
                 flex-direction: column;
@@ -74,7 +94,7 @@
                 justify-content: flex-start;
 
                 gap: 12px;
-            
+
                 .service-list-title {
                     display: block;
                     position: relative;
