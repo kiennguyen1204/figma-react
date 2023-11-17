@@ -3,12 +3,12 @@
 
     .group-name {
         padding-bottom: 16px;
+        position: relative;
 
         @media only screen and (min-width: 1200px) {
             display: flex;
             gap: 16px;
         }
-
         &.first-group {
             display: flex;
             gap: 20px;
@@ -21,8 +21,44 @@
 
         .title-input {
             width: 100%;
-            &.city-province{
+
+            &.country-region {
+                position: relative;
+
+                ~.list-data-country {
+                    position: absolute;
+                    top: 100%;
+                    transform-origin: top;
+                    transform: scaleY(0);
+                    width: 100%;
+                    left: 0;
+                    max-height: 400px;
+                    min-height: 200px;
+                    overflow-y: auto;
+                    z-index: 10;
+                    transition: all 0.3s ease;
+                    background: var(--color-neutral-lightest);
+
+                    &::-webkit-scrollbar {
+                        width: 3px;
+                    }
+
+                    div {
+                        padding: 8px 20px;
+                        border-bottom: 1px solid var(--color-matte-white);
+                    }
+
+                }
+
+                &.active~.list-data-country {
+                    transform: scaleY(1);
+
+                }
+            }
+
+            &.city-province {
                 margin-bottom: 16px;
+                position: relative;
 
                 @media only screen and (min-width: 1200px) {
                     margin-bottom: 0;
@@ -61,8 +97,69 @@
                 white-space: nowrap;
                 text-overflow: ellipsis;
                 overflow: hidden;
-                
+                position: relative;
                 justify-content: space-between;
+
+
+                &.active~.list-data-country {
+
+                    transform: scaleY(1);
+                    height: 100%;
+                }
+                &.province.active~.list-province{
+                    transform: scaleY(1);
+                }
+
+            }
+
+            .list-province {
+                position: absolute;
+                top: 105%;
+                transform-origin: top;
+                transform: scaleY(0);
+                width: 100%;
+                left: 0;
+                max-height: 400px;
+                min-height: 200px;
+                overflow-y: auto;
+                z-index: 10;
+                transition: all 0.3s ease;
+                background: var(--color-neutral-lightest);
+
+                &::-webkit-scrollbar {
+                    width: 3px;
+                }
+
+                div {
+                    padding: 8px 20px;
+                    border-bottom: 1px solid var(--color-matte-white);
+                }
+
+            }
+
+            .list-data-country {
+                position: absolute;
+                top: 105%;
+                transform-origin: top;
+                transform: scaleY(0);
+                width: 100%;
+                left: 0;
+                max-height: 400px;
+                min-height: 200px;
+                overflow-y: auto;
+                z-index: 10;
+                transition: all 0.3s ease;
+                background: var(--color-neutral-lightest);
+
+                &::-webkit-scrollbar {
+                    width: 3px;
+                }
+
+                div {
+                    padding: 8px 20px;
+                    border-bottom: 1px solid var(--color-matte-white);
+                }
+
             }
 
             &.text-area {
@@ -128,6 +225,7 @@
             opacity: 0;
             visibility: hidden;
             transition: all 0.3s ease-in;
+
             .info-contact {
                 .text-contact {
                     color: var(--color-neutral-black);
@@ -186,7 +284,8 @@
                 }
             }
         }
-        .checkbox-flex:has(#checkbox:checked)~.info-differ{
+
+        .checkbox-flex:has(#checkbox:checked)~.info-differ {
             display: block;
             opacity: 1;
             visibility: visible;

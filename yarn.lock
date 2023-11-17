@@ -6786,6 +6786,11 @@ handlebars@^4.7.7:
   optionalDependencies:
     uglify-js "^3.1.4"
 
+hanhchinhvn@^1.6.0:
+  version "1.6.0"
+  resolved "https://registry.yarnpkg.com/hanhchinhvn/-/hanhchinhvn-1.6.0.tgz#eb03dde30499e3a7a18fb6d695f7b48a50920467"
+  integrity sha512-ubHjaHsBHsiV5zY1pa6y9drzAZWS/zkJ7MpggZu3//zfh/LOwCyBqnZu83vlDZeMRIMgR95ScdUB27y90f3XRg==
+
 hard-rejection@^2.1.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/hard-rejection/-/hard-rejection-2.1.0.tgz#1c6eda5c1685c63942766d79bb40ae773cecd883"

@@ -1,5 +1,7 @@
 import { IoChevronDownOutline } from 'react-icons/io5';
 import './step_2.scss';
+import { useState } from 'react';
+import tinh from 'hanhchinhvn/dist/tinh_tp.json';
 
 export default function Step_2({
   setStep
@@ -9,6 +11,53 @@ export default function Step_2({
   windowWidth: number;
   setStep?: any;
 }) {
+  const countries = [
+    {
+      name: 'vietnam',
+      fullname: 'Việt Nam'
+    },
+    {
+      name: 'america',
+      fullname: 'Mỹ'
+    },
+    {
+      name: 'france',
+      fullname: 'Pháp'
+    },
+    {
+      name: 'thailand',
+      fullname: 'Thái Lan'
+    },
+    {
+      name: 'laos',
+      fullname: 'Lào'
+    },
+    {
+      name: 'singapore',
+      fullname: 'Singapore'
+    },
+    {
+      name: 'india',
+      fullname: 'Ấn Độ'
+    }
+  ];
+
+  const t = Object.values(
+    tinh
+  ).sort((a, b) =>
+    a < b ? -1 : a < b ? 1 : 0
+  );
+
+  const [
+    showSelectCountry,
+    setShowSelectCountry
+  ] = useState(false);
+
+  const [
+    showProvince,
+    setShowProvince
+  ] = useState(false);
+
   return (
     <div className="cart-content">
       <div className="header-content">
@@ -24,10 +73,13 @@ export default function Step_2({
             </p>
             <input
               className="first-name input-text"
-              onChange={(e) =>{
+              onChange={(
+                e
+              ) => {
                 // console.log('kiennn')
               }}
-              defaultValue="Hehe"/>
+              defaultValue="Hehe"
+            />
           </div>
           <div className="last-name title-input">
             <p className="text-first-name text-name">
@@ -35,14 +87,29 @@ export default function Step_2({
             </p>
             <input
               className="first-name input-text"
-              onChange={(e) =>{
+              onChange={(
+                e
+              ) => {
                 // console.log('kiennn')
               }}
-              defaultValue="Alola"/>
+              defaultValue="Alola"
+            />
           </div>
         </div>
-        <div className="group-name">
-          <div className="country-region title-input">
+        <div
+          className={`group-name`}>
+          <div
+            className={`country-region title-input ${
+              showSelectCountry
+                ? 'active'
+                : ''
+            }`}
+            onClick={() =>
+              setShowSelectCountry(
+                (prev) =>
+                  !prev
+              )
+            }>
             <p className="text-first-name text-name">
               Country / Region
               *
@@ -59,6 +126,23 @@ export default function Step_2({
               />
             </div>
           </div>
+          <div className="list-data-country">
+            <div className="list-data">
+              {countries.map(
+                (e) => (
+                  <div
+                    className="name-countries"
+                    key={
+                      e.name
+                    }>
+                    {
+                      e.fullname
+                    }
+                  </div>
+                )
+              )}
+            </div>
+          </div>
         </div>
         <div className="group-name">
           <div className="city-province title-input">
@@ -68,20 +152,26 @@ export default function Step_2({
             </p>
             <input
               className="first-name input-text"
-              onChange={(e) =>{
+              onChange={(
+                e
+              ) => {
                 // console.log('kiennn')
               }}
               defaultValue={
                 '3B 13OI'
-              }/>
+              }
+            />
             <input
               className="first-name input-text input-2"
-              onChange={(e) =>{
+              onChange={(
+                e
+              ) => {
                 // console.log('kiennn')
               }}
               defaultValue={
                 'Apartment'
-              }/>
+              }
+            />
           </div>
         </div>
         <div className="group-name">
@@ -91,18 +181,32 @@ export default function Step_2({
             </p>
             <input
               className="first-name input-text"
-              onChange={(e) =>{
+              onChange={(
+                e
+              ) => {
                 // console.log('kiennn')
               }}
               defaultValue={
                 'New York'
-              }/>
+              }
+            />
           </div>
           <div className="city-province title-input">
             <p className="text-first-name text-name">
               Province *
             </p>
-            <div className="dropdown-select-country input-text">
+            <div
+              className={`dropdown-select-country province input-text ${
+                showProvince
+                  ? 'active'
+                  : ''
+              }`}
+              onClick={() =>
+                setShowProvince(
+                  (prev) =>
+                    !prev
+                )
+              }>
               <span className="country">
                 Ho Chi Minh
                 City
@@ -114,52 +218,37 @@ export default function Step_2({
                 }
               />
             </div>
-          </div>
-          <div className="city-province title-input">
-            <p className="text-first-name text-name">
-              Postcode / ZIP *
-            </p>
-            <input
-              className="first-name input-text"
-              onChange={(e) =>{
-                // console.log('kiennn')
-              }}
-              defaultValue={
-                '21945'
-              }/>
-          </div>
-        </div>
-        {/* <div className="group-name">
-          <div className="city-province title-input">
-            <p className="text-first-name text-name">
-              Province *
-            </p>
-            <div className="dropdown-select-country input-text">
-              <span className="country">
-                Ho Chi Minh
-                City
-              </span>
-              <IoChevronDownOutline
-                size={18}
-                color={
-                  'var(--color-neutral-mid)'
-                }
-              />
+            <div className="list-province">
+              <div className="list-data">
+                {t.map(
+                  (e) => (
+                    <div
+                      className="name-province"
+                      key={
+                        e.slug
+                      }>
+                      {e.name}
+                    </div>
+                  )
+                )}
+              </div>
             </div>
           </div>
-        </div>
-        <div className="group-name">
           <div className="city-province title-input">
             <p className="text-first-name text-name">
               Postcode / ZIP *
             </p>
             <input
               className="first-name input-text"
+              onChange={(
+                e
+              ) => {}}
               defaultValue={
                 '21945'
-              }/>
+              }
+            />
           </div>
-        </div> */}
+        </div>
         <div className="group-name first-group">
           <div className="first-name title-input">
             <p className="text-first-name text-name">
@@ -167,10 +256,13 @@ export default function Step_2({
             </p>
             <input
               className="first-name input-text"
-              onChange={(e) =>{
+              onChange={(
+                e
+              ) => {
                 // console.log('kiennn')
               }}
-              defaultValue="+1 23482385025"/>
+              defaultValue="+1 23482385025"
+            />
           </div>
           <div className="last-name title-input">
             <p className="text-first-name text-name">
@@ -178,10 +270,13 @@ export default function Step_2({
             </p>
             <input
               className="first-name input-text"
-              onChange={(e) =>{
+              onChange={(
+                e
+              ) => {
                 // console.log('kiennn')
               }}
-              defaultValue="johndoe@example.com"/>
+              defaultValue="johndoe@example.com"
+            />
           </div>
         </div>
 
@@ -191,7 +286,9 @@ export default function Step_2({
             htmlFor="checkbox">
             <input
               type="checkbox"
-              onChange={(e) =>{
+              onChange={(
+                e
+              ) => {
                 // console.log('kiennn')
               }}
               hidden
@@ -213,10 +310,13 @@ export default function Step_2({
                 </p>
                 <input
                   className="first-name input-text"
-                  onChange={(e) =>{
+                  onChange={(
+                    e
+                  ) => {
                     // console.log('kiennn')
                   }}
-                  defaultValue="Hehe"/>
+                  defaultValue="Hehe"
+                />
               </div>
               <div className="last-name title-input">
                 <p className="text-first-name text-name">
@@ -224,10 +324,13 @@ export default function Step_2({
                 </p>
                 <input
                   className="first-name input-text"
-                  onChange={(e) =>{
+                  onChange={(
+                    e
+                  ) => {
                     // console.log('kiennn')
                   }}
-                  defaultValue="Alola"/>
+                  defaultValue="Alola"
+                />
               </div>
             </div>
             <div className="group-name">
@@ -236,7 +339,22 @@ export default function Step_2({
                   Country /
                   Region *
                 </p>
-                <div className="dropdown-select-country input-text">
+                <div
+                  className={`dropdown-select-country input-text ${
+                    showSelectCountry
+                      ? 'active'
+                      : ''
+                  }`}
+                  role="button"
+                  tabIndex={0}
+                  onClick={() =>
+                    setShowSelectCountry(
+                      (
+                        prev
+                      ) =>
+                        !prev
+                    )
+                  }>
                   <span className="country">
                     Vietnam
                   </span>
@@ -246,6 +364,23 @@ export default function Step_2({
                       'var(--color-neutral-mid)'
                     }
                   />
+                </div>
+                <div className="list-data-country">
+                  <div className="list-data">
+                    {countries.map(
+                      (e) => (
+                        <div
+                          className="name-countries"
+                          key={
+                            e.name
+                          }>
+                          {
+                            e.fullname
+                          }
+                        </div>
+                      )
+                    )}
+                  </div>
                 </div>
               </div>
             </div>
@@ -257,20 +392,26 @@ export default function Step_2({
                 </p>
                 <input
                   className="first-name input-text"
-                  onChange={(e) =>{
+                  onChange={(
+                    e
+                  ) => {
                     // console.log('kiennn')
                   }}
                   defaultValue={
                     '3B 13OI'
-                  }/>
+                  }
+                />
                 <input
                   className="first-name input-text input-2"
-                  onChange={(e) =>{
+                  onChange={(
+                    e
+                  ) => {
                     // console.log('kiennn')
                   }}
                   defaultValue={
                     'Apartment'
-                  }/>
+                  }
+                />
               </div>
             </div>
             {/* <div className="group-name">
@@ -326,18 +467,35 @@ export default function Step_2({
                 </p>
                 <input
                   className="first-name input-text"
-                  onChange={(e) =>{
+                  onChange={(
+                    e
+                  ) => {
                     // console.log('kiennn')
                   }}
                   defaultValue={
                     'New York'
-                  }/>
+                  }
+                />
               </div>
               <div className="city-province title-input">
                 <p className="text-first-name text-name">
                   Province *
                 </p>
-                <div className="dropdown-select-country input-text">
+
+                <div
+                  className={`dropdown-select-country province input-text ${
+                    showProvince
+                      ? 'active'
+                      : ''
+                  }`}
+                  onClick={() =>
+                    setShowProvince(
+                      (
+                        prev
+                      ) =>
+                        !prev
+                    )
+                  }>
                   <span className="country">
                     Ho Chi
                     Minh City
@@ -349,6 +507,23 @@ export default function Step_2({
                     }
                   />
                 </div>
+                <div className="list-province">
+                  <div className="list-data">
+                    {t.map(
+                      (e) => (
+                        <div
+                          className="name-province"
+                          key={
+                            e.slug
+                          }>
+                          {
+                            e.name
+                          }
+                        </div>
+                      )
+                    )}
+                  </div>
+                </div>
               </div>
               <div className="city-province title-input">
                 <p className="text-first-name text-name">
@@ -359,7 +534,8 @@ export default function Step_2({
                   className="first-name input-text"
                   defaultValue={
                     '21945'
-                  }/>
+                  }
+                />
               </div>
             </div>
             <div className="group-name first-group">
